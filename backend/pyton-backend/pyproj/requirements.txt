@@ -1,0 +1,4 @@
+Django
+google-genai
+python-dotenv
+gunicorn
