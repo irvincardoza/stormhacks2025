@@ -1,0 +1,8 @@
+Django>=4.2
+djangorestframework
+celery
+redis
+requests
+python-dotenv
+# (Optional) elevenlabs sdk if you prefer that:
+# elevenlabs==x.y.z

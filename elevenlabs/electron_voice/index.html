@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Jarvis Voice Demo</title></head>
+  <body>
+    <h3>Jarvis Voice (PTT)</h3>
+    <button id="pttBtn">Hold / Toggle PTT (Ctrl+Shift+Space)</button>
+    <script src="renderer.js"></script>
+    <script>
+      const btn = document.getElementById('pttBtn')
+      btn.addEventListener('click', async () => {
+        // simulate hotkey press
+        window.electronAPI.onPttPressed(() => {})
+      })
+    </script>
+  </body>
+</html>
