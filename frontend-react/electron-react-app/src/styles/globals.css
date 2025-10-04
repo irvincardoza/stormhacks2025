@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme (shadcn-style) */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    /* Use emerald for a more colorful primary */
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+
+    /* Chart colors - orange/green themed (light) */
+    /* Orange primary, green secondary, accessible on white */
+    --chart-1: 24 94% 50%;   /* orange */
+    --chart-2: 142 71% 45%;  /* green */
+    --chart-3: 32 95% 60%;   /* amber/orange-light */
+    --chart-4: 165 60% 55%;  /* teal/green-light */
+    --chart-5: 200 10% 20%;  /* black-ish accent for light bg */
+
+    /* Sidebar colors (light) */
+    --sidebar: 0 0% 100%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 142.1 76.2% 36.3%;
+    --sidebar-primary-foreground: 355.7 100% 97.3%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 142.1 76.2% 36.3%;
+  }
+
+  /* Dark theme overrides */
+  .dark {
+    color-scheme: dark;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.1 76.2% 36.3%;
+
+    /* Sidebar colors (dark) */
+    --sidebar: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 142.1 76.2% 36.3%;
+    --sidebar-primary-foreground: 355.7 100% 97.3%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 142.1 76.2% 36.3%;
+
+    /* Chart colors - orange/green themed (dark) */
+    /* Brighter oranges/greens to pop on dark */
+    --chart-1: 24 95% 62%;   /* orange brighter */
+    --chart-2: 142 70% 55%;  /* green brighter */
+    --chart-3: 30 95% 65%;   /* amber */
+    --chart-4: 165 65% 60%;  /* teal */
+    --chart-5: 0 0% 90%;     /* white-ish accent for dark bg */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Fix spacing and layout issues */
+  .App {
+    min-height: 100vh;
+    background: hsl(var(--background));
+  }
+
+  /* Fix card backgrounds */
+  .card {
+    background: hsl(var(--card));
+    border-color: hsl(var(--border));
+  }
+
+  /* Fix text contrast */
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Fix button contrast */
+  .btn-primary {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Fix sidebar styling */
+  .sidebar {
+    background: hsl(var(--sidebar));
+    border-color: hsl(var(--sidebar-border));
+  }
+
+  /* Ensure proper spacing */
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  .gap-6 {
+    gap: 1.5rem;
+  }
+
+  /* Fix chart colors visibility */
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    stroke: hsl(var(--border));
+  }
+
+  .recharts-text {
+    fill: hsl(var(--muted-foreground));
+  }
+
+  /* Fix progress bars */
+  .progress {
+    background: hsl(var(--muted));
+  }
+
+  .progress-fill {
+    background: hsl(var(--primary));
+  }
+
+  /* Enhanced typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+  }
+
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .text-base {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  /* Improved button typography */
+  .btn, button {
+    font-weight: 500;
+    letter-spacing: 0.025em;
+  }
+
+  /* Card title improvements */
+  .card-title {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  /* Badge improvements */
+  .badge {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+}
