@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./main.css" rel="stylesheet">
+    <title>Log Activity</title>
+</head>
+<body class="bg-transparent overflow-hidden">
+    <!-- Re-add side padding for comfortable spacing -->
+    <div class="w-full h-full flex items-center justify-center p-4">
+        <!-- The 'card' class is used by inputRenderer.js for the load animation -->
+        <div class="card w-full max-w-sm rounded-lg backdrop-blur-xl bg-card/80 border-none p-6 space-y-4">
+            <div>
+                <h2 class="text-lg font-semibold text-foreground">What are you working on?</h2>
+            </div>
+            
+            <div>
+                <input 
+                    type="text" 
+                    id="activity-input" 
+                    name="activity" 
+                    placeholder="e.g., Designing the new dashboard" 
+                    class="input w-full"
+                >
+            </div>
+            
+            <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-xs text-muted-foreground mr-2">Suggestions:</span>
+                <button class="suggestion-btn" data-activity="Coding">Coding</button>
+                <button class="suggestion-btn" data-activity="Meeting">Meeting</button>
+                <button class="suggestion-btn" data-activity="Research">Research</button>
+                <button class="suggestion-btn" data-activity="Planning">Planning</button>
+            </div>
+
+            <!-- Add vertical space before buttons and ensure bottom padding -->
+            <div class="flex justify-end items-center space-x-3 pt-5">
+                <button id="cancel-button" class="btn-outline">Cancel</button>
+                <button id="log-button" class="btn-primary">Log</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./inputRenderer.js"></script>
+</body>
+</html>
