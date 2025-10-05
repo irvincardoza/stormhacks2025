@@ -9,8 +9,8 @@ let tray;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 800,
     webPreferences: {
       // Keep current renderer behavior for dashboard
       nodeIntegration: true,
@@ -26,21 +26,24 @@ function createWindow() {
   mainWindow.on('closed', () => (mainWindow = null));
 }
 
-function positionOverlay(width = 720, height = 64) {
+function positionOverlay() {
   if (!overlayWindow) return;
   const cursorPoint = screen.getCursorScreenPoint();
   const display = screen.getDisplayNearestPoint(cursorPoint);
-  const { x, y, width: w } = display.workArea;
-  const targetX = Math.round(x + (w - width) / 2);
-  const targetY = Math.round(y + 20);
-  overlayWindow.setBounds({ x: targetX, y: targetY, width, height });
+  const { x, y, width, height } = display.bounds;
+  // Make the overlay window span the entire display so the pill can be dragged anywhere
+  overlayWindow.setBounds({ x, y, width, height });
 }
 
 function createOverlayWindow() {
   if (overlayWindow) return overlayWindow;
+  // Initialize to full-screen size on the display nearest the cursor
+  const cursorPoint = screen.getCursorScreenPoint();
+  const display = screen.getDisplayNearestPoint(cursorPoint);
+  const { width: dispWidth, height: dispHeight } = display.bounds;
   overlayWindow = new BrowserWindow({
-    width: 720,
-    height: 64,
+    width: dispWidth,
+    height: dispHeight,
     frame: false,
     transparent: true,
     resizable: false,
@@ -65,6 +68,8 @@ function createOverlayWindow() {
     // Fallback without crashing on other platforms
     overlayWindow.setAlwaysOnTop(true);
   }
+
+  // The overlay captures input while visible; click-through is not enabled to keep behavior simple
 
   const baseURL = isDev
     ? 'http://localhost:3000'
@@ -170,3 +175,4 @@ app.on('activate', () => {
 app.on('will-quit', () => {
   try { globalShortcut.unregisterAll(); } catch (_) {}
 });
+

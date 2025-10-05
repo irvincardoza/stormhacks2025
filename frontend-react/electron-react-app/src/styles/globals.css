@@ -42,7 +42,7 @@
 
     /* Chart colors - Using the provided palette intelligently */
     --chart-1: 24.6 95% 53.1%; /* Deep orange - primary data */
-    --chart-2: 158.1 64.4% 51.6%; /* Teal - secondary data */
+    --chart-2: 24.6 95% 53.1%; /* Deep orange - secondary data */
     --chart-3: 221.2 83.2% 53.3%; /* Blue - tertiary data */
     --chart-4: 30.7 97.2% 72.4%; /* Bright lime - success/positive */
     --chart-5: 32.1 97.7% 83.1%; /* Light yellow - warnings/highlights */
@@ -106,7 +106,7 @@
 
     /* Chart colors - Brighter versions for dark theme */
     --chart-1: 27 96% 61%; /* Vibrant orange - primary data */
-    --chart-2: 158.1 64.4% 60%; /* Brighter teal - secondary data */
+    --chart-2: 24.6 95% 53.1%; /* Deep orange - secondary data */
     --chart-3: 221.2 83.2% 60%; /* Brighter blue - tertiary data */
     --chart-4: 30.7 97.2% 80%; /* Brighter lime - success/positive */
     --chart-5: 32.1 97.7% 90%; /* Brighter yellow - warnings/highlights */
@@ -200,7 +200,7 @@
   }
 
   .text-gradient {
-    background-image: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--chart-3)));
+    background-image: linear-gradient(90deg, hsl(var(--primary)), hsl(30 97% 72%));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
