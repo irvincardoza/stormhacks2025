@@ -43,7 +43,7 @@ void runTrackerLoop()
                 << "\",\"idle_seconds\":" << idle
                 << "}" << std::endl;
 
-        logFile.flush();                                       // ensure immediate write
-        std::this_thread::sleep_for(std::chrono::seconds(60)); // 1 minute interval
+        logFile.flush();                                      // ensure immediate write
+        std::this_thread::sleep_for(std::chrono::seconds(5)); // 1 minute interval
     }
 }

@@ -63,8 +63,6 @@ def analyze_screenshot(request):
 
     # Append ONLY; no reads
     append_history(entry)
-    subprocess.Popen([sys.executable, str((BASE_DIR / "pyapp" / "utils" / "script_combiner.py").resolve())])
-    
 
     # Return a simple acknowledgment
     return JsonResponse({

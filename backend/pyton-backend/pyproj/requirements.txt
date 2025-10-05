@@ -1,7 +1,8 @@
-Django
+﻿Django
 google-genai
-python-dotenv
 gunicorn
-mss 
-pillow 
-pyobjc
+mss
+pandas
+Pillow
+python-dotenv
+requests

@@ -1,0 +1,51 @@
+# General OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django
+db.sqlite3
+
+# Environments / secrets
+.env
+.env.*
+
+# Node
+node_modules/
+
+# C/C++ build artefacts
+build/
+bin/
+obj/
+*.o
+*.obj
+*.exe
+
+# macOS metadata
+.AppleDouble
+.LSOverride
+
