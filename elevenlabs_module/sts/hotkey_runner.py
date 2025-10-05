@@ -1,45 +1,50 @@
-"""Global hotkey entry point for the ElevenLabs speech-to-text tester."""
+"""Global hotkey trigger for the ElevenLabs speech-to-speech + overlay assist pipeline."""
 
 from __future__ import annotations
 import logging
 import threading
 from contextlib import suppress
-from pathlib import Path
 
 try:
     from pynput import keyboard
 except ImportError as exc:
     raise SystemExit("Missing dependency 'pynput'. Run `pip install pynput`.") from exc
 
-# ✅ Use your local modules
-from .audio_utils import record_audio
-from .stt_elevenlabs import transcribe_audio
+# 🔹 Use full speech-to-speech pipeline instead of raw STT
+from .speech_to_speech import run_speech_cycle
 
 LOGGER = logging.getLogger(__name__)
 _cycle_lock = threading.Lock()
 
 
 def _run_cycle_async(duration: int = 5):
-    """Record a short clip and send it to ElevenLabs STT."""
+    """Record, transcribe, and send to overlay assist asynchronously."""
     if not _cycle_lock.acquire(blocking=False):
-        LOGGER.info("Hotkey ignored — another STT cycle is running.")
+        LOGGER.info("Hotkey ignored — another cycle is already running.")
         return
 
     def _runner():
         try:
-            LOGGER.info("🎙️ Recording for %s seconds...", duration)
-            audio_path = record_audio(duration=duration)
-            LOGGER.info("📁 Audio saved to %s", audio_path)
+            LOGGER.info("🎙️ Starting full speech-to-speech + overlay cycle.")
+            result = run_speech_cycle(duration=duration)
+            if not result:
+                LOGGER.warning("⚠️ No valid transcription or response.")
+                return
 
-            text = transcribe_audio(audio_path)
-            if text:
-                LOGGER.info("[STT Result] %s", text)
-                print(f"\n🗣️ You said: {text}\n")
+            print("\n==============================")
+            print(f"🗣️ You said: {result['transcript']}")
+            if result.get("overlay_response"):
+                print("📸 Screenshot + prompt successfully sent to overlay endpoint.")
+                print(f"🤖 Overlay replied: {result['overlay_response']}")
             else:
-                LOGGER.warning("⚠️ No transcription detected.")
+                print("⚠️ No overlay response received.")
+            print("==============================\n")
+
+        except Exception as e:
+            LOGGER.error("❌ Error during speech cycle: %s", e)
         finally:
             _cycle_lock.release()
-            LOGGER.info("✅ STT cycle finished.")
+            LOGGER.info("✅ Speech cycle completed.")
 
     threading.Thread(target=_runner, daemon=True).start()
 
