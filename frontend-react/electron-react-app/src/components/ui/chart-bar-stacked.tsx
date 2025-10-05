@@ -18,8 +18,38 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "./chart"
+import { VSCode, ChromeIcon, FigmaIcon, SlackIcon, TerminalIcon, SystemIcon } from "components/icons/lucide-adapter"
 
 export const description = "A stacked bar chart with a legend"
+
+// App icon mapping
+const appIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  "VS Code": VSCode,
+  "Chrome": ChromeIcon,
+  "Figma": FigmaIcon,
+  "Slack": SlackIcon,
+  "Terminal": TerminalIcon,
+  "System": SystemIcon,
+}
+
+// Custom legend component with app icons
+function AppLegendContent({ config }: { config: ChartConfig }) {
+  return (
+    <div className="flex flex-wrap gap-4 justify-center">
+      {Object.entries(config).map(([key, item]) => {
+        const IconComponent = appIcons[key] || SystemIcon
+        return (
+          <div key={key} className="flex items-center gap-2">
+            <div style={{ color: item.color }}>
+              <IconComponent className="h-4 w-4" />
+            </div>
+            <span className="text-sm">{item.label}</span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 
 export function ChartBarStacked({ 
   data: chartData, 
@@ -52,7 +82,7 @@ export function ChartBarStacked({
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend content={<AppLegendContent config={config} />} />
             {Object.entries(config).map(([key, item], index) => (
               <Bar
                 key={key}
@@ -68,7 +98,7 @@ export function ChartBarStacked({
       {showFooter && (
         <CardFooter className="flex-col items-start gap-2 text-sm">
           <div className="text-muted-foreground leading-none font-bold">
-            Total productivity for the last 24 hours
+            Total app usage for the last 24 hours
           </div>
         </CardFooter>
       )}

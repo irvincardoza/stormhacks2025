@@ -12,6 +12,12 @@ import {
   X as XIconBase,
   PanelLeftOpen as PanelLeftIconBase,
   Plus as PlusIconBase,
+  VSCode as VSCodeIcon,
+  ChromeIcon as ChromeIconBase,
+  FigmaIcon as FigmaIconBase,
+  SlackIcon as SlackIconBase,
+  TerminalIcon as TerminalIconBase,
+  SystemIcon as SystemIconBase,
 } from "./icons"
 import {
   AlarmClock as LucideAlarmClockIcon,
@@ -171,6 +177,31 @@ export const Trash2 = ({ className }: IconProps) => (
 
 export const Edit = ({ className }: IconProps) => (
   <LucideEditIcon className={className} />
+)
+
+// App Icons
+export const VSCode = ({ className }: IconProps) => (
+  <VSCodeIcon className={className} />
+)
+
+export const ChromeIcon = ({ className }: IconProps) => (
+  <ChromeIconBase className={className} />
+)
+
+export const FigmaIcon = ({ className }: IconProps) => (
+  <FigmaIconBase className={className} />
+)
+
+export const SlackIcon = ({ className }: IconProps) => (
+  <SlackIconBase className={className} />
+)
+
+export const TerminalIcon = ({ className }: IconProps) => (
+  <TerminalIconBase className={className} />
+)
+
+export const SystemIcon = ({ className }: IconProps) => (
+  <SystemIconBase className={className} />
 )
 
 

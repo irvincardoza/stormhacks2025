@@ -15,7 +15,7 @@ export function TimelinePage() {
     <div className="space-y-6">
       <PageHeader 
         title="Timeline" 
-        description="See your day as stacked blocks of productivity"
+        description="See your day as stacked blocks of app usage"
       />
       
       <div className="grid gap-6 px-6">
@@ -23,7 +23,7 @@ export function TimelinePage() {
           data={dailyTimeline.points}
           config={dailyTimeline.config}
           title="Daily Timeline"
-          description="Your productivity breakdown by hour"
+          description="Your app usage breakdown by hour"
           showFooter={true}
         />
 

@@ -295,7 +295,7 @@ export type ActivityEvent = {
 
 export type TimelineData = {
   dailyTimeline: {
-    points: NamedMetricPoint<"focus" | "meetings" | "breaks">[]
+    points: NamedMetricPoint<"VS Code" | "Chrome" | "Figma" | "Slack" | "Terminal" | "System">[]
     config: ChartConfig
   }
   activityEvents: ActivityEvent[]
@@ -570,16 +570,30 @@ const switchesConfig: SwitchesData = {
 
 const timelineConfig: TimelineData = {
   dailyTimeline: {
-    points: timelineData.map(({ hour, focus, meetings, breaks }) => ({
-      name: hour,
-      focus,
-      meetings,
-      breaks,
-    })),
+    points: [
+      { name: "6a", "VS Code": 0, Chrome: 0, Figma: 0, Slack: 0, Terminal: 0, System: 0 },
+      { name: "7a", "VS Code": 5, Chrome: 3, Figma: 0, Slack: 0, Terminal: 0, System: 2 },
+      { name: "8a", "VS Code": 12, Chrome: 6, Figma: 0, Slack: 0, Terminal: 0, System: 0 },
+      { name: "9a", "VS Code": 18, Chrome: 8, Figma: 2, Slack: 2, Terminal: 0, System: 0 },
+      { name: "10a", "VS Code": 22, Chrome: 10, Figma: 4, Slack: 2, Terminal: 0, System: 0 },
+      { name: "11a", "VS Code": 25, Chrome: 8, Figma: 3, Slack: 4, Terminal: 0, System: 0 },
+      { name: "12p", "VS Code": 8, Chrome: 4, Figma: 0, Slack: 2, Terminal: 0, System: 20 },
+      { name: "1p", "VS Code": 28, Chrome: 12, Figma: 6, Slack: 2, Terminal: 0, System: 0 },
+      { name: "2p", "VS Code": 24, Chrome: 10, Figma: 8, Slack: 4, Terminal: 0, System: 0 },
+      { name: "3p", "VS Code": 20, Chrome: 8, Figma: 4, Slack: 6, Terminal: 0, System: 0 },
+      { name: "4p", "VS Code": 16, Chrome: 6, Figma: 2, Slack: 4, Terminal: 0, System: 0 },
+      { name: "5p", "VS Code": 12, Chrome: 4, Figma: 0, Slack: 2, Terminal: 0, System: 0 },
+      { name: "6p", "VS Code": 8, Chrome: 4, Figma: 0, Slack: 0, Terminal: 0, System: 0 },
+      { name: "7p", "VS Code": 4, Chrome: 2, Figma: 0, Slack: 0, Terminal: 0, System: 0 },
+      { name: "8p", "VS Code": 0, Chrome: 0, Figma: 0, Slack: 0, Terminal: 0, System: 0 },
+    ],
     config: {
-      focus: { label: "Focus", color: "hsl(var(--chart-1))" },
-      meetings: { label: "Meetings", color: "hsl(var(--chart-2))" },
-      breaks: { label: "Breaks", color: "hsl(var(--chart-3))" },
+      "VS Code": { label: "VS Code", color: "hsl(var(--chart-1))" },
+      Chrome: { label: "Chrome", color: "hsl(var(--chart-2))" },
+      Figma: { label: "Figma", color: "hsl(var(--chart-3))" },
+      Slack: { label: "Slack", color: "hsl(var(--chart-4))" },
+      Terminal: { label: "Terminal", color: "hsl(var(--chart-5))" },
+      System: { label: "System", color: "hsl(var(--chart-6))" },
     } satisfies ChartConfig,
   },
   activityEvents: [
