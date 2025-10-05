@@ -1,5 +1,7 @@
 // Cross-platform active window info
 
+#include "../include/tracker.hpp"
+
 #include <string>
 #include <utility>
 #include <filesystem>
