@@ -4,88 +4,113 @@
 
 @layer base {
   :root {
-    /* Light theme (shadcn-style) */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    /* Use emerald for a more colorful primary */
-    --primary: 142.1 76.2% 36.3%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Light theme with custom color palette */
+    --background: 0 0% 0%; /* Black background */
+    --foreground: 0 0% 100%; /* White text for contrast */
+    --card: 0 0% 5%; /* Very dark gray cards */
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    
+    /* Primary colors - Orange gradient */
+    --primary: 24.6 95% 53.1%; /* Deep orange for primary actions */
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary colors - Teal for secondary actions */
+    --secondary: 158.1 64.4% 95%; /* Very light teal background */
+    --secondary-foreground: 158.1 64.4% 20%; /* Dark teal text */
+    
+    /* Muted colors - Dark backgrounds */
+    --muted: 0 0% 8%; /* Dark gray background */
+    --muted-foreground: 0 0% 100%; /* White text */
+    
+    /* Accent colors - Blue for interactive elements */
+    --accent: 221.2 83.2% 15%; /* Dark blue background */
+    --accent-foreground: 0 0% 100%; /* White text */
+    
+    /* Destructive - Red for errors */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142.1 76.2% 36.3%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders and inputs */
+    --border: 0 0% 15%; /* Dark gray border */
+    --input: 0 0% 8%; /* Dark gray input background */
+    --ring: 24.6 95% 53.1%; /* Deep orange focus ring */
+    /* Default icon color to inherit current text color */
+    --icon-color: currentColor;
     --radius: 0.5rem;
 
-    /* Chart colors - black, orange, white, green themed (light) */
-    /* Orange primary, green secondary, black accent, white highlight */
-    --chart-1: 24 94% 50%;   /* orange */
-    --chart-2: 142 71% 45%;  /* green */
-    --chart-3: 0 0% 20%;     /* black */
-    --chart-4: 0 0% 95%;     /* white/light gray */
-    --chart-5: 24 94% 70%;   /* orange-light */
+    /* Chart colors - Using the provided palette intelligently */
+    --chart-1: 24.6 95% 53.1%; /* Deep orange - primary data */
+    --chart-2: 158.1 64.4% 51.6%; /* Teal - secondary data */
+    --chart-3: 221.2 83.2% 53.3%; /* Blue - tertiary data */
+    --chart-4: 30.7 97.2% 72.4%; /* Bright lime - success/positive */
+    --chart-5: 32.1 97.7% 83.1%; /* Light yellow - warnings/highlights */
 
-    /* Sidebar colors (light) */
-    --sidebar: 0 0% 100%;
-    --sidebar-foreground: 222.2 84% 4.9%;
-    --sidebar-primary: 142.1 76.2% 36.3%;
-    --sidebar-primary-foreground: 355.7 100% 97.3%;
-    --sidebar-accent: 210 40% 96.1%;
-    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
-    --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: 142.1 76.2% 36.3%;
+    /* Sidebar colors (dark) */
+    --sidebar: 0 0% 3%; /* Very dark gray sidebar */
+    --sidebar-foreground: 0 0% 100%; /* White text */
+    --sidebar-primary: 24.6 95% 53.1%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 100%; /* White text */
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 24.6 95% 53.1%;
   }
 
   /* Dark theme overrides */
   .dark {
     color-scheme: dark;
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142.1 76.2% 36.3%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 0 0% 0%; /* Pure black background */
+    --foreground: 0 0% 100%; /* White text */
+    --card: 0 0% 5%; /* Very dark gray cards */
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    
+    /* Primary colors - Brighter orange for dark theme */
+    --primary: 27 96% 61%; /* Vibrant orange */
+    --primary-foreground: 0 0% 0%; /* Black text on orange */
+    
+    /* Secondary colors - Teal for dark theme */
+    --secondary: 158.1 64.4% 15%; /* Dark teal background */
+    --secondary-foreground: 158.1 64.4% 85%; /* Light teal text */
+    
+    /* Muted colors - Dark backgrounds */
+    --muted: 0 0% 8%; /* Dark gray background */
+    --muted-foreground: 0 0% 100%; /* White text */
+    
+    /* Accent colors - Blue for dark theme */
+    --accent: 221.2 83.2% 15%; /* Dark blue background */
+    --accent-foreground: 0 0% 100%; /* White text */
+    
+    /* Destructive - Red for errors */
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142.1 76.2% 36.3%;
+    
+    /* Borders and inputs */
+    --border: 0 0% 15%; /* Dark gray border */
+    --input: 0 0% 8%; /* Dark gray input background */
+    --ring: 27 96% 61%; /* Vibrant orange focus ring */
+    /* Default icon color to inherit current text color */
+    --icon-color: currentColor;
 
     /* Sidebar colors (dark) */
-    --sidebar: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 142.1 76.2% 36.3%;
-    --sidebar-primary-foreground: 355.7 100% 97.3%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 142.1 76.2% 36.3%;
+    --sidebar: 0 0% 3%; /* Very dark gray sidebar */
+    --sidebar-foreground: 0 0% 100%; /* White text */
+    --sidebar-primary: 27 96% 61%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 100%; /* White text */
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 27 96% 61%;
 
-    /* Chart colors - black, orange, white, green themed (dark) */
-    /* Brighter oranges/greens with black and white accents for dark theme */
-    --chart-1: 24 95% 62%;   /* orange brighter */
-    --chart-2: 142 70% 55%;  /* green brighter */
-    --chart-3: 0 0% 10%;     /* black darker for dark theme */
-    --chart-4: 0 0% 95%;     /* white/light for contrast */
-    --chart-5: 24 95% 75%;   /* orange-light brighter */
+    /* Chart colors - Brighter versions for dark theme */
+    --chart-1: 27 96% 61%; /* Vibrant orange - primary data */
+    --chart-2: 158.1 64.4% 60%; /* Brighter teal - secondary data */
+    --chart-3: 221.2 83.2% 60%; /* Brighter blue - tertiary data */
+    --chart-4: 30.7 97.2% 80%; /* Brighter lime - success/positive */
+    --chart-5: 32.1 97.7% 90%; /* Brighter yellow - warnings/highlights */
   }
 
   * {
@@ -160,7 +185,7 @@
 
   /* Enhanced typography */
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.025em;
   }
@@ -172,38 +197,38 @@
   }
 
   .text-sm {
-    font-size: 0.875rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .text-base {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.0625rem; /* ~17px */
+    line-height: 1.65;
   }
 
   .text-lg {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     line-height: 1.5;
   }
 
   .text-xl {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     line-height: 1.4;
   }
 
   .text-2xl {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.3;
   }
 
   .text-3xl {
-    font-size: 1.875rem;
+    font-size: 2rem;
     line-height: 1.2;
   }
 
   /* Improved button typography */
   .btn, button {
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.025em;
   }
 

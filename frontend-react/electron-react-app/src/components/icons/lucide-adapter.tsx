@@ -16,7 +16,30 @@ import {
   X as XIconBase,
   Bell as BellIcon,
   PanelLeftOpen as PanelLeftIconBase,
+  Plus as PlusIconBase,
 } from "./icons"
+import {
+  AlarmClock as LucideAlarmClockIcon,
+  BarChart3 as LucideBarChart3Icon,
+  BrainCircuit as LucideBrainCircuitIcon,
+  CalendarClock as LucideCalendarClockIcon,
+  CalendarDays as LucideCalendarDaysIcon,
+  Clock3 as LucideClock3Icon,
+  Database as LucideDatabaseIcon,
+  Edit as LucideEditIcon,
+  ExternalLink as LucideExternalLinkIcon,
+  Home as LucideHomeIcon,
+  Monitor as LucideMonitorIcon,
+  MoreHorizontal as LucideMoreHorizontalIcon,
+  Pause as LucidePauseIcon,
+  Play as LucidePlayIcon,
+  Power as LucidePowerIcon,
+  RefreshCw as LucideRefreshCwIcon,
+  Target as LucideTargetIcon,
+  Timer as LucideTimerIcon,
+  TrendingUp as LucideTrendingUpIcon,
+  Trash2 as LucideTrash2Icon,
+} from "lucide-react"
 
 type IconProps = { className?: string }
 
@@ -30,23 +53,23 @@ export const Brain = ({ className }: IconProps) => (
 )
 
 export const CalendarClock = ({ className }: IconProps) => (
-  <CalendarIcon className={className} />
+  <LucideCalendarClockIcon className={className} />
 )
 
 export const CalendarDays = ({ className }: IconProps) => (
-  <CalendarIcon className={className} />
+  <LucideCalendarDaysIcon className={className} />
 )
 
 export const Timer = ({ className }: IconProps) => (
-  <ClockIcon className={className} />
+  <LucideTimerIcon className={className} />
 )
 
 export const Clock3 = ({ className }: IconProps) => (
-  <ClockIcon className={className} />
+  <LucideClock3Icon className={className} />
 )
 
 export const Target = ({ className }: IconProps) => (
-  <ArrowCircleIcon className={className} />
+  <LucideTargetIcon className={className} />
 )
 
 export const Settings = ({ className }: IconProps) => (
@@ -54,7 +77,7 @@ export const Settings = ({ className }: IconProps) => (
 )
 
 export const Home = ({ className }: IconProps) => (
-  <UsersIcon className={className} />
+  <LucideHomeIcon className={className} />
 )
 
 export const LineChart = ({ className }: IconProps) => (
@@ -62,11 +85,11 @@ export const LineChart = ({ className }: IconProps) => (
 )
 
 export const Play = ({ className }: IconProps) => (
-  <ArrowRightIcon className={className} />
+  <LucidePlayIcon className={className} />
 )
 
 export const Power = ({ className }: IconProps) => (
-  <LightningIcon className={className} />
+  <LucidePowerIcon className={className} />
 )
 
 export const Check = ({ className }: IconProps) => (
@@ -87,11 +110,11 @@ export const XIcon = ({ className }: IconProps) => (
 )
 
 export const AlarmClock = ({ className }: IconProps) => (
-  <BellIcon className={className} />
+  <LucideAlarmClockIcon className={className} />
 )
 
 export const BrainCircuit = ({ className }: IconProps) => (
-  <BrainIcon className={className} />
+  <LucideBrainCircuitIcon className={className} />
 )
 
 export const PanelLeftIcon = ({ className }: IconProps) => (
@@ -104,7 +127,7 @@ export const Bot = ({ className }: IconProps) => (
 
 // Additional icons for the new navigation
 export const BarChart3 = ({ className }: IconProps) => (
-  <StarIcon className={className} />
+  <LucideBarChart3Icon className={className} />
 )
 
 export const Clock = ({ className }: IconProps) => (
@@ -112,15 +135,15 @@ export const Clock = ({ className }: IconProps) => (
 )
 
 export const Database = ({ className }: IconProps) => (
-  <StarIcon className={className} />
+  <LucideDatabaseIcon className={className} />
 )
 
 export const Monitor = ({ className }: IconProps) => (
-  <UsersIcon className={className} />
+  <LucideMonitorIcon className={className} />
 )
 
 export const Pause = ({ className }: IconProps) => (
-  <XIconBase className={className} />
+  <LucidePauseIcon className={className} />
 )
 
 export const Smartphone = ({ className }: IconProps) => (
@@ -128,31 +151,31 @@ export const Smartphone = ({ className }: IconProps) => (
 )
 
 export const TrendingUp = ({ className }: IconProps) => (
-  <ArrowRightIcon className={className} />
+  <LucideTrendingUpIcon className={className} />
 )
 
 export const MoreHorizontal = ({ className }: IconProps) => (
-  <XIconBase className={className} />
+  <LucideMoreHorizontalIcon className={className} />
 )
 
 export const RefreshCw = ({ className }: IconProps) => (
-  <ArrowRightIcon className={className} />
+  <LucideRefreshCwIcon className={className} />
 )
 
 export const ExternalLink = ({ className }: IconProps) => (
-  <ArrowRightIcon className={className} />
+  <LucideExternalLinkIcon className={className} />
 )
 
 export const Plus = ({ className }: IconProps) => (
-  <CheckIconBase className={className} />
+  <PlusIconBase className={className} />
 )
 
 export const Trash2 = ({ className }: IconProps) => (
-  <XIconBase className={className} />
+  <LucideTrash2Icon className={className} />
 )
 
 export const Edit = ({ className }: IconProps) => (
-  <ArrowRightIcon className={className} />
+  <LucideEditIcon className={className} />
 )
 
 

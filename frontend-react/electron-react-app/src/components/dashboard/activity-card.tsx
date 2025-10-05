@@ -40,12 +40,16 @@ export function ActivityCard() {
 function statusClass(status: string) {
   switch (status) {
     case "ok":
-      return "bg-chart-2 text-chart-2-foreground"
+      return "bg-success/20 text-success border-success/30" // Bright lime for success
     case "review":
-      return "bg-chart-3 text-chart-3-foreground"
+      return "bg-info/20 text-info border-info/30" // Blue for review
     case "deep-work":
-      return "bg-primary text-primary-foreground"
+      return "bg-accent-orange text-white border-accent-orange" // Vibrant orange for deep work
+    case "break":
+      return "bg-warning/20 text-warning border-warning/30" // Light yellow for breaks
+    case "idle":
+      return "bg-accent-teal/20 text-accent-teal border-accent-teal/30" // Teal for idle
     default:
-      return "bg-muted text-muted-foreground"
+      return "bg-muted text-muted-foreground border-border"
   }
 }

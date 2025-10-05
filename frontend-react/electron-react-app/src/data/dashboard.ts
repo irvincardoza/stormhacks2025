@@ -1,3 +1,5 @@
+import type { ChartConfig } from "components/ui/chart"
+
 export type TimelineEntry = {
   hour: string
   focus: number
@@ -165,3 +167,544 @@ export const trackedApps = [
   { name: "Slack", percent: 12 },
   { name: "Figma", percent: 10 },
 ]
+
+export type DonutSlice = {
+  name: string
+  value: number
+  color?: string
+}
+
+export type NamedMetricPoint<TFields extends string> = {
+  name: string
+} & Record<TFields, number>
+
+export type OverviewData = {
+  productivityBreakdown: {
+    slices: DonutSlice[]
+    config: ChartConfig
+  }
+  hourlyProductivity: {
+    points: NamedMetricPoint<"productive" | "unproductive">[]
+    config: ChartConfig
+  }
+  contextSwitchTrend: {
+    points: NamedMetricPoint<"switches">[]
+    config: ChartConfig
+  }
+  weeklyProductivity: {
+    points: NamedMetricPoint<"productivity">[]
+    config: ChartConfig
+  }
+}
+
+export type FocusSession = {
+  id: string
+  start: string
+  end: string
+  durationSec: number
+  app: string
+  window: string
+  productivity: "productive" | "neutral" | "unproductive"
+}
+
+export type FocusData = {
+  sessions: FocusSession[]
+  categoryMinutes: {
+    points: NamedMetricPoint<"minutes">[]
+    config: ChartConfig
+  }
+  sessionDistribution: {
+    points: NamedMetricPoint<"sessions">[]
+    config: ChartConfig
+  }
+  focusScoreTrend: {
+    points: NamedMetricPoint<"focus">[]
+    config: ChartConfig
+  }
+  goalMinutes: number
+}
+
+export type IdleBreak = {
+  start: string
+  end: string
+  durationMin: number
+  reason: string
+}
+
+export type IdleData = {
+  idleOverTime: {
+    points: NamedMetricPoint<"idleMin">[]
+    config: ChartConfig
+  }
+  longBreaks: IdleBreak[]
+  trackedMinutes: number
+}
+
+export type AppSession = {
+  app: string
+  domain: string | null
+  totalTime: number
+  sessions: number
+  avgSession: number
+  productivity: number
+}
+
+export type AppsData = {
+  usageByApp: {
+    points: NamedMetricPoint<"time" | "productivity">[]
+    config: ChartConfig
+  }
+  categoryDistribution: {
+    slices: DonutSlice[]
+    config: ChartConfig
+  }
+  productiveVsUnproductive: {
+    points: NamedMetricPoint<"productive" | "unproductive">[]
+    config: ChartConfig
+  }
+  sessions: AppSession[]
+}
+
+export type SwitchPair = {
+  from: string
+  to: string
+  count: number
+}
+
+export type SwitchesData = {
+  switchesOverTime: {
+    points: NamedMetricPoint<"switches">[]
+    config: ChartConfig
+  }
+  switchIntensity: {
+    points: NamedMetricPoint<"count">[]
+    config: ChartConfig
+  }
+  topPairs: SwitchPair[]
+}
+
+export type ActivityEvent = {
+  ts: string
+  app: string
+  window: string
+  domain: string | null
+  idleSec: number
+  category: string
+  productivity: "productive" | "neutral" | "unproductive" | "idle"
+}
+
+export type TimelineData = {
+  dailyTimeline: {
+    points: NamedMetricPoint<"focus" | "meetings" | "breaks">[]
+    config: ChartConfig
+  }
+  activityEvents: ActivityEvent[]
+}
+
+export type LabelRule = {
+  id: string
+  label: string
+  resource: string
+  resourceType: "application" | "domain"
+  productivity: "productive" | "neutral" | "unproductive"
+}
+
+export type SettingsData = {
+  thresholds: {
+    sessionSeconds: number
+    idleSeconds: number
+    breakMinutes: number
+  }
+  rules: LabelRule[]
+  privacy: {
+    redactFilenames: boolean
+    hideScreenshots: boolean
+    anonymizeDomains: boolean
+  }
+  dataManagement: {
+    retentionDays: number
+    exportLabel: string
+    deleteLabel: string
+  }
+}
+
+export type DashboardData = {
+  overview: OverviewData
+  focus: FocusData
+  idle: IdleData
+  apps: AppsData
+  switches: SwitchesData
+  timeline: TimelineData
+  settings: SettingsData
+}
+
+const overviewConfig = {
+  productivityBreakdown: {
+    slices: [
+      { name: "Productive", value: 275, color: "hsl(var(--chart-1))" },
+      { name: "Unproductive", value: 200, color: "hsl(var(--chart-2))" },
+      { name: "Neutral", value: 187, color: "hsl(var(--chart-3))" },
+      { name: "Idle", value: 173, color: "hsl(var(--chart-4))" },
+      { name: "Other", value: 90, color: "hsl(var(--chart-5))" },
+    ],
+    config: {
+      Productive: { label: "Productive", color: "hsl(var(--chart-1))" },
+      Unproductive: { label: "Unproductive", color: "hsl(var(--chart-2))" },
+      Neutral: { label: "Neutral", color: "hsl(var(--chart-3))" },
+      Idle: { label: "Idle", color: "hsl(var(--chart-4))" },
+      Other: { label: "Other", color: "hsl(var(--chart-5))" },
+    } satisfies ChartConfig,
+  },
+  hourlyProductivity: {
+    points: [
+      { name: "09:00", productive: 45, unproductive: 15 },
+      { name: "10:00", productive: 60, unproductive: 20 },
+      { name: "11:00", productive: 30, unproductive: 30 },
+      { name: "12:00", productive: 15, unproductive: 45 },
+      { name: "13:00", productive: 20, unproductive: 40 },
+      { name: "14:00", productive: 55, unproductive: 25 },
+      { name: "15:00", productive: 40, unproductive: 20 },
+      { name: "16:00", productive: 35, unproductive: 25 },
+      { name: "17:00", productive: 25, unproductive: 35 },
+    ],
+    config: {
+      productive: { label: "Productive", color: "hsl(var(--chart-1))" },
+      unproductive: { label: "Unproductive", color: "hsl(var(--chart-2))" },
+    } satisfies ChartConfig,
+  },
+  contextSwitchTrend: {
+    points: [
+      { name: "09:00", switches: 3 },
+      { name: "10:00", switches: 7 },
+      { name: "11:00", switches: 5 },
+      { name: "12:00", switches: 2 },
+      { name: "13:00", switches: 1 },
+      { name: "14:00", switches: 8 },
+      { name: "15:00", switches: 4 },
+      { name: "16:00", switches: 6 },
+      { name: "17:00", switches: 3 },
+    ],
+    config: {
+      switches: { label: "Switches", color: "hsl(var(--chart-1))" },
+    } satisfies ChartConfig,
+  },
+  weeklyProductivity: {
+    points: [
+      { name: "Mon", productivity: 85 },
+      { name: "Tue", productivity: 92 },
+      { name: "Wed", productivity: 78 },
+      { name: "Thu", productivity: 88 },
+      { name: "Fri", productivity: 95 },
+    ],
+    config: {
+      productivity: { label: "Productivity", color: "hsl(var(--chart-2))" },
+    } satisfies ChartConfig,
+  },
+}
+
+const focusConfig: FocusData = {
+  sessions: [
+    { id: "1", start: "09:00", end: "11:15", durationSec: 8100, app: "VS Code", window: "project/src/", productivity: "productive" },
+    { id: "2", start: "13:00", end: "14:30", durationSec: 5400, app: "Figma", window: "Design System", productivity: "productive" },
+    { id: "3", start: "15:00", end: "16:45", durationSec: 6300, app: "VS Code", window: "project/tests/", productivity: "productive" },
+  ],
+  categoryMinutes: {
+    points: [
+      { name: "Development", minutes: 186 },
+      { name: "Design", minutes: 285 },
+      { name: "Communication", minutes: 237 },
+      { name: "Research", minutes: 203 },
+      { name: "Meetings", minutes: 209 },
+      { name: "Other", minutes: 264 },
+    ],
+    config: {
+      minutes: { label: "Focus Time (minutes)", color: "hsl(var(--chart-1))" },
+    } satisfies ChartConfig,
+  },
+  sessionDistribution: {
+    points: [
+      { name: "0-15m", sessions: 2 },
+      { name: "15-30m", sessions: 5 },
+      { name: "30-45m", sessions: 8 },
+      { name: "45-60m", sessions: 12 },
+      { name: "60-90m", sessions: 6 },
+      { name: "90m+", sessions: 3 },
+    ],
+    config: {
+      sessions: { label: "Sessions", color: "hsl(var(--chart-1))" },
+    } satisfies ChartConfig,
+  },
+  focusScoreTrend: {
+    points: [
+      { name: "09:00", focus: 85 },
+      { name: "10:00", focus: 92 },
+      { name: "11:00", focus: 78 },
+      { name: "12:00", focus: 45 },
+      { name: "13:00", focus: 88 },
+      { name: "14:00", focus: 95 },
+      { name: "15:00", focus: 82 },
+      { name: "16:00", focus: 76 },
+      { name: "17:00", focus: 68 },
+    ],
+    config: {
+      focus: { label: "Focus Score", color: "hsl(var(--chart-2))" },
+    } satisfies ChartConfig,
+  },
+  goalMinutes: 180,
+}
+
+const idleConfig: IdleData = {
+  idleOverTime: {
+    points: [
+      { name: "09:00", idleMin: 0 },
+      { name: "09:30", idleMin: 0 },
+      { name: "10:00", idleMin: 5 },
+      { name: "10:30", idleMin: 0 },
+      { name: "11:00", idleMin: 0 },
+      { name: "11:30", idleMin: 0 },
+      { name: "12:00", idleMin: 30 },
+      { name: "12:30", idleMin: 30 },
+      { name: "13:00", idleMin: 0 },
+      { name: "13:30", idleMin: 0 },
+      { name: "14:00", idleMin: 0 },
+      { name: "14:30", idleMin: 0 },
+      { name: "15:00", idleMin: 0 },
+      { name: "15:30", idleMin: 0 },
+      { name: "16:00", idleMin: 0 },
+      { name: "16:30", idleMin: 0 },
+      { name: "17:00", idleMin: 0 },
+    ],
+    config: {
+      idleMin: { label: "Idle Time (minutes)", color: "hsl(var(--chart-1))" },
+    } satisfies ChartConfig,
+  },
+  longBreaks: [
+    { start: "12:00", end: "12:30", durationMin: 30, reason: "Lunch break" },
+    { start: "15:15", end: "15:20", durationMin: 5, reason: "Coffee break" },
+    { start: "16:45", end: "16:50", durationMin: 5, reason: "Stretch break" },
+  ],
+  trackedMinutes: 480,
+}
+
+const appsConfig: AppsData = {
+  usageByApp: {
+    points: [
+      { name: "VS Code", time: 186, productivity: 85 },
+      { name: "Chrome", time: 142, productivity: 45 },
+      { name: "Figma", time: 98, productivity: 92 },
+      { name: "Slack", time: 67, productivity: 30 },
+      { name: "Terminal", time: 54, productivity: 88 },
+    ],
+    config: {
+      time: { label: "Time (minutes)", color: "hsl(var(--chart-1))" },
+      productivity: { label: "Productivity", color: "hsl(var(--chart-2))" },
+    } satisfies ChartConfig,
+  },
+  categoryDistribution: {
+    slices: [
+      { name: "Development", value: 45, color: "hsl(var(--chart-1))" },
+      { name: "Design", value: 25, color: "hsl(var(--chart-2))" },
+      { name: "Communication", value: 15, color: "hsl(var(--chart-3))" },
+      { name: "Research", value: 10, color: "hsl(var(--chart-4))" },
+      { name: "Other", value: 5, color: "hsl(var(--chart-5))" },
+    ],
+    config: {
+      Development: { label: "Development", color: "hsl(var(--chart-1))" },
+      Design: { label: "Design", color: "hsl(var(--chart-2))" },
+      Communication: { label: "Communication", color: "hsl(var(--chart-3))" },
+      Research: { label: "Research", color: "hsl(var(--chart-4))" },
+      Other: { label: "Other", color: "hsl(var(--chart-5))" },
+    } satisfies ChartConfig,
+  },
+  productiveVsUnproductive: {
+    points: [
+      { name: "VS Code", productive: 186, unproductive: 45 },
+      { name: "Chrome", productive: 67, unproductive: 142 },
+      { name: "Figma", productive: 98, unproductive: 12 },
+      { name: "Slack", productive: 23, unproductive: 67 },
+      { name: "Terminal", productive: 54, unproductive: 8 },
+    ],
+    config: {
+      productive: { label: "Productive", color: "hsl(var(--chart-1))" },
+      unproductive: { label: "Unproductive", color: "hsl(var(--chart-2))" },
+    } satisfies ChartConfig,
+  },
+  sessions: [
+    { app: "VS Code", domain: null, totalTime: 240, sessions: 8, avgSession: 30, productivity: 75 },
+    { app: "Chrome", domain: "github.com", totalTime: 90, sessions: 12, avgSession: 7.5, productivity: 67 },
+    { app: "Chrome", domain: "stackoverflow.com", totalTime: 60, sessions: 8, avgSession: 7.5, productivity: 83 },
+    { app: "Figma", domain: "figma.com", totalTime: 120, sessions: 3, avgSession: 40, productivity: 75 },
+    { app: "Slack", domain: "slack.com", totalTime: 90, sessions: 15, avgSession: 6, productivity: 33 },
+  ],
+}
+
+const switchesConfig: SwitchesData = {
+  switchesOverTime: {
+    points: overviewConfig.contextSwitchTrend.points,
+    config: overviewConfig.contextSwitchTrend.config,
+  },
+  switchIntensity: {
+    points: [
+      { name: "0-5", count: 2 },
+      { name: "5-10", count: 5 },
+      { name: "10-15", count: 8 },
+      { name: "15-20", count: 12 },
+      { name: "20-25", count: 6 },
+      { name: "25+", count: 3 },
+    ],
+    config: {
+      count: { label: "Sessions", color: "hsl(var(--chart-2))" },
+    } satisfies ChartConfig,
+  },
+  topPairs: [
+    { from: "VS Code", to: "Chrome", count: 12 },
+    { from: "Chrome", to: "VS Code", count: 10 },
+    { from: "VS Code", to: "Terminal", count: 8 },
+    { from: "Slack", to: "VS Code", count: 6 },
+    { from: "Figma", to: "VS Code", count: 5 },
+    { from: "Chrome", to: "Slack", count: 4 },
+    { from: "Terminal", to: "VS Code", count: 4 },
+    { from: "VS Code", to: "Slack", count: 3 },
+  ],
+}
+
+const timelineConfig: TimelineData = {
+  dailyTimeline: {
+    points: timelineData.map(({ hour, focus, meetings, breaks }) => ({
+      name: hour,
+      focus,
+      meetings,
+      breaks,
+    })),
+    config: {
+      focus: { label: "Focus", color: "hsl(var(--chart-1))" },
+      meetings: { label: "Meetings", color: "hsl(var(--chart-2))" },
+      breaks: { label: "Breaks", color: "hsl(var(--chart-3))" },
+    } satisfies ChartConfig,
+  },
+  activityEvents: [
+    {
+      ts: "2024-01-15T09:00:00Z",
+      app: "VS Code",
+      window: "project/src/App.tsx",
+      domain: null,
+      idleSec: 0,
+      category: "Development",
+      productivity: "productive",
+    },
+    {
+      ts: "2024-01-15T09:15:00Z",
+      app: "Chrome",
+      window: "GitHub - project",
+      domain: "github.com",
+      idleSec: 0,
+      category: "Development",
+      productivity: "productive",
+    },
+    {
+      ts: "2024-01-15T09:30:00Z",
+      app: "Slack",
+      window: "Team Chat",
+      domain: "slack.com",
+      idleSec: 0,
+      category: "Communication",
+      productivity: "neutral",
+    },
+    {
+      ts: "2024-01-15T10:00:00Z",
+      app: "VS Code",
+      window: "project/src/components/",
+      domain: null,
+      idleSec: 0,
+      category: "Development",
+      productivity: "productive",
+    },
+    {
+      ts: "2024-01-15T10:30:00Z",
+      app: "Chrome",
+      window: "Stack Overflow",
+      domain: "stackoverflow.com",
+      idleSec: 0,
+      category: "Development",
+      productivity: "productive",
+    },
+    {
+      ts: "2024-01-15T11:00:00Z",
+      app: "Twitter",
+      window: "Home / X",
+      domain: "twitter.com",
+      idleSec: 0,
+      category: "Social",
+      productivity: "unproductive",
+    },
+    {
+      ts: "2024-01-15T11:15:00Z",
+      app: "VS Code",
+      window: "project/",
+      domain: null,
+      idleSec: 0,
+      category: "Development",
+      productivity: "productive",
+    },
+    {
+      ts: "2024-01-15T12:00:00Z",
+      app: "System",
+      window: "Lunch Break",
+      domain: null,
+      idleSec: 1800,
+      category: "Break",
+      productivity: "idle",
+    },
+  ],
+}
+
+const settingsConfig: SettingsData = {
+  thresholds: {
+    sessionSeconds: 30,
+    idleSeconds: 300,
+    breakMinutes: 15,
+  },
+  rules: [
+    {
+      id: "rule-vscode",
+      label: "VS Code",
+      resource: "VS Code",
+      resourceType: "application",
+      productivity: "productive",
+    },
+    {
+      id: "rule-github",
+      label: "github.com",
+      resource: "github.com",
+      resourceType: "domain",
+      productivity: "productive",
+    },
+    {
+      id: "rule-twitter",
+      label: "twitter.com",
+      resource: "twitter.com",
+      resourceType: "domain",
+      productivity: "unproductive",
+    },
+  ],
+  privacy: {
+    redactFilenames: true,
+    hideScreenshots: false,
+    anonymizeDomains: false,
+  },
+  dataManagement: {
+    retentionDays: 90,
+    exportLabel: "Download your productivity data",
+    deleteLabel: "Permanently remove all tracked data",
+  },
+}
+
+export const dashboardMockData: DashboardData = {
+  overview: overviewConfig,
+  focus: focusConfig,
+  idle: idleConfig,
+  apps: appsConfig,
+  switches: switchesConfig,
+  timeline: timelineConfig,
+  settings: settingsConfig,
+}

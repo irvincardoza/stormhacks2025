@@ -12,7 +12,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuBadge,
   SidebarProvider,
   SidebarTrigger,
 } from "components/ui/sidebar"
@@ -23,19 +22,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "components/ui/avatar"
-import {
-  BarChart3,
-  CalendarDays,
-  Clock,
-  Database,
-  Home,
-  Monitor,
-  Pause,
-  Settings,
-  Target,
-  Timer,
-  TrendingUp,
-} from "components/icons/lucide-adapter"
+import { BarChart3, CalendarDays, Clock, Home, Settings, Target, Timer } from "components/icons/lucide-adapter"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -50,12 +37,8 @@ import { ModeToggle } from "components/ui/mode-toggle"
 const primaryNav = [
   { label: "Overview", icon: Home, href: "/dashboard" },
   { label: "Timeline", icon: Clock, href: "/dashboard/timeline" },
-  { label: "Focus", icon: Target, href: "/dashboard/focus" },
-  { label: "Apps & Domains", icon: Monitor, href: "/dashboard/apps" },
-  { label: "Switches", icon: TrendingUp, href: "/dashboard/switches" },
-  { label: "Idle & Breaks", icon: Pause, href: "/dashboard/idle" },
-  { label: "Label Review", icon: BarChart3, href: "/dashboard/review", badge: "3" },
-  { label: "Data Explorer", icon: Database, href: "/dashboard/data" },
+  { label: "Insights", icon: BarChart3, href: "/dashboard/insights" },
+  { label: "Sessions", icon: Target, href: "/dashboard/sessions" },
   { label: "Settings", icon: Settings, href: "/dashboard/settings" },
 ]
 
@@ -107,9 +90,6 @@ function renderSidebar(currentPath: string, navigate: (path: string) => void) {
                   >
                     <item.icon className="size-4" />
                     <span>{item.label}</span>
-                    {item.badge && (
-                      <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
-                    )}
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -123,7 +103,7 @@ function renderSidebar(currentPath: string, navigate: (path: string) => void) {
             <p className="text-xs font-medium text-sidebar-accent-foreground">Productivity</p>
             <p className="text-[10px] text-muted-foreground">Tracked time today</p>
           </div>
-          <Badge className="bg-primary text-primary-foreground text-[10px]">6h 23m</Badge>
+          <Badge className="bg-success text-white text-[10px]">6h 23m</Badge>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -219,10 +199,10 @@ export function DashboardTopbar() {
             <DropdownMenuItem>Connect calendar...</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <Button variant="outline" size="sm" className="gap-2 border-chart-3/40 text-chart-3">
+        <Button variant="outline" size="sm" className="gap-2 border-info/40 text-info hover:bg-info/10">
           <Timer className="size-4" /> Disable tracking
         </Button>
-        <Button size="sm" className="gap-2 bg-primary/80">
+        <Button size="sm" className="gap-2 bg-accent-orange hover:bg-accent-orange/90 text-white">
           <Target className="size-4" /> Start focus mode
         </Button>
         <ModeToggle />

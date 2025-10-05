@@ -26,7 +26,7 @@ export function WorkHoursCard() {
             Tracking window 08:00 — 18:00
           </p>
         </div>
-        <Badge variant="secondary" className="bg-primary/10 text-primary">
+        <Badge variant="secondary" className="bg-success/20 text-success border-success/30">
           On schedule
         </Badge>
       </CardHeader>
@@ -54,7 +54,7 @@ export function WorkHoursCard() {
               <Progress value={focusRatio * 100} className="mt-2" />
             </div>
             <DialogTrigger asChild>
-              <Button size="sm" variant="outline" className="gap-2 border-primary/40">
+              <Button size="sm" variant="outline" className="gap-2 border-accent-orange/40 text-accent-orange hover:bg-accent-orange/10">
                 <CalendarClock className="size-4" />
                 AI Adjustments
               </Button>
@@ -68,27 +68,27 @@ export function WorkHoursCard() {
               </DialogDescription>
             </DialogHeader>
             <ul className="space-y-3 text-sm">
-              <li className="rounded-lg border border-border/40 bg-muted/10 p-3">
+              <li className="rounded-lg border border-accent-orange/20 bg-accent-orange/5 p-3">
                 <div className="flex items-center gap-2">
-                  <Clock3 className="size-4 text-primary" />
+                  <Clock3 className="size-4 text-accent-orange" />
                   <span className="font-medium">Protect focus arc 09:40 → 11:20</span>
                 </div>
                 <p className="mt-1 text-xs text-muted-foreground">
                   Calendar blocks created and teammates notified of async mode.
                 </p>
               </li>
-              <li className="rounded-lg border border-border/40 bg-muted/10 p-3">
+              <li className="rounded-lg border border-info/20 bg-info/5 p-3">
                 <div className="flex items-center gap-2">
-                  <Power className="size-4 text-chart-3" />
+                  <Power className="size-4 text-info" />
                   <span className="font-medium">Disable tracking @ 19:00</span>
                 </div>
                 <p className="mt-1 text-xs text-muted-foreground">
                   Reduce decision fatigue—AI will re-enable tomorrow morning.
                 </p>
               </li>
-              <li className="rounded-lg border border-border/40 bg-muted/10 p-3">
+              <li className="rounded-lg border border-accent-teal/20 bg-accent-teal/5 p-3">
                 <div className="flex items-center gap-2">
-                  <Play className="size-4 text-chart-2" />
+                  <Play className="size-4 text-accent-teal" />
                   <span className="font-medium">Break cadence update</span>
                 </div>
                 <p className="mt-1 text-xs text-muted-foreground">

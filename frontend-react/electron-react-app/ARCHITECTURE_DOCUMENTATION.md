@@ -1,5 +1,7 @@
 # Prism Dashboard - Architecture Documentation
 
+> For backend wiring and the new data provider, see docs/BACKEND_INTEGRATION.md.
+
 ## Overview
 
 Prism is a productivity OS dashboard built with React, TypeScript, and Electron. It features an AI-augmented productivity interface with intelligent time tracking, focus management, and data visualization components.

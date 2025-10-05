@@ -1,10 +1,8 @@
 import { useState, createContext, useContext } from "react"
 import { OverviewPage } from "pages/overview"
 import { TimelinePage } from "pages/timeline"
-import { FocusPage } from "pages/focus"
-import { AppsPage } from "pages/apps"
-import { SwitchesPage } from "pages/switches"
-import { IdlePage } from "pages/idle"
+import { InsightsPage } from "pages/insights"
+import { SessionsPage } from "pages/sessions"
 import { SettingsPage } from "pages/settings"
 
 type Route = {
@@ -16,10 +14,8 @@ type Route = {
 const routes: Route[] = [
   { path: "/dashboard", component: OverviewPage, title: "Overview" },
   { path: "/dashboard/timeline", component: TimelinePage, title: "Timeline" },
-  { path: "/dashboard/focus", component: FocusPage, title: "Focus" },
-  { path: "/dashboard/apps", component: AppsPage, title: "Apps & Domains" },
-  { path: "/dashboard/switches", component: SwitchesPage, title: "Switches" },
-  { path: "/dashboard/idle", component: IdlePage, title: "Idle & Breaks" },
+  { path: "/dashboard/insights", component: InsightsPage, title: "Insights" },
+  { path: "/dashboard/sessions", component: SessionsPage, title: "Sessions" },
   { path: "/dashboard/settings", component: SettingsPage, title: "Settings" },
 ]
 

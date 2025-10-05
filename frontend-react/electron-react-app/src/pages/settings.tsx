@@ -7,8 +7,17 @@ import { Switch } from "components/ui/switch"
 import { Separator } from "components/ui/separator"
 import { Badge } from "components/ui/badge"
 import { Plus, Trash2, Edit } from "components/icons/lucide-adapter"
+import { useSettingsData } from "providers/dashboard-data-provider"
 
 export function SettingsPage() {
+  const { thresholds, rules, privacy, dataManagement } = useSettingsData()
+
+  const getRuleVariant = (productivity: string) => {
+    if (productivity === "productive") return "default" as const
+    if (productivity === "unproductive") return "destructive" as const
+    return "secondary" as const
+  }
+
   return (
     <div className="space-y-6">
       <PageHeader 
@@ -17,7 +26,6 @@ export function SettingsPage() {
       />
       
       <div className="grid gap-6 px-6">
-        {/* Session/Idle Thresholds */}
         <Card>
           <CardHeader>
             <CardTitle>Session & Idle Thresholds</CardTitle>
@@ -29,14 +37,14 @@ export function SettingsPage() {
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="session-threshold">Session Threshold (seconds)</Label>
-                <Input id="session-threshold" type="number" defaultValue="30" />
+                <Input id="session-threshold" type="number" defaultValue={thresholds.sessionSeconds} />
                 <p className="text-xs text-muted-foreground">
                   Minimum time to start a new session
                 </p>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="idle-threshold">Idle Threshold (seconds)</Label>
-                <Input id="idle-threshold" type="number" defaultValue="300" />
+                <Input id="idle-threshold" type="number" defaultValue={thresholds.idleSeconds} />
                 <p className="text-xs text-muted-foreground">
                   Time before considering activity as idle
                 </p>
@@ -44,7 +52,7 @@ export function SettingsPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="break-threshold">Break Threshold (minutes)</Label>
-              <Input id="break-threshold" type="number" defaultValue="15" />
+              <Input id="break-threshold" type="number" defaultValue={thresholds.breakMinutes} />
               <p className="text-xs text-muted-foreground">
                 Minimum idle time to count as a break
               </p>
@@ -52,7 +60,6 @@ export function SettingsPage() {
           </CardContent>
         </Card>
 
-        {/* Labeling Rules */}
         <Card>
           <CardHeader>
             <CardTitle>Labeling Rules</CardTitle>
@@ -64,7 +71,7 @@ export function SettingsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <div className="font-medium">Productive Rules</div>
-                <div className="text-sm text-muted-foreground">3 rules configured</div>
+                <div className="text-sm text-muted-foreground">{rules.length} rules configured</div>
               </div>
               <Button size="sm">
                 <Plus className="h-4 w-4 mr-2" />
@@ -73,58 +80,31 @@ export function SettingsPage() {
             </div>
             
             <div className="space-y-3">
-              <div className="flex items-center justify-between p-3 border rounded-lg">
-                <div>
-                  <div className="font-medium">VS Code</div>
-                  <div className="text-sm text-muted-foreground">Application</div>
+              {rules.map((rule) => (
+                <div key={rule.id} className="flex items-center justify-between p-3 border rounded-lg">
+                  <div>
+                    <div className="font-medium">{rule.label}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {rule.resourceType === "application" ? "Application" : "Domain"}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Badge variant={getRuleVariant(rule.productivity)}>
+                      {rule.productivity}
+                    </Badge>
+                    <Button variant="ghost" size="sm">
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button variant="ghost" size="sm">
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Badge variant="default">Productive</Badge>
-                  <Button variant="ghost" size="sm">
-                    <Edit className="h-4 w-4" />
-                  </Button>
-                  <Button variant="ghost" size="sm">
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between p-3 border rounded-lg">
-                <div>
-                  <div className="font-medium">github.com</div>
-                  <div className="text-sm text-muted-foreground">Domain</div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Badge variant="default">Productive</Badge>
-                  <Button variant="ghost" size="sm">
-                    <Edit className="h-4 w-4" />
-                  </Button>
-                  <Button variant="ghost" size="sm">
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between p-3 border rounded-lg">
-                <div>
-                  <div className="font-medium">twitter.com</div>
-                  <div className="text-sm text-muted-foreground">Domain</div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Badge variant="destructive">Unproductive</Badge>
-                  <Button variant="ghost" size="sm">
-                    <Edit className="h-4 w-4" />
-                  </Button>
-                  <Button variant="ghost" size="sm">
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
+              ))}
             </div>
           </CardContent>
         </Card>
 
-        {/* Privacy Settings */}
         <Card>
           <CardHeader>
             <CardTitle>Privacy Settings</CardTitle>
@@ -140,7 +120,7 @@ export function SettingsPage() {
                   Hide sensitive file names in window titles
                 </div>
               </div>
-              <Switch defaultChecked />
+              <Switch defaultChecked={privacy.redactFilenames} />
             </div>
             
             <Separator />
@@ -152,7 +132,7 @@ export function SettingsPage() {
                   Don't capture screenshots unless explicitly enabled
                 </div>
               </div>
-              <Switch />
+              <Switch defaultChecked={privacy.hideScreenshots} />
             </div>
             
             <Separator />
@@ -164,12 +144,11 @@ export function SettingsPage() {
                   Replace domain names with generic categories
                 </div>
               </div>
-              <Switch />
+              <Switch defaultChecked={privacy.anonymizeDomains} />
             </div>
           </CardContent>
         </Card>
 
-        {/* Data Management */}
         <Card>
           <CardHeader>
             <CardTitle>Data Management</CardTitle>
@@ -182,7 +161,7 @@ export function SettingsPage() {
               <div>
                 <div className="font-medium">Data Retention</div>
                 <div className="text-sm text-muted-foreground">
-                  Keep data for 90 days
+                  Keep data for {dataManagement.retentionDays} days
                 </div>
               </div>
               <Button variant="outline" size="sm">
@@ -194,7 +173,7 @@ export function SettingsPage() {
               <div>
                 <div className="font-medium">Export Data</div>
                 <div className="text-sm text-muted-foreground">
-                  Download your productivity data
+                  {dataManagement.exportLabel}
                 </div>
               </div>
               <Button variant="outline" size="sm">
@@ -206,7 +185,7 @@ export function SettingsPage() {
               <div>
                 <div className="font-medium">Delete All Data</div>
                 <div className="text-sm text-muted-foreground">
-                  Permanently remove all tracked data
+                  {dataManagement.deleteLabel}
                 </div>
               </div>
               <Button variant="destructive" size="sm">
