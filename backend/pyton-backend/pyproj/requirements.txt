@@ -1,5 +1,7 @@
 Django
 django-cors-headers
+djangorestframework
+drf-spectacular
 google-genai
 gunicorn
 mss

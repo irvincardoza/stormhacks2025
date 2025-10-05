@@ -13,18 +13,18 @@
   },
   {
     "hour": "2025-10-05T02:00:00",
-    "switches": 206
+    "switches": 184
   },
   {
     "hour": "2025-10-05T03:00:00",
-    "switches": 106
+    "switches": 103
   },
   {
     "hour": "2025-10-05T04:00:00",
-    "switches": 240
+    "switches": 231
   },
   {
     "hour": "2025-10-05T05:00:00",
-    "switches": 46
+    "switches": 60
   }
 ]

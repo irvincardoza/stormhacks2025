@@ -1,8 +1,11 @@
 python-dotenv==1.0.1
-elevenlabs<0.2.27
-pydantic<2.0
+elevenlabs>=1.0.0,<2.0.0
+pydantic>=2.7,<3.0
 loguru==0.7.2
 requests>=2.32.0
 sounddevice>=0.4.6
 scipy>=1.11.0
 pynput>=1.7.6
+mss>=9.0.1
+pillow>=10.0.0
+pydub>=0.25.1

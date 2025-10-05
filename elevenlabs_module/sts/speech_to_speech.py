@@ -8,22 +8,18 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-try:
-    from .audio_utils import record_audio
-    from .stt_elevenlabs import transcribe_audio
-    from .llm_client import get_llm_response
-    from .tts_elevenlabs import speak_text
-except ImportError:
-    from audio_utils import record_audio
-    from stt_elevenlabs import transcribe_audio
-    from llm_client import get_llm_response
-    from tts_elevenlabs import speak_text
+from .audio_utils import record_audio
+from .stt_elevenlabs import transcribe_audio
+from .llm_client import get_llm_response
+from .tts_elevenlabs import speak_text
 
 
 LOGGER = logging.getLogger(__name__)
 
 # 🔹 Your Django backend URL (adjust if running elsewhere)
 API_BASE = os.getenv("API_BASE", "http://127.0.0.1:8000")
+
+FINAL_RESPONSE = ""
 
 
 # ======================================================
@@ -75,6 +71,9 @@ def send_to_overlay_assist(prompt_text: str, screenshot_path: str | None):
         LOGGER.info("✅ Overlay assist response: %s", result)
         print(f"\n🗣️ Sent text: {prompt_text}")
         print("✅ Overlay assist successful.\n")
+        # Persist the last overlay reply for external consumers
+        global FINAL_RESPONSE
+        FINAL_RESPONSE = result
         return result
 
     except Exception as e:
@@ -103,17 +102,25 @@ def run_speech_cycle(duration: int = 5, context: str | None = None) -> dict | No
     # 🔹 Step 2: Send transcription + screenshot to backend
     overlay_response = send_to_overlay_assist(user_text, screenshot_path)
 
-    # 🔹 Step 3: Optionally get LLM + TTS response
-    llm_response = get_llm_response(user_text, context=context)
-    LOGGER.info("LLM response: %s", llm_response)
+    # 🔹 Step 3: Prefer speaking the overlay-assist reply when available
+    response_text = None
+    if isinstance(overlay_response, dict):
+        # overlay endpoint returns {"reply": str, "model": str}
+        response_text = overlay_response.get("reply") or overlay_response.get("response")
+
+    # Fall back to generic LLM endpoint if overlay reply is missing
+    if not response_text:
+        llm_response = get_llm_response(user_text, context=context)
+        LOGGER.info("LLM response: %s", llm_response)
+        response_text = llm_response
 
     LOGGER.info("Speaking response via ElevenLabs")
-    speak_text(llm_response)
+    speak_text(response_text)
 
     return {
         "transcript": user_text,
         "overlay_response": overlay_response,
-        "response": llm_response,
+        "response": FINAL_RESPONSE,
     }
 
 

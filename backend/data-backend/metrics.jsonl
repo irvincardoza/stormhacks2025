@@ -1591,10 +1591,10 @@
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
+{"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Cursor","window_title":"zsh \u2014 stormhacks2025","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
-{"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
-{"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":2,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
+{"timestamp":"2025-10-05T02:38:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
 {"timestamp":"2025-10-05T02:38:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":6,"source_app_name":"Prism","source_window_title":"electron-react-app","productive":true}
@@ -1983,14 +1983,14 @@
 {"timestamp":"2025-10-05T03:10:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:10:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:10:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":57,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":62,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":77,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":72,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":67,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":62,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":57,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":52,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":42,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":47,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":42,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":37,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":32,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:11:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":27,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2013,36 +2013,36 @@
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":182,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":177,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":172,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":167,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":162,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":157,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":152,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":147,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":142,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:13:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":167,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:14:00.000","app_name":"Cursor","window_title":"shell.tsx \u2014 electron-react-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":10,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":23,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":28,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":18,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:15:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:16:00.000","app_name":"Comet","window_title":"","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:16:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:16:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2055,11 +2055,11 @@
 {"timestamp":"2025-10-05T03:16:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:16:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:16:00.000","app_name":"Cursor","window_title":"zsh \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:17:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2070,20 +2070,20 @@
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:18:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:19:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2109,15 +2109,14 @@
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Comet","window_title":"New Tab","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Comet","window_title":"Rushik-B","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Comet","window_title":"Rushik-B","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:21:00.000","app_name":"Comet","window_title":"Rushik-B","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:21:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:21:00.000","app_name":"Comet","window_title":"Rushik-B","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2126,11 +2125,13 @@
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:22:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2138,14 +2139,13 @@
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":14,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:23:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:24:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:24:00.000","app_name":"Cursor","window_title":"overlay-pill.tsx \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:24:00.000","app_name":"Comet","window_title":"irvincardoza\/stormhacks2025 at macos","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:24:00.000","app_name":"Comet","window_title":"irvincardoza\/stormhacks2025 at macos","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:24:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:51:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:51:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:51:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:51:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:51:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:51:00.000","app_name":"Comet","window_title":"(169) Qualifying Highlights | 2025 Singapore Grand Prix - YouTube","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2167,46 +2167,46 @@
 {"timestamp":"2025-10-05T03:52:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:52:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:52:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:53:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:53:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:53:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:53:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:53:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:53:00.000","app_name":"Comet","window_title":"127.0.0.1:8000\/api\/dashboard\/","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:54:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:55:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2220,9 +2220,9 @@
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:57:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:57:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:57:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:57:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:57:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2232,10 +2232,10 @@
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:58:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:58:00.000","app_name":"Cursor","window_title":"zsh \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:58:00.000","app_name":"Cursor","window_title":"zsh \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:58:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:58:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2247,15 +2247,15 @@
 {"timestamp":"2025-10-05T03:59:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:59:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:59:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T03:59:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:59:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T03:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:00:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T03:59:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:00:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2264,30 +2264,31 @@
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"paths.py \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:01:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:01:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:02:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":10,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:02:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":15,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":10,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:02:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2298,55 +2299,54 @@
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:03:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:03:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:04:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:04:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:04:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:05:00.000","app_name":"Cursor","window_title":"dashboard-data-provider.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"Python \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:06:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"activity_processor.py \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:07:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:08:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:08:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:08:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2361,7 +2361,6 @@
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2370,6 +2369,7 @@
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:09:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2382,7 +2382,6 @@
 {"timestamp":"2025-10-05T04:10:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:10:00.000","app_name":"Cursor","window_title":"Codex \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2394,6 +2393,7 @@
 {"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:11:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:12:00.000","app_name":"Electron","window_title":"","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:12:00.000","app_name":"Comet","window_title":"Untitled","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:12:00.000","app_name":"Cursor","window_title":"zsh \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2781,20 +2781,19 @@
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Spotify","window_title":"Spotify Premium","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:44:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:44:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Cursor","window_title":"node \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2802,40 +2801,41 @@
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:45:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":"README.md \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:46:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":".env \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":"README.md \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Dock","window_title":"","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":".env \u2014 ezra-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:46:00.000","app_name":"Cursor","window_title":".env \u2014 ezra-app","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:46:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:47:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:48:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:48:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:49:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2870,14 +2870,14 @@
 {"timestamp":"2025-10-05T04:51:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:51:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:51:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:51:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:51:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:51:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:51:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:51:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:52:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:52:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:52:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:52:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:52:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:52:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:52:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:52:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2892,24 +2892,24 @@
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:53:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":51,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":46,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":41,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":36,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":31,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":26,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":21,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":51,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:54:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":21,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Cursor","window_title":"Clarifying productivity graph calculations \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Beautiful Charts & Graphs - shadcn\/ui","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Beautiful Charts & Graphs - shadcn\/ui","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2917,15 +2917,15 @@
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Beautiful Charts & Graphs - shadcn\/ui","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Beautiful Charts & Graphs - shadcn\/ui","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Beautiful Charts & Graphs - shadcn\/ui","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Cursor","window_title":"Clarifying productivity graph calculations \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Cursor","window_title":"Clarifying productivity graph calculations \u2014 stormhacks2025","idle_seconds":5,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Cursor","window_title":"Clarifying productivity graph calculations \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:55:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:55:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:56:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2958,30 +2958,32 @@
 {"timestamp":"2025-10-05T04:58:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:58:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:58:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:59:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:59:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:59:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:59:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T04:59:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T04:59:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:00:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -2992,25 +2994,23 @@
 {"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:01:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:02:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":28,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":23,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":18,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -3018,43 +3018,42 @@
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:03:00.000","app_name":"Cursor","window_title":"Update components and combine pages \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":28,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":23,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":18,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"activity.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:04:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:05:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":8,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:05:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":9,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":48,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":43,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":38,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":33,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:05:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":48,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":68,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":63,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":58,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":53,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":48,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":43,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":33,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":18,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":38,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":28,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":23,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":18,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":13,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:06:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":38,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:07:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:07:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:07:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:07:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -3066,6 +3065,7 @@
 {"timestamp":"2025-10-05T05:07:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:07:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:07:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:07:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Cursor","window_title":"productivity_summary.json \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Cursor","window_title":"metrics.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Cursor","window_title":"metrics.jsonl \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -3074,69 +3074,71 @@
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:08:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:08:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"chart-pie-legend.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"Remove pink color from chart legend \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"chart-pie-legend.tsx \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"q_analysis.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"q_analysis.jsonl \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:09:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"q_analysis.jsonl \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:09:00.000","app_name":"Cursor","window_title":"q_analysis.jsonl \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:10:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:10:00.000","app_name":"Electron","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":27,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":22,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":12,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":7,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":11,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":12,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:11:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":17,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":41,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":51,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:12:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":66,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":61,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":56,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":51,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":46,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":36,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":31,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:12:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":26,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":21,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":16,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":36,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:12:00.000","app_name":"Cursor","window_title":"globals.css \u2014 stormhacks2025","idle_seconds":41,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:13:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:13:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:13:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:13:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:13:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:13:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:13:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -3147,14 +3149,12 @@
 {"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:14:00.000","app_name":"Cursor","window_title":"New Chat \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Overview | Chat SDK by Vercel","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Overview | Chat SDK by Vercel","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Overview | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Overview | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -3163,16 +3163,17 @@
 {"timestamp":"2025-10-05T05:15:00.000","app_name":"Comet","window_title":"Prism","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":6,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":4,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Overview | Chat SDK by Vercel","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:16:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":1,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
@@ -3184,8 +3185,10 @@
 {"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"README.md \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:17:00.000","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:17:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
-{"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":2,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
 {"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"Update insights page and remove timeline \u2014 stormhacks2025","idle_seconds":3,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
+{"timestamp":"2025-10-05T05:18:00.000","app_name":"Cursor","window_title":"tracker \u2014 stormhacks2025","idle_seconds":0,"source_app_name":null,"source_window_title":null,"productive":"unknown"}
