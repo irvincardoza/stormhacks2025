@@ -7,7 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
 import sys, subprocess
 from pathlib import Path
-
+import sys, subprocess
+from pathlib import Path
 from ..utils.gemini_api import analyze_image
 from ..services.paths import BASE_DIR, SCREENSHOT_DIR, HISTORY_FILE
 from ..services.history_store import append_history
@@ -63,7 +64,7 @@ def analyze_screenshot(request):
     # Append ONLY; no reads
     append_history(entry)
     subprocess.Popen([sys.executable, str((BASE_DIR / "pyapp" / "utils" / "script_combiner.py").resolve())])
-
+    
 
     # Return a simple acknowledgment
     return JsonResponse({
