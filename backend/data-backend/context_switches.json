@@ -9,22 +9,22 @@
   },
   {
     "hour": "2025-10-05T01:00:00",
-    "switches": 77
+    "switches": 59
   },
   {
     "hour": "2025-10-05T02:00:00",
-    "switches": 205
+    "switches": 206
   },
   {
     "hour": "2025-10-05T03:00:00",
-    "switches": 108
+    "switches": 106
   },
   {
     "hour": "2025-10-05T04:00:00",
-    "switches": 231
+    "switches": 240
   },
   {
     "hour": "2025-10-05T05:00:00",
-    "switches": 42
+    "switches": 46
   }
 ]
