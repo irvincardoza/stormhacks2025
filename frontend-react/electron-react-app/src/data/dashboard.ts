@@ -174,7 +174,7 @@ export type DonutSlice = {
   color?: string
 }
 
-export type NamedMetricPoint<TFields extends string> = {
+export type NamedMetricPoint<TFields extends string = string> = {
   name: string
 } & Record<TFields, number>
 
@@ -295,7 +295,7 @@ export type ActivityEvent = {
 
 export type TimelineData = {
   dailyTimeline: {
-    points: NamedMetricPoint<"VS Code" | "Chrome" | "Figma" | "Slack" | "Terminal" | "System">[]
+    points: NamedMetricPoint[]
     config: ChartConfig
   }
   activityEvents: ActivityEvent[]
@@ -326,7 +326,13 @@ export type SettingsData = {
     exportLabel: string
     deleteLabel: string
   }
+  monitorStatus?: {
+    unproductive_streak?: boolean
+    checked_at?: string
+  }
 }
+
+export type PartialDashboardData = Partial<DashboardData>
 
 export type DashboardData = {
   overview: OverviewData
@@ -710,6 +716,10 @@ const settingsConfig: SettingsData = {
     retentionDays: 90,
     exportLabel: "Download your productivity data",
     deleteLabel: "Permanently remove all tracked data",
+  },
+  monitorStatus: {
+    unproductive_streak: false,
+    checked_at: new Date().toISOString(),
   },
 }
 

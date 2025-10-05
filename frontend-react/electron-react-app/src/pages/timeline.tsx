@@ -18,14 +18,17 @@ export function TimelinePage() {
         description="See your day as stacked blocks of app usage"
       />
       
-      <div className="grid gap-6 px-6">
-        <ChartBarStacked 
-          data={dailyTimeline.points}
-          config={dailyTimeline.config}
-          title="Daily Timeline"
-          description="Your app usage breakdown by hour"
-          showFooter={true}
-        />
+      <div className="space-y-8 px-6">
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold">Daily Timeline</h3>
+          <ChartBarStacked 
+            data={dailyTimeline.points}
+            config={dailyTimeline.config}
+            title="Daily Timeline"
+            description="Your app usage breakdown by hour"
+            showFooter={true}
+          />
+        </div>
 
         <Card>
           <CardHeader>

@@ -65,43 +65,36 @@ export function ChartBarStacked({
   showFooter?: boolean
 }) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer config={config}>
-          <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="name"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
-            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-            <ChartLegend content={<AppLegendContent config={config} />} />
-            {Object.entries(config).map(([key, item], index) => (
-              <Bar
-                key={key}
-                dataKey={key}
-                stackId="a"
-                fill={item.color}
-                radius={index === 0 ? [0, 0, 4, 4] : index === Object.keys(config).length - 1 ? [4, 4, 0, 0] : [0, 0, 0, 0]}
-              />
-            ))}
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
-      {showFooter && (
-        <CardFooter className="flex-col items-start gap-2 text-sm">
-          <div className="text-muted-foreground leading-none font-bold">
-            Total app usage for the last 24 hours
-          </div>
-        </CardFooter>
-      )}
-    </Card>
+    <ChartContainer config={config} className="mx-auto h-[400px] w-full">
+      <BarChart 
+        accessibilityLayer 
+        data={chartData}
+        margin={{
+          left: 12,
+          right: 12,
+          bottom: 20,
+        }}
+      >
+        <CartesianGrid vertical={false} />
+        <XAxis
+          dataKey="name"
+          tickLine={false}
+          tickMargin={10}
+          axisLine={false}
+          tickFormatter={(value) => value.slice(0, 3)}
+        />
+        <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+        <ChartLegend content={<AppLegendContent config={config} />} />
+        {Object.entries(config).map(([key, item], index) => (
+          <Bar
+            key={key}
+            dataKey={key}
+            stackId="a"
+            fill={item.color}
+            radius={index === 0 ? [0, 0, 4, 4] : index === Object.keys(config).length - 1 ? [4, 4, 0, 0] : [0, 0, 0, 0]}
+          />
+        ))}
+      </BarChart>
+    </ChartContainer>
   )
 }

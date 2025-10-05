@@ -4,7 +4,8 @@ This app is now refactored to be backend‑ready. All hard‑coded values used b
 
 ## Data Flow Overview
 
-- `src/providers/dashboard-data-provider.tsx` exposes a `DashboardDataProvider` context.
+- Django exposes `GET /api/dashboard/` which returns a `DashboardData`-compatible payload assembled from `data-backend` metrics.
+- `src/providers/dashboard-data-provider.tsx` fetches that endpoint on mount (respecting `REACT_APP_API_BASE`, defaulting to `http://127.0.0.1:8000`).
 - Pages read typed slices via hooks: `useOverviewData`, `useFocusData`, `useIdleData`, `useAppsData`, `useSwitchesData`, `useTimelineData`, `useSettingsData`.
 - Mock data and TypeScript contracts live in `src/data/dashboard.ts`.
 - Charts consume only two props: `data` (array of points) and `config` (ChartConfig with colors/labels). No UI code changes are needed when switching to real data.
@@ -46,62 +47,12 @@ const { idleOverTime, longBreaks, trackedMinutes } = useIdleData()
 
 ## Swapping to Live Backend
 
-You have two non‑breaking options. Choose one per your architecture.
+The provider now hydrates itself automatically, so no UI wiring is required. You still have two escape hatches:
 
-1) Inject real data from the app root
+1. **Override the source** – pass a `value` prop to `DashboardDataProvider` when you need fixtures (tests/offline) and the fetch logic is skipped.
+2. **Point to another host** – set `REACT_APP_API_BASE` (e.g. `http://localhost:8787`) to target a different Django instance when packaging Electron builds.
 
-- Fetch the full `DashboardData` on startup and pass it via the provider `value` prop.
-
-```tsx
-// src/App.tsx (example sketch)
-import { useEffect, useState } from "react"
-import { DashboardDataProvider } from "providers/dashboard-data-provider"
-import type { DashboardData } from "data/dashboard"
-
-function App() {
-  const [data, setData] = useState<DashboardData | null>(null)
-
-  useEffect(() => {
-    ;(async () => {
-      const res = await fetch("/api/dashboard")
-      const json = (await res.json()) as DashboardData
-      setData(json)
-    })()
-  }, [])
-
-  return (
-    <NavigationProvider>
-      <DashboardDataProvider value={data ?? dashboardMockData}>
-        <DashboardShell>
-          <Router />
-        </DashboardShell>
-      </DashboardDataProvider>
-    </NavigationProvider>
-  )
-}
-```
-
-2) Load inside the provider (React Query/SWR)
-
-- Replace `dashboardMockData` with a query that resolves to the same `DashboardData` type. The provider remains the only place that knows where data comes from.
-
-```tsx
-// src/providers/dashboard-data-provider.tsx (sketch)
-import { useQuery } from "@tanstack/react-query"
-
-export function DashboardDataProvider({ children }: { children: React.ReactNode }) {
-  const { data } = useQuery({
-    queryKey: ["dashboard"],
-    queryFn: async () => (await fetch("/api/dashboard")).json(),
-  })
-
-  return (
-    <DashboardDataContext.Provider value={data ?? dashboardMockData}>
-      {children}
-    </DashboardDataContext.Provider>
-  )
-}
-```
+Anything the backend does not yet emit falls back to the rich mocks in `dashboard.ts`, so incremental rollout is safe.
 
 ## Mapping From Raw API → UI Schemas
 
@@ -162,12 +113,11 @@ Place validation in your adapter before returning `DashboardData`.
 - [x] Inline mocks removed from active pages.
 - [x] Shared data contracts defined and used.
 - [x] Charts render only via `data` + `config` props.
-- [ ] Implement API client and adapters.
+- [x] Implement API client (provider fetch + Django endpoint).
 - [ ] Add validation and error boundaries.
-- [ ] Switch provider to live data.
+- [x] Switch provider to live data.
 
 ## Troubleshooting
 
 - Empty arrays/zero values are fine; derived metrics guard against division by zero.
 - When adding new series, update `ChartConfig` in the same section and reuse existing color tokens.
-
