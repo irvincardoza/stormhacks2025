@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
+// @ts-ignore - image modules declared, but resolver may not pick it up in lint
+import dragIcon from "../components/icons/3-dots-icon.png"
 import { assistWithScreenshot, type OverlayAssistResponse } from "services/overlay-analyze"
 import { startMic, stopMic, subscribeMicStatus } from "services/mic-control"
 
@@ -27,12 +29,12 @@ export function OverlayPill() {
   const [recording, setRecording] = useState(false)
   const [micMessage, setMicMessage] = useState<string | undefined>(undefined)
   const [micPressing, setMicPressing] = useState(false)
+  const [micStyle, setMicStyle] = useState<{ left: number; top: number; size: number }>({ left: 0, top: 0, size: 44 })
+  const [dragStyle, setDragStyle] = useState<{ left: number; top: number; size: number }>({ left: 0, top: 0, size: 44 })
+  const [dragPressing, setDragPressing] = useState(false)
+  const ORANGE = 'hsl(24.6 95% 53.1%)'
 
-  useEffect(() => {
-    // Autofocus and select on show without timers to avoid races
-    inputRef.current?.focus()
-    inputRef.current?.select()
-  }, [])
+  // Do not autofocus to avoid hijacking page keyboard interactions
 
   // Load external XML prompt once
   useEffect(() => {
@@ -106,13 +108,25 @@ export function OverlayPill() {
     setPosition({ x: centeredX, y: 20 })
   }, [])
 
-  // Keep result box positioned under the pill
+  // Keep result box positioned under the pill and controls around it
   useEffect(() => {
     const el = pillRef.current
     if (!el) return
     const width = el.offsetWidth
     const height = el.offsetHeight
     setResultBoxStyle({ left: position.x, top: position.y + height + 8, width })
+    const micSize = 44
+    const dragSize = 44
+    setMicStyle({
+      left: position.x + width + 12,
+      top: position.y + Math.max(0, Math.round((height - micSize) / 2)),
+      size: micSize,
+    })
+    setDragStyle({
+      left: Math.max(12, position.x - 12 - dragSize),
+      top: position.y + Math.max(0, Math.round((height - dragSize) / 2)),
+      size: dragSize,
+    })
   }, [position, value, result, error, loading, templateError, lastQuery])
 
   // Mic status subscription
@@ -147,13 +161,14 @@ export function OverlayPill() {
 
   const endDrag = useCallback(() => {
     setIsDragging(false)
+    setDragPressing(false)
     dragOffsetRef.current = null
     window.removeEventListener('pointermove', onDragMove)
     window.removeEventListener('pointerup', endDrag)
     window.removeEventListener('pointercancel', endDrag)
   }, [onDragMove])
 
-  const onDragStart = (e: React.PointerEvent<HTMLDivElement>) => {
+  const onDragStart = (e: React.PointerEvent<HTMLElement>) => {
     if (e.button !== 0) return
     const el = pillRef.current
     if (!el) return
@@ -161,6 +176,7 @@ export function OverlayPill() {
     const rect = el.getBoundingClientRect()
     dragOffsetRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top }
     setIsDragging(true)
+    setDragPressing(true)
     try { (e.currentTarget as any)?.setPointerCapture?.(e.pointerId) } catch {}
     window.addEventListener('pointermove', onDragMove)
     window.addEventListener('pointerup', endDrag)
@@ -236,14 +252,6 @@ export function OverlayPill() {
         className={`pointer-events-auto w-[720px] max-w-[90vw] rounded-full border bg-black/80 border-white/25 backdrop-blur-xl shadow-2xl px-4 py-3 flex items-center gap-3 ${isDragging ? 'cursor-grabbing' : ''}`}
         style={{ WebkitAppRegion: 'no-drag', position: 'absolute', top: position.y, left: position.x } as React.CSSProperties}
       >
-        {/* drag handle */}
-        <div
-          className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'} flex-none h-8 w-8 rounded-full bg-white/15 hover:bg-white/25 transition-colors select-none`}
-          style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}
-          aria-label="Move pill"
-          title="Drag to move"
-          onPointerDown={onDragStart}
-        />
         <input
           ref={inputRef}
           className="flex-1 bg-transparent outline-none text-white placeholder-white/80 px-1 text-lg md:text-xl leading-7"
@@ -253,60 +261,74 @@ export function OverlayPill() {
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={onKeyDown}
         />
-        {/* Push-to-talk mic button */}
-        <button
-          type="button"
-          aria-label={recording ? "Stop recording" : "Hold to talk"}
-          title={recording ? "Recording… release to stop" : "Hold to talk"}
-          className={`flex-none h-8 w-8 rounded-full border transition-colors ${(recording || micPressing) ? 'bg-red-500/80 border-red-400 shadow-inner' : 'bg-white/15 border-white/25 hover:bg-white/25'}`}
-          style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}
-          onPointerDown={async (e) => {
-            e.preventDefault()
-            setMicPressing(true)
-            try { (e.currentTarget as any)?.setPointerCapture?.(e.pointerId) } catch {}
-            if (!recording) await startMic()
-          }}
-          onPointerUp={async () => {
-            try { setMicPressing(false) } finally {}
-            if (recording) await stopMic()
-          }}
-          onPointerCancel={async () => {
-            try { setMicPressing(false) } finally {}
-            if (recording) await stopMic()
-          }}
-          onPointerLeave={async () => {
-            // If user drags pointer away while holding, keep it red due to capture,
-            // but if we somehow lose capture, ensure visual resets.
-            // We don't stop mic here to avoid accidental cancellations; pointerup/cancel will handle it.
-          }}
-        >
-          <span className="sr-only">{recording ? 'Stop recording' : 'Hold to talk'}</span>
-          {/* Simple mic glyph */}
-          <svg viewBox="0 0 24 24" className="h-4 w-4 mx-auto" aria-hidden="true">
-            <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 19v3h2v-3h-2z" fill={recording ? '#fff' : '#e5e7eb'} />
-          </svg>
-        </button>
         <div className="text-sm md:text-base text-white/80 select-none pr-1" style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}>
-          {loading ? 'Sending…' : 'Enter'}
+          {loading ? (
+            'Sending…'
+          ) : (
+            <div className="flex items-center gap-1 text-white">
+              <span className="font-bold">⌘</span>
+              <span className="font-bold">⏎</span>
+            </div>
+          )}
         </div>
       </div>
+
+      {/* Popped-out drag handle to the left of the pill */}
+      <button
+        type="button"
+        aria-label="Drag to move"
+        title="Drag to move"
+        className={`pointer-events-auto rounded-full border ${(isDragging ? 'cursor-grabbing' : 'cursor-grab')} backdrop-blur-xl shadow-2xl transition-colors select-none`}
+        style={{ WebkitAppRegion: 'no-drag', position: 'absolute', left: dragStyle.left, top: dragStyle.top, width: dragStyle.size, height: dragStyle.size, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: (dragPressing || isDragging) ? ORANGE : 'rgba(0,0,0,0.8)', borderColor: (dragPressing || isDragging) ? ORANGE : 'rgba(255,255,255,0.25)' } as React.CSSProperties}
+        onPointerDown={onDragStart}
+      >
+        <img src={dragIcon as unknown as string} alt="Drag" className="h-4 w-4 opacity-90" />
+      </button>
+
+      {/* Popped-out mic button to the right of the pill */}
+      <button
+        type="button"
+        aria-label={recording ? "Stop recording" : "Hold to talk"}
+        title={recording ? "Recording… release to stop" : "Hold to talk"}
+        className={`pointer-events-auto rounded-full border transition-colors ${(recording && !micPressing) ? 'shadow-inner' : 'backdrop-blur-xl shadow-2xl'}`}
+        style={{ WebkitAppRegion: 'no-drag', position: 'absolute', left: micStyle.left, top: micStyle.top, width: micStyle.size, height: micStyle.size, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: micPressing ? ORANGE : (recording ? 'rgba(239,68,68,0.8)' : 'rgba(0,0,0,0.8)'), borderColor: micPressing ? ORANGE : (recording ? 'rgba(248,113,113,1)' : 'rgba(255,255,255,0.25)') } as React.CSSProperties}
+        onPointerDown={async (e) => {
+          e.preventDefault()
+          setMicPressing(true)
+          try { (e.currentTarget as any)?.setPointerCapture?.(e.pointerId) } catch {}
+          if (!recording) await startMic()
+        }}
+        onPointerUp={async () => {
+          try { setMicPressing(false) } finally {}
+          if (recording) await stopMic()
+        }}
+        onPointerCancel={async () => {
+          try { setMicPressing(false) } finally {}
+          if (recording) await stopMic()
+        }}
+      >
+        <span className="sr-only">{recording ? 'Stop recording' : 'Hold to talk'}</span>
+        <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+          <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 19v3h2v-3h-2z" fill={recording ? '#fff' : '#e5e7eb'} />
+        </svg>
+      </button>
 
       {/* Result panel */}
       {(loading || error || result || templateError) && (
         <div
-          className="pointer-events-auto rounded-xl border bg-black/80 border-white/20 backdrop-blur-xl shadow-2xl text-white p-3 text-sm"
+          className="pointer-events-none rounded-xl border bg-black/80 border-white/20 backdrop-blur-xl shadow-2xl text-white p-3 text-sm"
           style={{ position: 'absolute', left: resultBoxStyle.left, top: resultBoxStyle.top, width: resultBoxStyle.width }}
         >
-          {loading && <div>Analyzing screenshot…</div>}
-          {!loading && error && <div className="text-red-300">{error}</div>}
+          {loading && <div className="pointer-events-none">Analyzing screenshot…</div>}
+          {!loading && error && <div className="pointer-events-none text-red-300">{error}</div>}
           {!loading && !error && templateError && !result && (
-            <div className="text-amber-200">{templateError}</div>
+            <div className="pointer-events-none text-amber-200">{templateError}</div>
           )}
           {!loading && !error && micMessage && (
-            <div className="text-white/50">{micMessage}</div>
+            <div className="pointer-events-none text-white/50">{micMessage}</div>
           )}
           {!loading && result && (
-            <div className="space-y-2">
+            <div className="pointer-events-none space-y-2">
               {lastQuery && (
                 <div className="space-y-1">
                   <div className="text-white/60 text-[11px] tracking-wide uppercase">You asked</div>

@@ -3308,3 +3308,410 @@
 {"timestamp":"2025-10-05T08:03:10","app_name":"Electron","window_title":"Prism","idle_seconds":0}
 {"timestamp":"2025-10-05T08:03:15","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
 {"timestamp":"2025-10-05T08:03:20","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:03:25","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:03:30","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:03:35","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":4}
+{"timestamp":"2025-10-05T08:03:40","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:03:45","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:03:50","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:03:55","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:04:00","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:04:05","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:04:10","app_name":"Comet","window_title":"Setup | Chat SDK by Vercel","idle_seconds":0}
+{"timestamp":"2025-10-05T08:04:15","app_name":"Comet","window_title":"","idle_seconds":2}
+{"timestamp":"2025-10-05T08:04:20","app_name":"Comet","window_title":"","idle_seconds":7}
+{"timestamp":"2025-10-05T08:04:25","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:04:30","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:04:35","app_name":"Electron","window_title":"Prism","idle_seconds":4}
+{"timestamp":"2025-10-05T08:04:40","app_name":"Electron","window_title":"Prism","idle_seconds":9}
+{"timestamp":"2025-10-05T08:04:45","app_name":"Electron","window_title":"Prism","idle_seconds":14}
+{"timestamp":"2025-10-05T08:04:50","app_name":"Electron","window_title":"Prism","idle_seconds":19}
+{"timestamp":"2025-10-05T08:04:55","app_name":"Electron","window_title":"Prism","idle_seconds":24}
+{"timestamp":"2025-10-05T08:05:00","app_name":"Electron","window_title":"Prism","idle_seconds":29}
+{"timestamp":"2025-10-05T08:05:05","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:10","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:15","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:20","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:25","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:30","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:35","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:40","app_name":"Electron","window_title":"Prism","idle_seconds":1}
+{"timestamp":"2025-10-05T08:05:45","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:50","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:05:55","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:00","app_name":"Electron","window_title":"Prism","idle_seconds":2}
+{"timestamp":"2025-10-05T08:06:05","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:10","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:15","app_name":"Cursor","window_title":"Delete timeline button from sidebar — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:20","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:25","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:30","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:35","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:40","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:45","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:50","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:06:55","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:07:00","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:07:05","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":6}
+{"timestamp":"2025-10-05T08:07:10","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":11}
+{"timestamp":"2025-10-05T08:07:15","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":16}
+{"timestamp":"2025-10-05T08:07:20","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":21}
+{"timestamp":"2025-10-05T08:07:25","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":26}
+{"timestamp":"2025-10-05T08:07:30","app_name":"Comet","window_title":"New Tab","idle_seconds":1}
+{"timestamp":"2025-10-05T08:07:35","app_name":"Comet","window_title":"New Tab","idle_seconds":0}
+{"timestamp":"2025-10-05T08:07:40","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:07:45","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:07:50","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:07:55","app_name":"Comet","window_title":"Heck of a time with threeJS and electron - Questions - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:00","app_name":"Comet","window_title":"3js in electron - Google Search","idle_seconds":2}
+{"timestamp":"2025-10-05T08:08:06","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:11","app_name":"Comet","window_title":"3js in electron - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:16","app_name":"Comet","window_title":"siri 3d icon 3js - Google Search","idle_seconds":1}
+{"timestamp":"2025-10-05T08:08:21","app_name":"Comet","window_title":"siri 3d icon 3js - Google Search","idle_seconds":6}
+{"timestamp":"2025-10-05T08:08:26","app_name":"Comet","window_title":"siri 3d icon 3js - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:31","app_name":"Comet","window_title":"Untitled","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:36","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:41","app_name":"Comet","window_title":"Siri light reflection - Questions - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:46","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:08:51","app_name":"Comet","window_title":"dribbble.com/shots/6309158-Siri-Bubble","idle_seconds":2}
+{"timestamp":"2025-10-05T08:08:56","app_name":"Comet","window_title":"","idle_seconds":1}
+{"timestamp":"2025-10-05T08:09:01","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:06","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:11","app_name":"Comet","window_title":"cool 3js orbs - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:16","app_name":"Comet","window_title":"cool 3js orbs github - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:21","app_name":"Comet","window_title":"cool 3js orbs github - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:26","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:31","app_name":"Comet","window_title":"Floating particle orb! HELP - Questions - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:36","app_name":"Comet","window_title":"Floating particle orb! HELP - Questions - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:41","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:46","app_name":"Comet","window_title":"Floating particle orb! HELP - Questions - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:51","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:09:56","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:01","app_name":"Comet","window_title":"","idle_seconds":1}
+{"timestamp":"2025-10-05T08:10:06","app_name":"Comet","window_title":"Life of Cube","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:11","app_name":"Comet","window_title":"Life of Cube","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:16","app_name":"Comet","window_title":"Life of Cube","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:21","app_name":"Comet","window_title":"tomhsiao1260/life-of-cube: 🦠 A cool Three.js and WebGL practice","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:26","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:31","app_name":"Comet","window_title":"Make a Cube come to Life (shader practice) - Showcase - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:36","app_name":"Comet","window_title":"","idle_seconds":1}
+{"timestamp":"2025-10-05T08:10:41","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:46","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:51","app_name":"Comet","window_title":"cool 3js orbs github - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:10:56","app_name":"Comet","window_title":"siri 3js github - Google Search","idle_seconds":1}
+{"timestamp":"2025-10-05T08:11:01","app_name":"Comet","window_title":"siri 3js github - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:06","app_name":"Comet","window_title":"mrdoob/three.js: JavaScript 3D Library.","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:11","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:16","app_name":"Comet","window_title":"","idle_seconds":1}
+{"timestamp":"2025-10-05T08:11:21","app_name":"Comet","window_title":"","idle_seconds":6}
+{"timestamp":"2025-10-05T08:11:26","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:31","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:36","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:41","app_name":"Comet","window_title":"Make a Cube come to Life (shader practice) - Showcase - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:46","app_name":"Comet","window_title":"Make a Cube come to Life (shader practice) - Showcase - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:51","app_name":"Comet","window_title":"Make a Cube come to Life (shader practice) - Showcase - three.js forum","idle_seconds":0}
+{"timestamp":"2025-10-05T08:11:56","app_name":"Comet","window_title":"Make a Cube come to Life (shader practice) - Showcase - three.js forum","idle_seconds":1}
+{"timestamp":"2025-10-05T08:12:01","app_name":"Cursor","window_title":"Add button to open overlay pill — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:06","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:11","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:16","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:21","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:26","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:31","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:36","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":4}
+{"timestamp":"2025-10-05T08:12:41","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:46","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:51","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:12:56","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":3}
+{"timestamp":"2025-10-05T08:13:01","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":8}
+{"timestamp":"2025-10-05T08:13:06","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":13}
+{"timestamp":"2025-10-05T08:13:11","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":18}
+{"timestamp":"2025-10-05T08:13:16","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":23}
+{"timestamp":"2025-10-05T08:13:21","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:13:26","app_name":"Cursor","window_title":"New Chat — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:13:31","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:13:36","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:13:41","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":3}
+{"timestamp":"2025-10-05T08:13:46","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":8}
+{"timestamp":"2025-10-05T08:13:51","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:13:56","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:14:01","app_name":"Comet","window_title":"Beautiful Charts & Graphs - shadcn/ui 🔊","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:06","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:11","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:16","app_name":"Comet","window_title":"Item - shadcn/ui 🔊","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:21","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:26","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:31","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:36","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:14:41","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:46","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:51","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:14:56","app_name":"Comet","window_title":"Untitled","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:01","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:06","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:11","app_name":"Comet","window_title":"2*3 dots icon - Google Search","idle_seconds":1}
+{"timestamp":"2025-10-05T08:15:16","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:21","app_name":"Comet","window_title":"","idle_seconds":3}
+{"timestamp":"2025-10-05T08:15:26","app_name":"Comet","window_title":"2*3 dots icon - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:31","app_name":"Comet","window_title":":: icon - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:36","app_name":"Comet","window_title":":: icon - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:41","app_name":"Comet","window_title":":: icon - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:46","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:51","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:15:56","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:01","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:06","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:11","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:16","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":3}
+{"timestamp":"2025-10-05T08:16:21","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":2}
+{"timestamp":"2025-10-05T08:16:26","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:31","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:36","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:41","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:46","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:51","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":0}
+{"timestamp":"2025-10-05T08:16:56","app_name":"Comet","window_title":"Three dots Icons & Symbols","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:01","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:06","app_name":"Cursor","window_title":"overlay-pill.tsx — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:11","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:16","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:21","app_name":"Comet","window_title":"Drag and drop - Free computer icons","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:26","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:31","app_name":"Comet","window_title":"3 dots icon - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:36","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:41","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:46","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:51","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:17:56","app_name":"Comet","window_title":"6 dots icon white - Google Search","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:01","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:06","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:11","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":5}
+{"timestamp":"2025-10-05T08:18:16","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:21","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:26","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:31","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:36","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:41","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:46","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:18:51","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:18:56","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":2}
+{"timestamp":"2025-10-05T08:19:01","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:06","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:11","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:16","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:21","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:26","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:31","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:36","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":1}
+{"timestamp":"2025-10-05T08:19:41","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:46","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:51","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:19:56","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:20:01","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":1}
+{"timestamp":"2025-10-05T08:20:06","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:20:11","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:20:16","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":1}
+{"timestamp":"2025-10-05T08:20:22","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":6}
+{"timestamp":"2025-10-05T08:20:27","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":11}
+{"timestamp":"2025-10-05T08:20:32","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":2}
+{"timestamp":"2025-10-05T08:20:37","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":7}
+{"timestamp":"2025-10-05T08:20:42","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":4}
+{"timestamp":"2025-10-05T08:20:47","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":9}
+{"timestamp":"2025-10-05T08:20:52","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:20:57","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":4}
+{"timestamp":"2025-10-05T08:21:02","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:07","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:12","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:17","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:27","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:32","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:37","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:42","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:21:47","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":2}
+{"timestamp":"2025-10-05T08:21:52","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":7}
+{"timestamp":"2025-10-05T08:21:57","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":12}
+{"timestamp":"2025-10-05T08:22:02","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":17}
+{"timestamp":"2025-10-05T08:22:07","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":22}
+{"timestamp":"2025-10-05T08:22:12","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:22:17","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":3}
+{"timestamp":"2025-10-05T08:22:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":8}
+{"timestamp":"2025-10-05T08:22:27","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":13}
+{"timestamp":"2025-10-05T08:22:32","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":18}
+{"timestamp":"2025-10-05T08:22:37","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":23}
+{"timestamp":"2025-10-05T08:22:42","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:22:47","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:22:52","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:22:57","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:02","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:07","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:12","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:17","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:27","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:32","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:37","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:42","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:47","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:52","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:23:57","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:24:02","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:07","app_name":"Comet","window_title":"Cluely - Live AI Meeting Assistant | Real-Time Meeting Notes and AI Insights","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:12","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:17","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:22","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:27","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:32","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:37","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:42","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:47","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:24:52","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":5}
+{"timestamp":"2025-10-05T08:24:57","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":10}
+{"timestamp":"2025-10-05T08:25:02","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:07","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:12","app_name":"Cursor","window_title":"image.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:17","app_name":"Finder","window_title":"stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:22","app_name":"Finder","window_title":"stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:27","app_name":"Finder","window_title":"electron-react-app","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:32","app_name":"Finder","window_title":"electron-react-app","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:37","app_name":"Finder","window_title":"src","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:42","app_name":"Finder","window_title":"icons","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:47","app_name":"Finder","window_title":"icons","idle_seconds":1}
+{"timestamp":"2025-10-05T08:25:52","app_name":"Finder","window_title":"icons","idle_seconds":0}
+{"timestamp":"2025-10-05T08:25:57","app_name":"Finder","window_title":"icons","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:02","app_name":"Finder","window_title":"AirDrop","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:07","app_name":"Finder","window_title":"AirDrop","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:12","app_name":"Finder","window_title":"AirDrop","idle_seconds":5}
+{"timestamp":"2025-10-05T08:26:17","app_name":"Finder","window_title":"AirDrop","idle_seconds":10}
+{"timestamp":"2025-10-05T08:26:22","app_name":"Finder","window_title":"AirDrop","idle_seconds":15}
+{"timestamp":"2025-10-05T08:26:27","app_name":"Finder","window_title":"icons","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:32","app_name":"Comet","window_title":"‎Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:37","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:42","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:47","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:26:52","app_name":"Comet","window_title":"Google Gemini","idle_seconds":1}
+{"timestamp":"2025-10-05T08:26:57","app_name":"Comet","window_title":"Google Gemini","idle_seconds":6}
+{"timestamp":"2025-10-05T08:27:02","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:07","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:12","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:17","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:22","app_name":"Comet","window_title":"Google Gemini","idle_seconds":4}
+{"timestamp":"2025-10-05T08:27:27","app_name":"Comet","window_title":"Google Gemini","idle_seconds":9}
+{"timestamp":"2025-10-05T08:27:32","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:37","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:42","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:47","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:27:52","app_name":"Comet","window_title":"Google Gemini","idle_seconds":1}
+{"timestamp":"2025-10-05T08:27:57","app_name":"Comet","window_title":"Google Gemini","idle_seconds":1}
+{"timestamp":"2025-10-05T08:28:02","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:07","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:12","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:17","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":5}
+{"timestamp":"2025-10-05T08:28:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:27","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:32","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:37","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:42","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:47","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:52","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:28:57","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:02","app_name":"Comet","window_title":"Google Gemini","idle_seconds":2}
+{"timestamp":"2025-10-05T08:29:07","app_name":"Comet","window_title":"Google Gemini","idle_seconds":7}
+{"timestamp":"2025-10-05T08:29:12","app_name":"Comet","window_title":"Google Gemini","idle_seconds":1}
+{"timestamp":"2025-10-05T08:29:17","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:22","app_name":"Comet","window_title":"Google Gemini","idle_seconds":3}
+{"timestamp":"2025-10-05T08:29:27","app_name":"Comet","window_title":"Google Gemini","idle_seconds":8}
+{"timestamp":"2025-10-05T08:29:32","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:37","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:42","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:47","app_name":"Comet","window_title":"Remove Background from Image for Free – remove.bg","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:52","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:29:57","app_name":"Comet","window_title":"Google Gemini","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:02","app_name":"Comet","window_title":"Google Gemini","idle_seconds":1}
+{"timestamp":"2025-10-05T08:30:07","app_name":"Comet","window_title":"Google Gemini","idle_seconds":6}
+{"timestamp":"2025-10-05T08:30:12","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:17","app_name":"Comet","window_title":"Remove Background from Image for Free – remove.bg","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:22","app_name":"Comet","window_title":"Remove Background from Image for Free – remove.bg","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:27","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:32","app_name":"Finder","window_title":"Downloads","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:37","app_name":"Finder","window_title":"","idle_seconds":1}
+{"timestamp":"2025-10-05T08:30:42","app_name":"Finder","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:47","app_name":"Finder","window_title":"Downloads","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:52","app_name":"Finder","window_title":"Downloads","idle_seconds":0}
+{"timestamp":"2025-10-05T08:30:57","app_name":"Finder","window_title":"Downloads","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:02","app_name":"Cursor","window_title":"3-dots-icon.png — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:07","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":1}
+{"timestamp":"2025-10-05T08:31:12","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:17","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:27","app_name":"Comet","window_title":"Remove Background from Image for Free – remove.bg","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:32","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:37","app_name":"Comet","window_title":"The Foundation for your Design System - shadcn/ui","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:42","app_name":"Comet","window_title":"","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:47","app_name":"Comet","window_title":"Tailwind Colors in Every Format - shadcn/ui","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:52","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:31:57","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:02","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:07","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:12","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:17","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:27","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:32","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:37","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:42","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:32:47","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":3}
+{"timestamp":"2025-10-05T08:32:52","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":8}
+{"timestamp":"2025-10-05T08:32:57","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":13}
+{"timestamp":"2025-10-05T08:33:02","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":18}
+{"timestamp":"2025-10-05T08:33:07","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":23}
+{"timestamp":"2025-10-05T08:33:12","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":28}
+{"timestamp":"2025-10-05T08:33:17","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":33}
+{"timestamp":"2025-10-05T08:33:22","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":38}
+{"timestamp":"2025-10-05T08:33:27","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":43}
+{"timestamp":"2025-10-05T08:33:32","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":48}
+{"timestamp":"2025-10-05T08:33:37","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":53}
+{"timestamp":"2025-10-05T08:33:42","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":58}
+{"timestamp":"2025-10-05T08:33:47","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":63}
+{"timestamp":"2025-10-05T08:33:53","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":68}
+{"timestamp":"2025-10-05T08:33:58","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":73}
+{"timestamp":"2025-10-05T08:34:03","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":78}
+{"timestamp":"2025-10-05T08:34:08","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":83}
+{"timestamp":"2025-10-05T08:34:13","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":88}
+{"timestamp":"2025-10-05T08:34:18","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":93}
+{"timestamp":"2025-10-05T08:34:23","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":98}
+{"timestamp":"2025-10-05T08:34:28","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":103}
+{"timestamp":"2025-10-05T08:34:33","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:34:38","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:34:43","app_name":"Comet","window_title":"Tailwind Colors in Every Format - shadcn/ui","idle_seconds":0}
+{"timestamp":"2025-10-05T08:34:48","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":0}
+{"timestamp":"2025-10-05T08:34:53","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":0}
+{"timestamp":"2025-10-05T08:34:58","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":5}
+{"timestamp":"2025-10-05T08:35:03","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:08","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":3}
+{"timestamp":"2025-10-05T08:35:13","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:18","app_name":"Comet","window_title":"Rize · Maximize Your Productivity","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:23","app_name":"Cursor","window_title":"README.md — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:28","app_name":"Cursor","window_title":"README.md — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:33","app_name":"Cursor","window_title":"README.md — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:38","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:43","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:48","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:53","app_name":"Comet","window_title":"Untitled","idle_seconds":0}
+{"timestamp":"2025-10-05T08:35:58","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:03","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:08","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:13","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:18","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:23","app_name":"Electron","window_title":"Prism","idle_seconds":2}
+{"timestamp":"2025-10-05T08:36:28","app_name":"Electron","window_title":"Prism","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:33","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:38","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:43","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:48","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:53","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:36:58","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:37:03","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":5}
+{"timestamp":"2025-10-05T08:37:08","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":4}
+{"timestamp":"2025-10-05T08:37:13","app_name":"Cursor","window_title":"Redesign overlay pill component — stormhacks2025","idle_seconds":0}
+{"timestamp":"2025-10-05T08:37:18","app_name":"Cursor","window_title":"zsh — stormhacks2025","idle_seconds":0}

@@ -22,7 +22,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "components/ui/avatar"
-import { BarChart3, CalendarDays, Home, Settings, Target, Timer } from "components/icons/lucide-adapter"
+import { BarChart3, CalendarDays, Home, Settings, Target, Timer, Sparkles } from "components/icons/lucide-adapter"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -212,6 +212,19 @@ export function DashboardTopbar() {
         </Button>
         <Button size="sm" className="gap-2 text-white bg-[linear-gradient(to_top_right,hsl(var(--primary)),hsl(var(--chart-4)))] hover:opacity-90">
           <Target className="size-4" /> Start focus mode
+        </Button>
+        <Button
+          size="sm"
+          className="gap-2 text-white bg-[linear-gradient(to_top_right,hsl(var(--chart-3)),hsl(var(--primary)))] hover:opacity-90"
+          onClick={() => {
+            const url = new URL(window.location.href)
+            url.searchParams.set('view', 'overlay')
+            window.location.href = url.toString()
+          }}
+          aria-label="Talk to AI"
+          title="Talk to AI"
+        >
+          <Sparkles className="size-4" /> Talk to AI
         </Button>
         <ModeToggle />
       </div>
