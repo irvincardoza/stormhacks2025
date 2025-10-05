@@ -82,7 +82,20 @@ export function ChartBarStacked({
           height={40}
           axisLine={false}
         />
-        <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+        <ChartTooltip 
+          content={<ChartTooltipContent 
+            hideLabel 
+            formatter={(value, name) => {
+              const num = typeof value === 'number' ? value : Number(value) || 0
+              return (
+                <>
+                  <span className="text-muted-foreground">{String(name)}</span>
+                  <span className="text-foreground font-mono font-medium">{num.toFixed(0)}%</span>
+                </>
+              )
+            }}
+          />} 
+        />
         <ChartLegend content={<AppLegendContent config={config} />} />
         {Object.entries(config).map(([key, item], index) => (
           <Bar
@@ -91,6 +104,7 @@ export function ChartBarStacked({
             stackId="a"
             fill={item.color}
             radius={index === 0 ? [0, 0, 4, 4] : index === Object.keys(config).length - 1 ? [4, 4, 0, 0] : [0, 0, 0, 0]}
+            isAnimationActive={false}
           />
         ))}
       </BarChart>

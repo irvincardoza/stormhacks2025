@@ -38,13 +38,15 @@ export function ChartPieLegend({
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={config}
-          className="mx-auto aspect-square max-h-[300px]"
+          className="mx-auto aspect-square w-full max-h-[420px] sm:max-h-[480px]"
         >
           <PieChart>
             <Pie 
               data={data} 
               dataKey="value" 
               nameKey="name"
+              innerRadius={0}
+              outerRadius={140}
             >
               {data.map((entry, index) => (
                 <Cell
@@ -55,7 +57,7 @@ export function ChartPieLegend({
             </Pie>
             <ChartLegend
               content={<ChartLegendContent nameKey="name" />}
-              className="-translate-y-2 flex-wrap gap-2 *:basis-1/4 *:justify-center"
+              className="-translate-y-2 flex-wrap gap-2 *:basis-1/3 *:justify-center"
             />
           </PieChart>
         </ChartContainer>

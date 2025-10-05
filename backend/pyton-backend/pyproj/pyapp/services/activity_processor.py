@@ -30,34 +30,23 @@ def _parse_activity_line(line: str) -> Optional[dict]:
 
 
 def _parse_iso_timestamp(ts_str: str) -> Optional[datetime]:
-    """Parse ISO timestamp string to datetime object"""
+    """Parse ISO timestamp; treat naive strings as local time (no UTC shift)."""
     if not ts_str:
         return None
     try:
-        # Handle various ISO formats
         dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-        # Ensure timezone awareness
         if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
+            # If the source string has no zone, interpret it as local time
+            local_tz = dj_timezone.get_current_timezone()
+            dt = dj_timezone.make_aware(dt, local_tz)
         return dt
-    except (ValueError, AttributeError):
+    except (ValueError, AttributeError, Exception):
         return None
 
 
 def _format_hour_label(dt: datetime) -> str:
-    """
-    Format datetime as hour label: "6a", "11a", "2p", "11p"
-    Matches frontend dashboard mock data format.
-    """
-    hour_num = dt.hour
-    if hour_num == 0:
-        return "12a"
-    elif hour_num < 12:
-        return f"{hour_num}a"
-    elif hour_num == 12:
-        return "12p"
-    else:
-        return f"{hour_num - 12}p"
+    """Format hour as 24-hour HH:MM using local time."""
+    return dt.strftime("%H:%M")
 
 
 def _classify_productivity(app_name: str, window_title: str) -> str:
@@ -112,7 +101,7 @@ def load_activity_data() -> list[dict]:
             if not dt:
                 continue
             
-            # Convert to local timezone
+            # Convert to local timezone (noop if already local)
             local_tz = dj_timezone.get_current_timezone()
             dt_local = dt.astimezone(local_tz)
             
@@ -120,6 +109,7 @@ def load_activity_data() -> list[dict]:
             record = {
                 "timestamp": dt_local,
                 "timestamp_iso": dt_local.isoformat(),
+                "timestamp_raw": data.get("timestamp", ""),
                 "timestamp_hour": dt_local.replace(minute=0, second=0, microsecond=0),
                 "app_name": data.get("app_name", "Unknown"),
                 "window_title": data.get("window_title", ""),
@@ -337,7 +327,8 @@ def build_timeline_data(activities: list[dict]) -> dict:
     events = []
     for record in activities[-200:]:
         events.append({
-            "ts": record["timestamp_iso"],
+            # Show the original timestamp string from the JSON source (no reformatting)
+            "ts": record.get("timestamp_raw") or record["timestamp_iso"],
             "app": record["app_name"],
             "window": record["window_title"],
             "domain": None,  # Could extract from window_title if needed

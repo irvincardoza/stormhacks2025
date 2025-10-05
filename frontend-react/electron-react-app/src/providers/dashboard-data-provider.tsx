@@ -112,51 +112,67 @@ export function DashboardDataProvider({ value, children }: DashboardDataProvider
   useEffect(() => { lastGeneratedAtRef.current = lastGeneratedAt }, [lastGeneratedAt])
 
   async function fetchDashboard(signal?: AbortSignal) {
-    try {
-      const response = await fetch(`${API_BASE}/api/dashboard/?t=${Date.now()}` , {
-        signal,
-        credentials: "include",
-        cache: "no-store",
-        headers: {
-          "Cache-Control": "no-cache, no-store, must-revalidate",
-          Pragma: "no-cache",
-          Expires: "0",
-        },
-      })
-      if (!response.ok) {
-        throw new Error(`Dashboard fetch failed with status ${response.status}`)
+    const ts = Date.now()
+    const bases: string[] = (() => {
+      const base = API_BASE
+      try {
+        const url = new URL(base)
+        const is127 = url.hostname === '127.0.0.1'
+        const isLocalhost = url.hostname === 'localhost'
+        const altHost = is127 ? 'localhost' : isLocalhost ? '127.0.0.1' : null
+        return altHost ? [base, `${url.protocol}//${altHost}:${url.port || '8000'}`] : [base]
+      } catch {
+        return [base]
       }
-      const payload = await response.json()
-      const generatedAt: string | undefined = payload?.generated_at
-      const incoming = payload?.data as PartialDashboardData | undefined
-      if (incoming) {
-        setData((prev) => {
-          // Ignore stale responses if we already have a newer snapshot
-          const currentGen = lastGeneratedAtRef.current || undefined
-          if (generatedAt && currentGen) {
-            try {
-              const prevTs = Date.parse(currentGen)
-              const nextTs = Date.parse(generatedAt)
-              if (!Number.isNaN(prevTs) && !Number.isNaN(nextTs) && nextTs <= prevTs) {
-                return prev
-              }
-            } catch {}
-          }
+    })()
 
-          const merged = mergeDashboard(prev, incoming)
-          try {
-            sessionStorage.setItem("dashboardData", JSON.stringify(merged))
-            if (generatedAt) sessionStorage.setItem("dashboardGeneratedAt", generatedAt)
-          } catch {}
-          if (generatedAt) setLastGeneratedAt(generatedAt)
-          return merged
+    let lastError: unknown = null
+    for (const base of bases) {
+      try {
+        const response = await fetch(`${base}/api/dashboard/?t=${ts}`, {
+          signal,
+          cache: "no-store",
+          // No custom headers, no credentials → avoid preflight/CORS issues.
         })
-      }
-    } catch (error) {
-      if ((error as Error).name === "AbortError") {
+        if (!response.ok) {
+          lastError = new Error(`Dashboard fetch failed with status ${response.status}`)
+          continue
+        }
+        const payload = await response.json()
+        const generatedAt: string | undefined = payload?.generated_at
+        const incoming = payload?.data as PartialDashboardData | undefined
+        if (incoming) {
+          setData((prev) => {
+            const currentGen = lastGeneratedAtRef.current || undefined
+            if (generatedAt && currentGen) {
+              try {
+                const prevTs = Date.parse(currentGen)
+                const nextTs = Date.parse(generatedAt)
+                if (!Number.isNaN(prevTs) && !Number.isNaN(nextTs) && nextTs <= prevTs) {
+                  return prev
+                }
+              } catch {}
+            }
+
+            const merged = mergeDashboard(prev, incoming)
+            try {
+              sessionStorage.setItem("dashboardData", JSON.stringify(merged))
+              if (generatedAt) sessionStorage.setItem("dashboardGeneratedAt", generatedAt)
+            } catch {}
+            if (generatedAt) setLastGeneratedAt(generatedAt)
+            return merged
+          })
+        }
+        // Success on this base; stop trying further bases
         return
+      } catch (error) {
+        if ((error as Error).name === "AbortError") return
+        lastError = error
+        // Try next base
       }
-      console.warn("Failed to hydrate dashboard data", error)
+    }
+    if (lastError) {
+      console.warn("Failed to hydrate dashboard data", lastError)
     }
   }
 

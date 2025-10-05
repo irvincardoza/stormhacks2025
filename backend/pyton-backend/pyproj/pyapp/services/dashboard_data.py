@@ -72,20 +72,26 @@ def _load_json_array(path: Path) -> list[dict]:
 
 
 def _parse_timestamp(value: Any) -> Optional[pd.Timestamp]:
+    """
+    Parse timestamp without forcing UTC. Naive strings are treated as local time.
+    """
     if value in (None, ""):
         return None
     try:
-        ts = pd.to_datetime(value, utc=True, errors="coerce")
+        ts = pd.to_datetime(value, errors="coerce")
     except (ValueError, TypeError):
         return None
     if pd.isna(ts):
         return None
     tz = timezone.get_current_timezone()
+    # If tz-aware, convert to local; if naive, localize to local
     try:
         return ts.tz_convert(tz)
-    except TypeError:
-        # Naive timestamp -> localise then convert
-        return ts.tz_localize(tz)
+    except Exception:
+        try:
+            return ts.tz_localize(tz)
+        except Exception:
+            return ts
 
 
 def _format_time_label(ts: pd.Timestamp, fmt: str = "%H:%M") -> str:
@@ -103,7 +109,7 @@ def _load_metrics_dataframe() -> Optional[pd.DataFrame]:
     if df.empty:
         return None
 
-    ts = pd.to_datetime(df.get("timestamp"), utc=True, errors="coerce")
+    ts = pd.to_datetime(df.get("timestamp"), errors="coerce")
     ts = ts.dropna()
     if ts.empty:
         return None
@@ -111,8 +117,11 @@ def _load_metrics_dataframe() -> Optional[pd.DataFrame]:
     tz = timezone.get_current_timezone()
     try:
         df["timestamp"] = ts.dt.tz_convert(tz)
-    except TypeError:
-        df["timestamp"] = ts.dt.tz_localize(tz)
+    except Exception:
+        try:
+            df["timestamp"] = ts.dt.tz_localize(tz)
+        except Exception:
+            df["timestamp"] = ts
 
     df = df.sort_values("timestamp").reset_index(drop=True)
 
