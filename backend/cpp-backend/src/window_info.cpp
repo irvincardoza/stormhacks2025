@@ -2,6 +2,8 @@
 #include <psapi.h>
 #include <string>
 #include <utility>
+#include <filesystem>
+#include <string>
 
 std::pair<std::string, std::string> getActiveWindow()
 {
@@ -25,5 +27,18 @@ std::pair<std::string, std::string> getActiveWindow()
         CloseHandle(process);
     }
 
-    return {std::string(exePath), std::string(title)};
+    std::string appName = std::filesystem::path(exePath).filename().string();
+    std::string winTitle(title);
+    size_t lastDash = winTitle.rfind(" - ");
+    if (lastDash != std::string::npos)
+    {
+        appName = winTitle.substr(lastDash + 3); // everything after last " - "
+        winTitle = winTitle.substr(0, lastDash); // everything before last " - "
+    }
+    else
+    {
+        appName = std::filesystem::path(exePath).filename().string(); // fallback
+    }
+
+    return {appName, winTitle};
 }

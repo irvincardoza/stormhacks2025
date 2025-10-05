@@ -11,7 +11,7 @@ void runTrackerLoop()
 {
     // Ensure logs directory exists
     std::filesystem::create_directories("logs");
-    std::ofstream logFile("logs/activity.jsonl", std::ios::app);
+    std::ofstream logFile("../../data-backend/activity.jsonl", std::ios::app);
 
     if (!logFile.is_open())
     {
@@ -43,7 +43,7 @@ void runTrackerLoop()
                 << "\",\"idle_seconds\":" << idle
                 << "}" << std::endl;
 
-        logFile.flush(); // ensure immediate write
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        logFile.flush();                                       // ensure immediate write
+        std::this_thread::sleep_for(std::chrono::seconds(60)); // 1 minute interval
     }
 }
