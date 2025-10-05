@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "compo
 import { Button } from "components/ui/button"
 import { Badge } from "components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "components/ui/table"
-import { ChartBar } from "components/ui/chart-bar"
+import { ChartBarStacked } from "components/ui/chart-bar-stacked"
 import { MoreHorizontal, RefreshCw } from "components/icons/lucide-adapter"
 import { useTimelineData } from "providers/dashboard-data-provider"
 
@@ -19,13 +19,13 @@ export function TimelinePage() {
       />
       
       <div className="grid gap-6 px-6">
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Daily Timeline</h3>
-          <ChartBar 
-            data={dailyTimeline.points}
-            config={dailyTimeline.config}
-          />
-        </div>
+        <ChartBarStacked 
+          data={dailyTimeline.points}
+          config={dailyTimeline.config}
+          title="Daily Timeline"
+          description="Your productivity breakdown by hour"
+          showFooter={true}
+        />
 
         <Card>
           <CardHeader>

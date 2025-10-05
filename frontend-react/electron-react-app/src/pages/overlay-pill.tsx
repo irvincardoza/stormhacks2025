@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
 
 export function OverlayPill() {
   const [value, setValue] = useState("")
@@ -37,21 +37,21 @@ export function OverlayPill() {
     }
   }
 
-  const onDragMove = (e: PointerEvent) => {
+  const onDragMove = useCallback((e: PointerEvent) => {
     const offset = dragOffsetRef.current
     const el = pillRef.current
     if (!offset || !el) return
     const next = clampWithinViewport(e.clientX - offset.x, e.clientY - offset.y)
     setPosition(next)
-  }
+  }, [])
 
-  const endDrag = () => {
+  const endDrag = useCallback(() => {
     setIsDragging(false)
     dragOffsetRef.current = null
     window.removeEventListener('pointermove', onDragMove)
     window.removeEventListener('pointerup', endDrag)
     window.removeEventListener('pointercancel', endDrag)
-  }
+  }, [onDragMove])
 
   const onDragStart = (e: React.PointerEvent<HTMLDivElement>) => {
     if (e.button !== 0) return
@@ -73,7 +73,7 @@ export function OverlayPill() {
       window.removeEventListener('pointerup', endDrag)
       window.removeEventListener('pointercancel', endDrag)
     }
-  }, [])
+  }, [onDragMove, endDrag])
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
