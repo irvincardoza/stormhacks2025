@@ -17,6 +17,12 @@ from .paths import (
     MONITOR_FILE,
     SUMMARY_FILE,
 )
+from .activity_processor import (
+    load_activity_data,
+    build_overview_data,
+    build_timeline_data,
+    compute_context_switches,
+)
 
 
 COLORS = {
@@ -587,14 +593,65 @@ def build_settings_section() -> dict:
 
 
 def build_dashboard_payload() -> dict:
+    """
+    Build complete dashboard payload from activity.jsonl as source of truth.
+    Falls back to old metrics.jsonl for sections not yet migrated.
+    """
+    # Load activity data from activity.jsonl (source of truth)
+    activities = load_activity_data()
+    
+    # Also load old dataframe for sections not yet migrated
     df = _load_metrics_dataframe()
 
     payload: dict[str, Any] = {}
 
-    overview = build_overview_section(df)
+    # Use new activity processor for accurate timestamps
+    overview = build_overview_data(activities)
     if overview:
         payload["overview"] = overview
 
+    # Use new activity processor for timeline
+    timeline = build_timeline_data(activities)
+    if timeline:
+        payload["timeline"] = timeline
+
+    # Build switches from activities
+    context_switches = compute_context_switches(activities)
+    if context_switches:
+        # Format for switches section
+        from datetime import datetime
+        
+        def format_hour(dt: datetime) -> str:
+            """Format datetime as "6a", "11a", "2p", "11p" """
+            h = dt.hour
+            if h == 0: return "12a"
+            elif h < 12: return f"{h}a"
+            elif h == 12: return "12p"
+            else: return f"{h - 12}p"
+        
+        switches_points = []
+        for item in context_switches:
+            dt = datetime.fromisoformat(item["hour"])
+            switches_points.append({
+                "name": format_hour(dt),
+                "switches": item["switches"],
+            })
+        
+        payload["switches"] = {
+            "switchesOverTime": {
+                "points": switches_points,
+                "config": {
+                    "switches": {"label": "Switches", "color": "hsl(var(--chart-1))"}
+                },
+            },
+            "switchIntensity": {
+                "points": [],  # Can add later if needed
+                "config": {},
+            },
+            "topPairs": [],  # Can compute from activities if needed
+        }
+
+    # Keep old sections for now (can migrate later)
     idle = build_idle_section(df)
     if idle:
         payload["idle"] = idle
@@ -602,14 +659,6 @@ def build_dashboard_payload() -> dict:
     apps = build_apps_section(df)
     if apps:
         payload["apps"] = apps
-
-    switches = build_switches_section(df)
-    if switches:
-        payload["switches"] = switches
-
-    timeline = build_timeline_section(df)
-    if timeline:
-        payload["timeline"] = timeline
 
     focus = build_focus_section(df)
     if focus:
