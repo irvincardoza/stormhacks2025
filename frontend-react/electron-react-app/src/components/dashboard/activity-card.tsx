@@ -5,7 +5,7 @@ import { activityLog } from "data/dashboard"
 
 export function ActivityCard() {
   return (
-    <Card className="border-border bg-card">
+    <Card className="border-border">
       <CardHeader className="pb-4">
         <CardTitle className="text-base font-semibold text-card-foreground">Activity</CardTitle>
         <p className="text-xs text-muted-foreground">

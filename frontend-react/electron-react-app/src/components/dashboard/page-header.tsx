@@ -53,14 +53,14 @@ export function PageHeader({ title, description }: PageHeaderProps) {
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div className="flex flex-col gap-4 border-b border-border px-6 py-4 md:flex-row md:items-center md:justify-between bg-background">
+      <div className="flex flex-col gap-4 border-b border-border/0 px-6 py-4 md:flex-row md:items-center md:justify-between glass-card rounded-xl mx-6 mt-6">
         <div className="flex flex-1 items-center gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
               {formatDate(currentDate)} • {formatTime(currentDate)}
             </p>
             <div className="mt-1 flex items-center gap-2">
-              <h1 className="text-3xl font-bold tracking-tight text-foreground">{title}</h1>
+              <h1 className="text-3xl font-bold tracking-tight text-gradient">{title}</h1>
             </div>
             {description && (
               <p className="mt-1 text-sm text-muted-foreground">

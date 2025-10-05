@@ -18,7 +18,7 @@ const focusRatio = 0.981
 
 export function WorkHoursCard() {
   return (
-    <Card className="border-border bg-card">
+    <Card className="border-border">
       <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-4">
         <div>
           <CardTitle className="text-base font-semibold text-card-foreground">Work hours</CardTitle>

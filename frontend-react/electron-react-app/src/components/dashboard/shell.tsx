@@ -65,7 +65,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
 function renderSidebar(currentPath: string, navigate: (path: string) => void) {
   return (
-    <Sidebar variant="sidebar" collapsible="icon" className="border-r border-border bg-sidebar">
+    <Sidebar variant="sidebar" collapsible="icon" className="border-r border-border bg-sidebar sidebar-glass">
       <SidebarHeader className="gap-3 p-4 pb-2">
         <div className="flex items-center gap-3">
           <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-primary">
@@ -162,7 +162,7 @@ export function DashboardTopbar() {
   }
 
   return (
-    <div className="flex flex-col gap-4 border-b border-border px-6 py-4 md:flex-row md:items-center md:justify-between bg-background">
+    <div className="flex flex-col gap-4 border-b border-border/0 px-6 py-4 md:flex-row md:items-center md:justify-between glass-card mx-4 my-4 rounded-xl">
       <div className="flex flex-1 items-center gap-4">
         <SidebarTrigger className="hidden md:flex" />
         <div>
@@ -170,7 +170,7 @@ export function DashboardTopbar() {
             {formatDate(currentDate)} • {formatTime(currentDate)}
           </p>
           <div className="mt-1 flex items-center gap-2">
-            <h1 className="text-3xl font-bold tracking-tight text-foreground">Prism</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gradient">Prism</h1>
           </div>
           <p className="mt-1 text-xs text-muted-foreground">
             Your adaptive productivity OS with intelligent time orchestration.
@@ -202,7 +202,7 @@ export function DashboardTopbar() {
         <Button variant="outline" size="sm" className="gap-2 border-info/40 text-info hover:bg-info/10">
           <Timer className="size-4" /> Disable tracking
         </Button>
-        <Button size="sm" className="gap-2 bg-accent-orange hover:bg-accent-orange/90 text-white">
+        <Button size="sm" className="gap-2 text-white bg-[linear-gradient(to_top_right,hsl(var(--primary)),hsl(var(--chart-4)))] hover:opacity-90">
           <Target className="size-4" /> Start focus mode
         </Button>
         <ModeToggle />

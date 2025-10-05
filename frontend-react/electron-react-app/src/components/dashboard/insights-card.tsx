@@ -15,7 +15,7 @@ import { BrainCircuit, Sparkles } from "components/icons/lucide-adapter"
 
 export function InsightsCard() {
   return (
-    <Card className="border-border/40 bg-card/70 backdrop-blur">
+    <Card className="border-border/40">
       <CardHeader className="flex flex-row items-start justify-between pb-4">
         <div>
           <CardTitle className="text-base font-semibold">AI insights</CardTitle>

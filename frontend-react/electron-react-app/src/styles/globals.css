@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Light theme with custom color palette */
+    /* Light theme with custom color palette (original) */
     --background: 0 0% 0%; /* Black background */
     --foreground: 0 0% 100%; /* White text for contrast */
     --card: 0 0% 5%; /* Very dark gray cards */
@@ -12,7 +12,7 @@
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
     
-    /* Primary colors - Orange gradient */
+    /* Primary colors - Orange */
     --primary: 24.6 95% 53.1%; /* Deep orange for primary actions */
     --primary-foreground: 0 0% 98%;
     
@@ -92,7 +92,6 @@
     --border: 0 0% 15%; /* Dark gray border */
     --input: 0 0% 8%; /* Dark gray input background */
     --ring: 27 96% 61%; /* Vibrant orange focus ring */
-    /* Default icon color to inherit current text color */
     --icon-color: currentColor;
 
     /* Sidebar colors (dark) */
@@ -124,6 +123,27 @@
     color: hsl(var(--foreground));
     font-weight: 400;
     line-height: 1.6;
+    position: relative;
+  }
+
+  /* Subtle global depth via layered gradients */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(1200px 800px at -10% -20%, hsl(var(--primary) / 0.14), transparent 60%),
+      radial-gradient(1000px 700px at 110% 120%, hsl(var(--chart-3) / 0.10), transparent 60%),
+      radial-gradient(800px 600px at 50% -10%, hsl(var(--chart-2) / 0.08), transparent 60%);
+    z-index: 0;
+  }
+
+  /* Transparent background for overlay pill window */
+  [data-overlay='1'] body,
+  [data-overlay='1'] #root,
+  [data-overlay='1'] html {
+    background: transparent !important;
   }
 
   /* Fix spacing and layout issues */
@@ -136,6 +156,54 @@
   .card {
     background: hsl(var(--card));
     border-color: hsl(var(--border));
+  }
+
+  /* Reusable elevated glass/gradient surfaces */
+  .glass-card {
+    background:
+      linear-gradient(
+        to bottom right,
+        hsl(240 10% 10% / 0.8),
+        hsl(240 10% 6% / 0.6)
+      ) !important;
+    border: 1px solid hsl(0 0% 100% / 0.06);
+    box-shadow:
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.05),
+      0 10px 30px hsl(240 30% 2% / 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .glass-panel {
+    background:
+      linear-gradient(
+        to bottom right,
+        hsl(240 8% 10% / 0.65),
+        hsl(240 8% 7% / 0.55)
+      ) !important;
+    border: 1px solid hsl(0 0% 100% / 0.05);
+    box-shadow: inset 0 1px 0 0 hsl(0 0% 100% / 0.04);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .sidebar-glass {
+    background:
+      linear-gradient(
+        to bottom,
+        hsl(240 8% 10% / 0.85),
+        hsl(240 8% 7% / 0.85)
+      ) !important;
+    border-right: 1px solid hsl(0 0% 100% / 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--chart-3)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   /* Fix text contrast */

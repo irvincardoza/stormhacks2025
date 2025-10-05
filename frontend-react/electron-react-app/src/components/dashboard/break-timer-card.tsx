@@ -16,7 +16,7 @@ import { AlarmClock, Brain, Check, Sparkles } from "components/icons/lucide-adap
 
 export function BreakTimerCard() {
   return (
-    <Card className="border-border/40 bg-card/70 backdrop-blur">
+    <Card className="border-border/40">
       <CardHeader className="space-y-2 pb-4">
         <CardTitle className="flex items-center justify-between text-base font-semibold">
           <span>Break timer</span>

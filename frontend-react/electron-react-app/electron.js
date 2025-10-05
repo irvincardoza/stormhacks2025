@@ -1,15 +1,18 @@
 // electron.js
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Tray, Menu, globalShortcut, screen, nativeImage } = require('electron');
 const path = require('path');
 const isDev = require('electron-is-dev');
 
 let mainWindow;
+let overlayWindow;
+let tray;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
+      // Keep current renderer behavior for dashboard
       nodeIntegration: true,
     },
   });
@@ -23,7 +26,134 @@ function createWindow() {
   mainWindow.on('closed', () => (mainWindow = null));
 }
 
-app.on('ready', createWindow);
+function positionOverlay(width = 720, height = 64) {
+  if (!overlayWindow) return;
+  const cursorPoint = screen.getCursorScreenPoint();
+  const display = screen.getDisplayNearestPoint(cursorPoint);
+  const { x, y, width: w } = display.workArea;
+  const targetX = Math.round(x + (w - width) / 2);
+  const targetY = Math.round(y + 20);
+  overlayWindow.setBounds({ x: targetX, y: targetY, width, height });
+}
+
+function createOverlayWindow() {
+  if (overlayWindow) return overlayWindow;
+  overlayWindow = new BrowserWindow({
+    width: 720,
+    height: 64,
+    frame: false,
+    transparent: true,
+    resizable: false,
+    movable: true,
+    skipTaskbar: true,
+    focusable: true,
+    fullscreenable: false,
+    alwaysOnTop: true,
+    hasShadow: false,
+    backgroundColor: '#00000000',
+    webPreferences: {
+      contextIsolation: true,
+      nodeIntegration: false,
+    },
+  });
+
+  // Keep overlay visible above full-screen apps on macOS
+  try {
+    overlayWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+    overlayWindow.setAlwaysOnTop(true, 'screen-saver');
+  } catch (_) {
+    // Fallback without crashing on other platforms
+    overlayWindow.setAlwaysOnTop(true);
+  }
+
+  const baseURL = isDev
+    ? 'http://localhost:3000'
+    : `file://${path.join(__dirname, '../build/index.html')}`;
+  const overlayURL = `${baseURL}${baseURL.startsWith('file://') ? '?' : '?'}view=overlay`;
+  overlayWindow.loadURL(overlayURL);
+
+  positionOverlay();
+
+  // Hide on blur to act like a pill/Spotlight
+  overlayWindow.on('blur', () => {
+    if (!overlayWindow) return;
+    overlayWindow.hide();
+  });
+
+  // Hide on Esc from overlay window
+  overlayWindow.webContents.on('before-input-event', (_event, input) => {
+    if (input.key && input.key.toLowerCase() === 'escape') {
+      overlayWindow?.hide();
+    }
+  });
+
+  return overlayWindow;
+}
+
+function toggleOverlay() {
+  if (!overlayWindow) createOverlayWindow();
+  if (!overlayWindow) return;
+  if (overlayWindow.isVisible()) {
+    overlayWindow.hide();
+  } else {
+    positionOverlay();
+    overlayWindow.show();
+    overlayWindow.focus();
+  }
+}
+
+function showDashboard() {
+  if (!mainWindow) return;
+  if (mainWindow.isMinimized()) mainWindow.restore();
+  mainWindow.show();
+  mainWindow.focus();
+}
+
+function createTray() {
+  const iconPath = isDev
+    ? path.join(__dirname, 'assets', 'icon.png')
+    : path.join(process.resourcesPath || __dirname, 'assets', 'icon.png');
+  let img = nativeImage.createFromPath(iconPath);
+  if (process.platform === 'darwin') {
+    const size = 18; // Typical menu bar icon size on macOS
+    img = img.resize({ width: size, height: size, quality: 'best' });
+  }
+  try {
+    img.setTemplateImage(true); // macOS auto-invert for menu bar
+  } catch (_) {
+    // ignore if unsupported
+  }
+  tray = new Tray(img);
+  tray.setToolTip('Stormhacks App');
+
+  const buildMenu = () => Menu.buildFromTemplate([
+    { label: 'Start session', click: () => { /* open for any use */ } },
+    { label: 'Take a break', click: () => { /* open for any use */ } },
+    { label: 'Stop session', click: () => { /* open for any use */ } },
+    { type: 'separator' },
+    { label: 'Show dashboard', click: () => showDashboard() },
+    { type: 'separator' },
+    { label: 'Quit', role: 'quit' },
+  ]);
+
+  tray.setContextMenu(buildMenu());
+  tray.on('click', () => {
+    // Pop menu on click for convenience
+    tray.popUpContextMenu();
+  });
+}
+
+app.on('ready', () => {
+  createWindow();
+  createTray();
+  // Register Cmd+\\ on mac and Ctrl+\\ on other platforms
+  try {
+    globalShortcut.register(process.platform === 'darwin' ? 'Command+\\' : 'CommandOrControl+\\', toggleOverlay);
+  } catch (e) {
+    // If registration fails, continue app without shortcut
+    console.error('Failed to register global shortcut for overlay:', e);
+  }
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -35,4 +165,8 @@ app.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
   }
+});
+
+app.on('will-quit', () => {
+  try { globalShortcut.unregisterAll(); } catch (_) {}
 });

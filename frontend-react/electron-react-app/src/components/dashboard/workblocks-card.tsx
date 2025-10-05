@@ -21,7 +21,7 @@ const categoryIcons: Record<string, React.ComponentType<{ className?: string }>>
 
 export function WorkBlocksCard() {
   return (
-    <Card className="border-border/40 bg-card/70 backdrop-blur">
+    <Card className="border-border/40">
       <CardHeader className="pb-4">
         <CardTitle className="text-base font-semibold">Workblocks</CardTitle>
         <p className="text-xs text-muted-foreground">
