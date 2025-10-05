@@ -5,17 +5,37 @@
 #include <iomanip>
 #include <sstream>
 #include <filesystem>
+#include <vector>
+#include <cstdlib>
 #include "../include/tracker.hpp"
 
 void runTrackerLoop()
 {
     // Ensure logs directory exists
     std::filesystem::create_directories("logs");
-    std::ofstream logFile("../../data-backend/activity.jsonl", std::ios::app);
-
+    // Resolve output file path (env override or common defaults)
+    std::ofstream logFile;
+    const char* envPath = std::getenv("TRACKER_ACTIVITY_PATH");
+    if (envPath && *envPath)
+    {
+        logFile.open(envPath, std::ios::app);
+    }
     if (!logFile.is_open())
     {
-        std::cerr << "Error: Unable to open logs/activity.jsonl\n";
+        const std::vector<std::string> candidates = {
+            "../../data-backend/activity.jsonl", // run from src or build
+            "../data-backend/activity.jsonl",    // run from cpp-backend
+            "activity.jsonl"                      // fallback to CWD
+        };
+        for (const auto& p : candidates)
+        {
+            logFile.open(p, std::ios::app);
+            if (logFile.is_open()) break;
+        }
+    }
+    if (!logFile.is_open())
+    {
+        std::cerr << "Error: Unable to open activity log. Set TRACKER_ACTIVITY_PATH or run from backend/cpp-backend/(src|build).\n";
         return;
     }
 
@@ -27,7 +47,11 @@ void runTrackerLoop()
         auto now = std::chrono::system_clock::now();
         std::time_t t = std::chrono::system_clock::to_time_t(now);
         std::tm tm{};
+#ifdef _WIN32
         localtime_s(&tm, &t);
+#else
+        localtime_r(&t, &tm);
+#endif
 
         std::ostringstream ts;
         ts << std::put_time(&tm, "%Y-%m-%dT%H:%M:%S");

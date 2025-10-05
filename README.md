@@ -8,7 +8,7 @@ This README gives the high-level getting started. See docs/RUNBOOK.md for full s
 
 - `frontend-react/electron-react-app` — Electron + React dashboard UI
 - `backend/pyton-backend/pyproj` — Django backend API + background analytics
-- `backend/cpp-backend` — Windows-only tracker that logs active window + idle
+- `backend/cpp-backend` — Native tracker (Windows + macOS) that logs active window + idle
 - `backend/data-backend` — Shared data directory (JSON/JSONL artifacts)
 
 ## Quick Start (Development)
@@ -35,13 +35,22 @@ npm install
 npm run electron-dev
 ```
 
-3) Windows-only tracker (optional on Windows)
+3) Native tracker (Windows/macOS)
 
 Run the built tracker so activity lines flow into `backend/data-backend/activity.jsonl`:
 
+Windows:
 ```powershell
 cd backend\cpp-backend\src
 ./tracker.exe
+```
+
+macOS (Apple Silicon/Intel):
+```bash
+cd backend/cpp-backend
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=arm64   # use x86_64 on Intel
+cmake --build build --config Release
+./build/tracker
 ```
 
 4) Optional: screenshot-to-analysis loop

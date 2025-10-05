@@ -4,7 +4,7 @@ This document covers end-to-end setup, commands, and integration details for the
 
 ## 1. Architecture Overview
 
-- C++ tracker (Windows-only): writes active window + idle seconds to `backend/data-backend/activity.jsonl`.
+- C++ tracker (Windows + macOS): writes active window + idle seconds to `backend/data-backend/activity.jsonl`.
 - Django backend: accepts screenshot uploads for analysis and runs background tasks to merge and aggregate data into metrics JSON.
 - Electron + React: displays charts and dashboard; auto-fetches `GET /api/dashboard/` and renders immediately with mock fallbacks.
 
@@ -69,15 +69,25 @@ npm run electron-dev
 
 The app will render with mock data and automatically hydrate with live data from the Django backend. You can point to a different backend using `REACT_APP_API_BASE` in `.env`.
 
-## 5. C++ Tracker (Windows only)
+## 5. C++ Tracker (Windows and macOS)
 
-From `backend/cpp-backend/src` (Windows PowerShell or CMD):
+### Windows
+From `backend/cpp-backend/src` (PowerShell or CMD):
 
 ```powershell
 ./tracker.exe
 ```
 
-It writes to `backend/data-backend/activity.jsonl` (relative path). Ensure you run it from the `src` directory so the relative paths resolve correctly.
+### macOS (Apple Silicon / Intel)
+From `backend/cpp-backend`:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=arm64   # use x86_64 on Intel Macs
+cmake --build build --config Release
+./build/tracker
+```
+
+The tracker writes to `backend/data-backend/activity.jsonl` (relative path). By default it targets `../../data-backend/activity.jsonl` from the current working directory. You can override with `TRACKER_ACTIVITY_PATH`.
 
 ## 6. Screenshot Capture Loop (Optional)
 
@@ -113,4 +123,3 @@ Produced in `backend/data-backend`:
 - CORS errors: backend CORS allows `localhost:3000` out of the box.
 - `GEMINI_API_KEY` missing: the analyze endpoint will raise; set it in `backend/pyton-backend/pyproj/.env`.
 - No graphs: start the tracker and/or screenshot loop so files appear in `backend/data-backend`. The UI will still render with mock data until live data arrives.
-

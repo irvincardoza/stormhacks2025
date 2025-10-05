@@ -295,7 +295,7 @@ export type ActivityEvent = {
 
 export type TimelineData = {
   dailyTimeline: {
-    points: NamedMetricPoint[]
+    points: NamedMetricPoint<"VS Code" | "Chrome" | "Figma" | "Slack" | "Terminal" | "System">[]
     config: ChartConfig
   }
   activityEvents: ActivityEvent[]
