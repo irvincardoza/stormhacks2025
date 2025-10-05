@@ -33,7 +33,7 @@ const chartConfig = {
 
 export function ChartLine({ data: chartData, config }: { data: any[], config: ChartConfig }) {
   return (
-    <ChartContainer config={config} className="mx-auto aspect-video max-h-[250px]">
+    <ChartContainer config={config} className="mx-auto h-[400px] w-full">
       <LineChart
         accessibilityLayer
         data={chartData}

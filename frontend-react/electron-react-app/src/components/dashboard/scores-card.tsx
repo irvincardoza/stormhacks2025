@@ -64,7 +64,7 @@ export function ScoresCard() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[300px]"
         >
           <RadialBarChart data={chartData} innerRadius={30} outerRadius={100}>
             <ChartTooltip

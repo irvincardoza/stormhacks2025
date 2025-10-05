@@ -33,7 +33,7 @@ const chartConfig = {
 
 export function ChartBar({ data: chartData, config }: { data: any[], config: ChartConfig }) {
   return (
-    <ChartContainer config={config} className="mx-auto aspect-video max-h-[250px]">
+    <ChartContainer config={config} className="mx-auto h-[400px] w-full">
       <BarChart
         accessibilityLayer
         data={chartData}

@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "compo
 import { Badge } from "components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "components/ui/table"
 import { Button } from "components/ui/button"
-import { ChartLineInteractive } from "components/charts/chart-line-interactive"
-import { ChartBarInteractive } from "components/charts/chart-bar-interactive"
+import { ChartLine } from "components/ui/chart-line"
+import { ChartBar } from "components/ui/chart-bar"
 import { MoreHorizontal } from "components/icons/lucide-adapter"
 
 // Mock data for switches
@@ -29,11 +29,45 @@ export function SwitchesPage() {
       />
       
       <div className="grid gap-6 px-6">
-        {/* Switches per Hour */}
-        <ChartLineInteractive />
-
-        {/* Switch Intensity Bins */}
-        <ChartBarInteractive />
+        {/* Charts Row */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Context Switches Over Time</h3>
+            <ChartLine 
+              data={[
+                { name: "09:00", switches: 3 },
+                { name: "10:00", switches: 7 },
+                { name: "11:00", switches: 5 },
+                { name: "12:00", switches: 2 },
+                { name: "13:00", switches: 1 },
+                { name: "14:00", switches: 8 },
+                { name: "15:00", switches: 4 },
+                { name: "16:00", switches: 6 },
+                { name: "17:00", switches: 3 },
+              ]}
+              config={{
+                switches: { label: "Switches", color: "hsl(var(--chart-1))" },
+              }}
+            />
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Switch Intensity Distribution</h3>
+            <ChartBar 
+              data={[
+                { name: "0-5", count: 2 },
+                { name: "5-10", count: 5 },
+                { name: "10-15", count: 8 },
+                { name: "15-20", count: 12 },
+                { name: "20-25", count: 6 },
+                { name: "25+", count: 3 },
+              ]}
+              config={{
+                count: { label: "Sessions", color: "hsl(var(--chart-2))" },
+              }}
+            />
+          </div>
+        </div>
 
         {/* Top Switch Pairs */}
         <Card>

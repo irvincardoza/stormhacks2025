@@ -34,7 +34,7 @@ const chartData = [
 const chartConfig = {
   switches: {
     label: "Switches",
-    color: "var(--chart-1)",
+    color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
 
@@ -82,7 +82,7 @@ export function ChartLineInteractive() {
       <CardContent className="px-2 sm:p-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className="aspect-auto h-[300px] w-full"
         >
           <LineChart
             accessibilityLayer

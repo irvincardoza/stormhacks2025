@@ -128,11 +128,11 @@ const chartConfig = {
   },
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "hsl(var(--chart-1))",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig
 
@@ -185,7 +185,7 @@ export function ChartAreaInteractive() {
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className="aspect-auto h-[300px] w-full"
         >
           <AreaChart data={filteredData}>
             <defs>

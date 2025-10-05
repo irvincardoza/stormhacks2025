@@ -14,15 +14,15 @@ import { Target, Home, Sparkles } from "components/icons/lucide-adapter"
 const timelineConfig: ChartConfig = {
   focus: {
     label: "Focus",
-    color: "var(--chart-1)",
+    color: "hsl(var(--chart-1))",
   },
   meetings: {
     label: "Meetings",
-    color: "var(--chart-2)",
+    color: "hsl(var(--chart-2))",
   },
   breaks: {
     label: "Breaks",
-    color: "var(--chart-3)",
+    color: "hsl(var(--chart-3))",
   },
 }
 
@@ -41,7 +41,7 @@ export function TimelineCard() {
         </Badge>
       </CardHeader>
       <CardContent className="space-y-4">
-        <ChartContainer config={timelineConfig} className="h-56">
+        <ChartContainer config={timelineConfig} className="h-[300px]">
           <BarChart data={timelineData} barCategoryGap={5}>
             <CartesianGrid
               strokeDasharray="3 3"

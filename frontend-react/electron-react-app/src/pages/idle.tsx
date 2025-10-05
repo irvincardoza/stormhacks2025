@@ -4,7 +4,7 @@ import { Badge } from "components/ui/badge"
 import { Progress } from "components/ui/progress"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "components/ui/table"
 import { Button } from "components/ui/button"
-import { ChartLineInteractive } from "components/charts/chart-line-interactive"
+import { ChartLine } from "components/ui/chart-line"
 import { MoreHorizontal, Clock } from "components/icons/lucide-adapter"
 
 // Mock data for idle and breaks
@@ -47,30 +47,40 @@ export function IdlePage() {
       />
       
       <div className="grid gap-6 px-6">
-        {/* Idle Percentage */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Idle Time Percentage</CardTitle>
-            <CardDescription>
-              How much of your tracked time was idle
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center justify-center h-[200px]">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-primary">{idlePercentage}%</div>
-                <div className="text-sm text-muted-foreground mt-2">Idle time</div>
-                <Progress value={idlePercentage} className="w-32 mt-4" />
-                <div className="text-xs text-muted-foreground mt-2">
-                  {totalIdleTime}m of {totalTrackedTime}m tracked
+        {/* Idle Stats and Chart */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <Card className="lg:col-span-1">
+            <CardHeader>
+              <CardTitle>Idle Time Percentage</CardTitle>
+              <CardDescription>
+                How much of your tracked time was idle
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center justify-center h-[200px]">
+                <div className="text-center">
+                  <div className="text-6xl font-bold text-primary">{idlePercentage}%</div>
+                  <div className="text-sm text-muted-foreground mt-2">Idle time</div>
+                  <Progress value={idlePercentage} className="w-32 mt-4" />
+                  <div className="text-xs text-muted-foreground mt-2">
+                    {totalIdleTime}m of {totalTrackedTime}m tracked
+                  </div>
                 </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
 
-        {/* Idle Over Time */}
-        <ChartLineInteractive />
+          {/* Idle Over Time */}
+          <div className="lg:col-span-2 space-y-4">
+            <h3 className="text-lg font-semibold">Idle Time Throughout the Day</h3>
+            <ChartLine 
+              data={idleOverTime}
+              config={{
+                idleMin: { label: "Idle Time (minutes)", color: "hsl(var(--chart-1))" },
+              }}
+            />
+          </div>
+        </div>
 
         {/* Long Breaks List */}
         <Card>

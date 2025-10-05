@@ -37,11 +37,11 @@ const chartConfig = {
   },
   productive: {
     label: "Productive",
-    color: "var(--chart-1)",
+    color: "hsl(var(--chart-1))",
   },
   unproductive: {
     label: "Unproductive",
-    color: "var(--chart-2)",
+    color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig
 
@@ -90,7 +90,7 @@ export function ChartBarInteractive() {
       <CardContent className="px-2 sm:p-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className="aspect-auto h-[300px] w-full"
         >
           <BarChart
             accessibilityLayer

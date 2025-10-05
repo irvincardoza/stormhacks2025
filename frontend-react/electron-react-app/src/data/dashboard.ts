@@ -111,9 +111,9 @@ export const timeCategories: TimeCategory[] = [
   { name: "Documentation", percent: 14, duration: "1h 15m", color: "hsl(var(--chart-3))" },
   { name: "Design", percent: 10, duration: "45m", color: "hsl(var(--chart-4))" },
   { name: "Messaging", percent: 6, duration: "23m", color: "hsl(var(--chart-5))" },
-  { name: "Email", percent: 4, duration: "20m", color: "hsl(var(--muted-foreground))" },
-  { name: "Task Mgmt", percent: 3, duration: "11m", color: "hsl(var(--accent))" },
-  { name: "AI Ops", percent: 2, duration: "8m", color: "hsl(var(--primary))" },
+  { name: "Email", percent: 4, duration: "20m", color: "hsl(var(--chart-3))" },
+  { name: "Task Mgmt", percent: 3, duration: "11m", color: "hsl(var(--chart-4))" },
+  { name: "AI Ops", percent: 2, duration: "8m", color: "hsl(var(--chart-1))" },
 ]
 
 export const aiInsights: Insight[] = [

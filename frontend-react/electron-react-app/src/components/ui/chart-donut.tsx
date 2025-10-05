@@ -37,7 +37,7 @@ const chartConfig = {
 
 export function ChartDonut({ data: chartData, config }: { data: any[], config: ChartConfig }) {
   return (
-    <ChartContainer config={config} className="mx-auto aspect-square max-h-[250px]">
+    <ChartContainer config={config} className="mx-auto aspect-square h-[400px] w-full">
       <PieChart>
         <ChartTooltip
           content={

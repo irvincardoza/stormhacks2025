@@ -32,7 +32,7 @@ const chartData = [
 const chartConfig = {
   minutes: {
     label: "Focus Time (minutes)",
-    color: "var(--chart-1)",
+    color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
 
@@ -48,7 +48,7 @@ export function ChartRadarGridCircleFill() {
       <CardContent className="pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[300px]"
         >
           <RadarChart data={chartData}>
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />

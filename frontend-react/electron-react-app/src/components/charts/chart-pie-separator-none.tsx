@@ -21,11 +21,11 @@ import {
 export const description = "Productivity breakdown by category"
 
 const chartData = [
-  { category: "productive", time: 275, fill: "var(--color-productive)" },
-  { category: "unproductive", time: 200, fill: "var(--color-unproductive)" },
-  { category: "neutral", time: 187, fill: "var(--color-neutral)" },
-  { category: "idle", time: 173, fill: "var(--color-idle)" },
-  { category: "other", time: 90, fill: "var(--color-other)" },
+  { category: "productive", time: 275, fill: "hsl(var(--chart-1))" },
+  { category: "unproductive", time: 200, fill: "hsl(var(--chart-2))" },
+  { category: "neutral", time: 187, fill: "hsl(var(--chart-3))" },
+  { category: "idle", time: 173, fill: "hsl(var(--chart-4))" },
+  { category: "other", time: 90, fill: "hsl(var(--chart-5))" },
 ]
 
 const chartConfig = {
@@ -34,23 +34,23 @@ const chartConfig = {
   },
   productive: {
     label: "Productive",
-    color: "var(--chart-1)",
+    color: "hsl(var(--chart-1))",
   },
   unproductive: {
     label: "Unproductive",
-    color: "var(--chart-2)",
+    color: "hsl(var(--chart-2))",
   },
   neutral: {
     label: "Neutral",
-    color: "var(--chart-3)",
+    color: "hsl(var(--chart-3))",
   },
   idle: {
     label: "Idle",
-    color: "var(--chart-4)",
+    color: "hsl(var(--chart-4))",
   },
   other: {
     label: "Other",
-    color: "var(--chart-5)",
+    color: "hsl(var(--chart-5))",
   },
 } satisfies ChartConfig
 
@@ -64,7 +64,7 @@ export function ChartPieSeparatorNone() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[300px]"
         >
           <PieChart>
             <ChartTooltip

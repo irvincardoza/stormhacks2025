@@ -27,13 +27,13 @@
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
 
-    /* Chart colors - orange/green themed (light) */
-    /* Orange primary, green secondary, accessible on white */
+    /* Chart colors - black, orange, white, green themed (light) */
+    /* Orange primary, green secondary, black accent, white highlight */
     --chart-1: 24 94% 50%;   /* orange */
     --chart-2: 142 71% 45%;  /* green */
-    --chart-3: 32 95% 60%;   /* amber/orange-light */
-    --chart-4: 165 60% 55%;  /* teal/green-light */
-    --chart-5: 200 10% 20%;  /* black-ish accent for light bg */
+    --chart-3: 0 0% 20%;     /* black */
+    --chart-4: 0 0% 95%;     /* white/light gray */
+    --chart-5: 24 94% 70%;   /* orange-light */
 
     /* Sidebar colors (light) */
     --sidebar: 0 0% 100%;
@@ -79,13 +79,13 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 142.1 76.2% 36.3%;
 
-    /* Chart colors - orange/green themed (dark) */
-    /* Brighter oranges/greens to pop on dark */
+    /* Chart colors - black, orange, white, green themed (dark) */
+    /* Brighter oranges/greens with black and white accents for dark theme */
     --chart-1: 24 95% 62%;   /* orange brighter */
     --chart-2: 142 70% 55%;  /* green brighter */
-    --chart-3: 30 95% 65%;   /* amber */
-    --chart-4: 165 65% 60%;  /* teal */
-    --chart-5: 0 0% 90%;     /* white-ish accent for dark bg */
+    --chart-3: 0 0% 10%;     /* black darker for dark theme */
+    --chart-4: 0 0% 95%;     /* white/light for contrast */
+    --chart-5: 24 95% 75%;   /* orange-light brighter */
   }
 
   * {

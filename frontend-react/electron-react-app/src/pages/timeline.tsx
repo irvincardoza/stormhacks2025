@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "compo
 import { Button } from "components/ui/button"
 import { Badge } from "components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "components/ui/table"
-import { ChartBarInteractive } from "components/charts/chart-bar-interactive"
+import { ChartBar } from "components/ui/chart-bar"
 import { MoreHorizontal, RefreshCw } from "components/icons/lucide-adapter"
 
 const activityEvents = [
@@ -91,7 +91,27 @@ export function TimelinePage() {
       
       <div className="grid gap-6 px-6">
         {/* Time-of-Day Stacked Bars */}
-        <ChartBarInteractive />
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold">Daily Timeline</h3>
+          <ChartBar 
+            data={[
+              { name: "09:00", focus: 45, meetings: 15, breaks: 0 },
+              { name: "10:00", focus: 60, meetings: 0, breaks: 0 },
+              { name: "11:00", focus: 30, meetings: 30, breaks: 0 },
+              { name: "12:00", focus: 0, meetings: 0, breaks: 60 },
+              { name: "13:00", focus: 20, meetings: 40, breaks: 0 },
+              { name: "14:00", focus: 55, meetings: 0, breaks: 5 },
+              { name: "15:00", focus: 40, meetings: 20, breaks: 0 },
+              { name: "16:00", focus: 35, meetings: 25, breaks: 0 },
+              { name: "17:00", focus: 25, meetings: 35, breaks: 0 },
+            ]}
+            config={{
+              focus: { label: "Focus", color: "hsl(var(--chart-1))" },
+              meetings: { label: "Meetings", color: "hsl(var(--chart-2))" },
+              breaks: { label: "Breaks", color: "hsl(var(--chart-3))" },
+            }}
+          />
+        </div>
 
         {/* Activity Feed */}
         <Card>
