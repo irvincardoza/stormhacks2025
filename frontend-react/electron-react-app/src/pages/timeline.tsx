@@ -5,10 +5,25 @@ import { Badge } from "components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "components/ui/table"
 import { ChartBarStacked } from "components/ui/chart-bar-stacked"
 import { MoreHorizontal, RefreshCw } from "components/icons/lucide-adapter"
-import { useTimelineData } from "providers/dashboard-data-provider"
+import { useTimelineData, useDashboardActions } from "providers/dashboard-data-provider"
+
+// Localized time formatter: e.g., 9:15 AM (no seconds)
+const timeFormatter = new Intl.DateTimeFormat(undefined, {
+  hour: "numeric",
+  minute: "2-digit",
+  hour12: true,
+})
+
+function formatEventTime(tsOrObj: string | { ts?: string; timestamp?: string }) {
+  const raw = typeof tsOrObj === "string" ? tsOrObj : (tsOrObj.timestamp ?? tsOrObj.ts ?? "")
+  const date = new Date(raw)
+  if (Number.isNaN(date.getTime())) return raw
+  return timeFormatter.format(date)
+}
 
 export function TimelinePage() {
   const { dailyTimeline, activityEvents } = useTimelineData()
+  const { refresh, isRefreshing } = useDashboardActions()
   const eventCount = activityEvents.length
 
   return (
@@ -41,9 +56,9 @@ export function TimelinePage() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Button variant="outline" size="sm">
-                    <RefreshCw className="h-4 w-4 mr-2" />
-                    Refresh
+                  <Button variant="outline" size="sm" onClick={refresh} disabled={isRefreshing}>
+                    <RefreshCw className={`h-4 w-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+                    {isRefreshing ? 'Refreshing' : 'Refresh'}
                   </Button>
                   <Badge variant="secondary">{eventCount} events</Badge>
                 </div>
@@ -65,10 +80,12 @@ export function TimelinePage() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {activityEvents.map((event, index) => (
-                    <TableRow key={`${event.ts}-${index}`}>
+                  {activityEvents.map((event: any, index: number) => {
+                    const ts = event?.ts ?? event?.timestamp ?? ""
+                    return (
+                    <TableRow key={`${ts || index}-${index}`}>
                       <TableCell className="font-mono text-sm">
-                        {new Date(event.ts).toLocaleTimeString()}
+                        {formatEventTime(ts)}
                       </TableCell>
                       <TableCell className="font-medium">{event.app}</TableCell>
                       <TableCell className="text-muted-foreground">
@@ -94,7 +111,7 @@ export function TimelinePage() {
                         </Button>
                       </TableCell>
                     </TableRow>
-                  ))}
+                  )})}
                 </TableBody>
               </Table>
             </div>

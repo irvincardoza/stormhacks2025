@@ -1,7 +1,8 @@
 // electron.js
-const { app, BrowserWindow, Tray, Menu, globalShortcut, screen, nativeImage } = require('electron');
+const { app, BrowserWindow, Tray, Menu, globalShortcut, screen, nativeImage, ipcMain } = require('electron');
 const path = require('path');
 const isDev = require('electron-is-dev');
+const screenshot = require('screenshot-desktop');
 
 let mainWindow;
 let overlayWindow;
@@ -57,6 +58,8 @@ function createOverlayWindow() {
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
+      sandbox: false,
+      preload: path.join(__dirname, 'overlay-preload.js'),
     },
   });
 
@@ -94,6 +97,17 @@ function createOverlayWindow() {
 
   return overlayWindow;
 }
+
+ipcMain.handle('overlay:capture', async () => {
+  try {
+    const imgBuffer = await screenshot({ format: 'png' })
+    return `data:image/png;base64,${imgBuffer.toString('base64')}`
+  } catch (e) {
+    console.error('overlay:capture error', e)
+    const msg = e && e.message ? e.message : String(e)
+    throw new Error(msg)
+  }
+})
 
 function toggleOverlay() {
   if (!overlayWindow) createOverlayWindow();
@@ -175,4 +189,3 @@ app.on('activate', () => {
 app.on('will-quit', () => {
   try { globalShortcut.unregisterAll(); } catch (_) {}
 });
-

@@ -32,21 +32,19 @@ const appIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   "System": SystemIcon,
 }
 
-// Custom legend component with app icons
+// Custom legend component with solid color boxes for readability
 function AppLegendContent({ config }: { config: ChartConfig }) {
   return (
-    <div className="flex flex-wrap gap-4 justify-center">
-      {Object.entries(config).map(([key, item]) => {
-        const IconComponent = appIcons[key] || SystemIcon
-        return (
-          <div key={key} className="flex items-center gap-2">
-            <div style={{ color: item.color }}>
-              <IconComponent className="h-4 w-4" />
-            </div>
-            <span className="text-sm">{item.label}</span>
-          </div>
-        )
-      })}
+    <div className="flex flex-wrap gap-3 justify-center">
+      {Object.entries(config).map(([key, item]) => (
+        <div key={key} className="flex items-center gap-2">
+          <div
+            className="h-3 w-3 rounded-sm border"
+            style={{ backgroundColor: item.color, borderColor: "hsl(var(--border))" }}
+          />
+          <span className="text-xs sm:text-sm">{item.label}</span>
+        </div>
+      ))}
     </div>
   )
 }
@@ -79,9 +77,10 @@ export function ChartBarStacked({
         <XAxis
           dataKey="name"
           tickLine={false}
-          tickMargin={10}
+          tickMargin={12}
+          interval={0}
+          height={40}
           axisLine={false}
-          tickFormatter={(value) => value.slice(0, 3)}
         />
         <ChartTooltip content={<ChartTooltipContent hideLabel />} />
         <ChartLegend content={<AppLegendContent config={config} />} />

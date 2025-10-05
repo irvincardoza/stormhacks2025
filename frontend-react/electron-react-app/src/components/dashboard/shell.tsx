@@ -33,6 +33,14 @@ import {
 } from "components/ui/dropdown-menu"
 import { Tabs, TabsList, TabsTrigger } from "components/ui/tabs"
 import { ModeToggle } from "components/ui/mode-toggle"
+import { useIdleData } from "providers/dashboard-data-provider"
+
+function formatMinutes(minutes: number) {
+  const h = Math.floor(minutes / 60)
+  const m = Math.round(minutes % 60)
+  if (h <= 0) return `${m}m`
+  return `${h}h ${m}m`
+}
 
 const primaryNav = [
   { label: "Overview", icon: Home, href: "/dashboard" },
@@ -48,12 +56,13 @@ type DashboardShellProps = {
 
 export function DashboardShell({ children }: DashboardShellProps) {
   const { currentPath, navigate } = useNavigation()
+  const idle = useIdleData()
   
   return (
     <SidebarProvider>
       <div className="bg-background text-foreground min-h-screen">
         <div className="flex min-h-screen">
-          {renderSidebar(currentPath, navigate)}
+          {renderSidebar(currentPath, navigate, idle.trackedMinutes || 0)}
           <SidebarInset className="bg-background flex-1">
             <div className="flex flex-col min-h-screen">{children}</div>
           </SidebarInset>
@@ -63,7 +72,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   )
 }
 
-function renderSidebar(currentPath: string, navigate: (path: string) => void) {
+function renderSidebar(currentPath: string, navigate: (path: string) => void, trackedMinutes: number) {
   return (
     <Sidebar variant="sidebar" collapsible="icon" className="border-r border-border bg-sidebar sidebar-glass">
       <SidebarHeader className="gap-3 p-4 pb-2">
@@ -98,12 +107,12 @@ function renderSidebar(currentPath: string, navigate: (path: string) => void) {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="border-t border-border">
-        <div className="flex items-center justify-between gap-2 rounded-lg bg-sidebar-accent px-3 py-2">
+            <div className="flex items-center justify-between gap-2 rounded-lg bg-sidebar-accent px-3 py-2">
           <div>
             <p className="text-xs font-medium text-sidebar-accent-foreground">Productivity</p>
             <p className="text-[10px] text-muted-foreground">Tracked time today</p>
           </div>
-          <Badge className="bg-success text-white text-[10px]">6h 23m</Badge>
+              <Badge className="bg-success text-white text-[10px]">{formatMinutes(trackedMinutes)}</Badge>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

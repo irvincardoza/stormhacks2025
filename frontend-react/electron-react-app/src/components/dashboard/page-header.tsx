@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { Button } from "components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "components/ui/tabs"
@@ -16,6 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "components/ui/dropdown-menu"
+import { useOverviewData, useSwitchesData, useFocusData, useIdleData } from "providers/dashboard-data-provider"
 
 type PageHeaderProps = {
   title: string
@@ -24,6 +25,10 @@ type PageHeaderProps = {
 
 export function PageHeader({ title, description }: PageHeaderProps) {
   const [currentDate, setCurrentDate] = useState(new Date())
+  const overview = useOverviewData()
+  const switches = useSwitchesData()
+  const focus = useFocusData()
+  const idle = useIdleData()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -49,6 +54,49 @@ export function PageHeader({ title, description }: PageHeaderProps) {
       second: '2-digit'
     })
   }
+
+  const formatMinutes = (minutes: number) => {
+    const h = Math.floor(minutes / 60)
+    const m = Math.round(minutes % 60)
+    if (h <= 0) return `${m}m`
+    return `${h}h ${m}m`
+  }
+
+  const trackedTimeLabel = useMemo(() => formatMinutes(idle.trackedMinutes || 0), [idle.trackedMinutes])
+
+  const productivePercent = useMemo(() => {
+    const weekly = overview.weeklyProductivity.points
+    if (weekly && weekly.length > 0) {
+      return Math.round(weekly[weekly.length - 1].productivity)
+    }
+    // Fallback: average hourly percentages if available
+    const hourly = overview.hourlyProductivity.points
+    if (hourly && hourly.length > 0) {
+      const sumProd = hourly.reduce((acc, p) => acc + (p.productive || 0), 0)
+      return Math.round(sumProd / hourly.length)
+    }
+    return 0
+  }, [overview])
+
+  const productiveDelta = useMemo(() => {
+    const weekly = overview.weeklyProductivity.points
+    if (weekly && weekly.length > 1) {
+      const today = weekly[weekly.length - 1].productivity
+      const prev = weekly[weekly.length - 2].productivity
+      const delta = Math.round((today - prev) * 10) / 10
+      return delta
+    }
+    return null
+  }, [overview])
+
+  const totalSwitches = useMemo(() => {
+    return (switches.switchesOverTime.points || []).reduce((acc, p) => acc + (p.switches || 0), 0)
+  }, [switches])
+
+  const longestFocusLabel = useMemo(() => {
+    const longestSec = Math.max(0, ...(focus.sessions || []).map((s) => s.durationSec))
+    return formatMinutes(Math.round(longestSec / 60))
+  }, [focus])
 
   return (
     <div className="space-y-6">
@@ -103,10 +151,8 @@ export function PageHeader({ title, description }: PageHeaderProps) {
             <Clock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">6h 23m</div>
-            <p className="text-xs text-muted-foreground">
-              +12% from yesterday
-            </p>
+            <div className="text-2xl font-bold">{trackedTimeLabel}</div>
+            <p className="text-xs text-muted-foreground">as of {formatTime(currentDate)}</p>
           </CardContent>
         </Card>
         <Card>
@@ -115,10 +161,12 @@ export function PageHeader({ title, description }: PageHeaderProps) {
             <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">78%</div>
-            <p className="text-xs text-muted-foreground">
-              +5% from yesterday
-            </p>
+            <div className="text-2xl font-bold">{productivePercent}%</div>
+            {productiveDelta !== null && (
+              <p className="text-xs text-muted-foreground">
+                {productiveDelta >= 0 ? "+" : ""}{productiveDelta}% vs yesterday
+              </p>
+            )}
           </CardContent>
         </Card>
         <Card>
@@ -127,10 +175,8 @@ export function PageHeader({ title, description }: PageHeaderProps) {
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">42</div>
-            <p className="text-xs text-muted-foreground">
-              -8% from yesterday
-            </p>
+            <div className="text-2xl font-bold">{totalSwitches}</div>
+            <p className="text-xs text-muted-foreground">today</p>
           </CardContent>
         </Card>
         <Card>
@@ -139,10 +185,8 @@ export function PageHeader({ title, description }: PageHeaderProps) {
             <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">2h 15m</div>
-            <p className="text-xs text-muted-foreground">
-              +23m from yesterday
-            </p>
+            <div className="text-2xl font-bold">{longestFocusLabel}</div>
+            <p className="text-xs text-muted-foreground">top session today</p>
           </CardContent>
         </Card>
       </div>
