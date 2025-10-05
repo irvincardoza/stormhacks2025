@@ -22,7 +22,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "components/ui/avatar"
-import { BarChart3, CalendarDays, Home, Settings, Target, Timer, Sparkles } from "components/icons/lucide-adapter"
+import { BarChart3, CalendarDays, Home, Settings, Target, Timer } from "components/icons/lucide-adapter"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,14 +33,6 @@ import {
 } from "components/ui/dropdown-menu"
 import { Tabs, TabsList, TabsTrigger } from "components/ui/tabs"
 import { ModeToggle } from "components/ui/mode-toggle"
-import { useIdleData } from "providers/dashboard-data-provider"
-
-function formatMinutes(minutes: number) {
-  const h = Math.floor(minutes / 60)
-  const m = Math.round(minutes % 60)
-  if (h <= 0) return `${m}m`
-  return `${h}h ${m}m`
-}
 
 const primaryNav = [
   { label: "Overview", icon: Home, href: "/dashboard" },
@@ -55,13 +47,12 @@ type DashboardShellProps = {
 
 export function DashboardShell({ children }: DashboardShellProps) {
   const { currentPath, navigate } = useNavigation()
-  const idle = useIdleData()
   
   return (
     <SidebarProvider>
       <div className="bg-background text-foreground min-h-screen">
         <div className="flex min-h-screen">
-          {renderSidebar(currentPath, navigate, idle.trackedMinutes || 0)}
+          {renderSidebar(currentPath, navigate)}
           <SidebarInset className="bg-background flex-1">
             <div className="flex flex-col min-h-screen">{children}</div>
           </SidebarInset>
@@ -71,16 +62,16 @@ export function DashboardShell({ children }: DashboardShellProps) {
   )
 }
 
-function renderSidebar(currentPath: string, navigate: (path: string) => void, trackedMinutes: number) {
+function renderSidebar(currentPath: string, navigate: (path: string) => void) {
   return (
     <Sidebar variant="sidebar" collapsible="icon" className="border-r border-border bg-sidebar sidebar-glass">
       <SidebarHeader className="gap-3 p-4 pb-2">
         <div className="flex items-center gap-3">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-primary">
-            <Target className="size-5" />
+          <div className="relative h-10 w-10 rounded-xl overflow-hidden">
+            <img src="/mira-logo.png" alt="Mira logo" className="h-full w-full object-contain bg-transparent" />
           </div>
           <div className="grid gap-0.5">
-            <span className="text-lg font-bold tracking-tight text-sidebar-foreground">Prism</span>
+            <span className="text-lg font-bold tracking-tight text-sidebar-foreground">Mira</span>
             <span className="text-xs text-muted-foreground">Productivity OS</span>
           </div>
         </div>
@@ -106,12 +97,12 @@ function renderSidebar(currentPath: string, navigate: (path: string) => void, tr
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="border-t border-border">
-            <div className="flex items-center justify-between gap-2 rounded-lg bg-sidebar-accent px-3 py-2">
+        <div className="flex items-center justify-between gap-2 rounded-lg bg-sidebar-accent px-3 py-2">
           <div>
             <p className="text-xs font-medium text-sidebar-accent-foreground">Productivity</p>
             <p className="text-[10px] text-muted-foreground">Tracked time today</p>
           </div>
-              <Badge className="bg-success text-white text-[10px]">{formatMinutes(trackedMinutes)}</Badge>
+          <Badge className="bg-success text-white text-[10px]">6h 23m</Badge>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -178,7 +169,7 @@ export function DashboardTopbar() {
             {formatDate(currentDate)} • {formatTime(currentDate)}
           </p>
           <div className="mt-1 flex items-center gap-2">
-            <h1 className="text-3xl font-bold tracking-tight text-gradient">Prism</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gradient">Mira</h1>
           </div>
           <p className="mt-1 text-xs text-muted-foreground">
             Your adaptive productivity OS with intelligent time orchestration.
@@ -212,19 +203,6 @@ export function DashboardTopbar() {
         </Button>
         <Button size="sm" className="gap-2 text-white bg-[linear-gradient(to_top_right,hsl(var(--primary)),hsl(var(--chart-4)))] hover:opacity-90">
           <Target className="size-4" /> Start focus mode
-        </Button>
-        <Button
-          size="sm"
-          className="gap-2 text-white bg-[linear-gradient(to_top_right,hsl(var(--chart-3)),hsl(var(--primary)))] hover:opacity-90"
-          onClick={() => {
-            const url = new URL(window.location.href)
-            url.searchParams.set('view', 'overlay')
-            window.location.href = url.toString()
-          }}
-          aria-label="Talk to AI"
-          title="Talk to AI"
-        >
-          <Sparkles className="size-4" /> Talk to AI
         </Button>
         <ModeToggle />
       </div>

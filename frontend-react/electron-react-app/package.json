@@ -1,5 +1,5 @@
 {
-  "name": "prism",
+  "name": "Mira",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -55,7 +55,7 @@
   },
   "build": {
     "appId": "com.example.myapp",
-    "productName": "Prism",
+    "productName": "Mira",
     "directories": {
       "output": "dist"
     }

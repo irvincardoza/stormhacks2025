@@ -1,36 +1,14 @@
 "use client"
 
+import * as React from "react"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./card"
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "./chart"
-import { VSCode, ChromeIcon, FigmaIcon, SlackIcon, TerminalIcon, SystemIcon } from "components/icons/lucide-adapter"
+import { ChartConfig, ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from "./chart"
+import { filterToTimeWindow } from "lib/chart-time"
 
 export const description = "A stacked bar chart with a legend"
 
-// App icon mapping
-const appIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  "VS Code": VSCode,
-  "Chrome": ChromeIcon,
-  "Figma": FigmaIcon,
-  "Slack": SlackIcon,
-  "Terminal": TerminalIcon,
-  "System": SystemIcon,
-}
+// Intentionally no icon markers in legend to keep it clean and readable.
 
 // Custom legend component with solid color boxes for readability
 function AppLegendContent({ config }: { config: ChartConfig }) {
@@ -62,11 +40,12 @@ export function ChartBarStacked({
   description?: string,
   showFooter?: boolean
 }) {
+  const clamped = React.useMemo(() => filterToTimeWindow(chartData), [chartData])
   return (
     <ChartContainer config={config} className="mx-auto h-[400px] w-full">
       <BarChart 
         accessibilityLayer 
-        data={chartData}
+        data={clamped}
         margin={{
           left: 12,
           right: 12,

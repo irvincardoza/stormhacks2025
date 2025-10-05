@@ -10,6 +10,7 @@ import {
   type TimelineData,
   type SettingsData,
 } from "data/dashboard"
+import { isDemo, buildDemoDashboardData } from "../lib/demo"
 
 const DashboardDataContext = createContext<DashboardData | null>(null)
 type DashboardActions = {
@@ -97,7 +98,11 @@ export function DashboardDataProvider({ value, children }: DashboardDataProvider
     }
   }
 
-  const [data, setData] = useState<DashboardData>(value ?? persisted ?? makeEmpty())
+  const [data, setData] = useState<DashboardData>(() => {
+    if (value) return value
+    if (isDemo) return buildDemoDashboardData()
+    return persisted ?? makeEmpty()
+  })
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false)
   const [lastGeneratedAt, setLastGeneratedAt] = useState<string | null>(() => {
     if (!persistedRaw) return null
@@ -154,7 +159,12 @@ export function DashboardDataProvider({ value, children }: DashboardDataProvider
               } catch {}
             }
 
-            const merged = mergeDashboard(prev, incoming)
+            // In demo mode, merge live apps AND timeline so that
+            // Overview pie, Insights usage-by-app, and Timeline/Activity feed remain real-time.
+            const partial: PartialDashboardData = isDemo
+              ? { apps: incoming.apps, timeline: incoming.timeline }
+              : incoming
+            const merged = mergeDashboard(prev, partial)
             try {
               sessionStorage.setItem("dashboardData", JSON.stringify(merged))
               if (generatedAt) sessionStorage.setItem("dashboardGeneratedAt", generatedAt)
@@ -189,7 +199,7 @@ export function DashboardDataProvider({ value, children }: DashboardDataProvider
     const controller = new AbortController()
     fetchDashboard(controller.signal)
 
-    // Real-time polling: keep data fresh; abort on unmount
+    // Real-time polling; in demo mode we still refresh live apps.
     const interval = window.setInterval(() => {
       const c = new AbortController()
       fetchDashboard(c.signal)

@@ -1,5 +1,15 @@
 from google import genai
 import os, json, mimetypes, re
+from typing import Any, Dict
+from django.utils import timezone
+
+try:
+    # Reuse existing dashboard builder for DRY server-sourced data
+    from ..services.dashboard_data import build_dashboard_payload  # type: ignore
+    from ..services.dashboard_data import _load_metrics_dataframe  # type: ignore
+except Exception:
+    build_dashboard_payload = None  # type: ignore
+    _load_metrics_dataframe = None  # type: ignore
 
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
@@ -19,6 +29,109 @@ def _force_parse_json(s: str) -> dict:
         except Exception:
             pass
     return {"app_name": "unknown", "window_title": "unknown", "productive": None}
+
+def _load_system_prompt(default_text: str) -> str:
+    """Return a system prompt for overlay assist.
+    Order of precedence:
+      1) OVERLAY_SYSTEM_PROMPT env var (inline text)
+      2) OVERLAY_SYSTEM_PROMPT_PATH env var (path to a text file)
+      3) Provided default_text fallback
+    """
+    env_text = os.getenv("OVERLAY_SYSTEM_PROMPT")
+    if env_text and env_text.strip():
+        return env_text.strip()
+
+    path = os.getenv("OVERLAY_SYSTEM_PROMPT_PATH")
+    if path and path.strip():
+        try:
+            with open(path.strip(), "r", encoding="utf-8") as f:
+                data = f.read().strip()
+                if data:
+                    return data
+        except Exception:
+            # Fall through to default
+            pass
+
+    return default_text
+
+def _build_compact_dashboard_context() -> str | None:
+    """Return a compact JSON string with key stats for optional LLM context.
+    Only include lightweight, high-signal fields. Return None on failure.
+    """
+    if build_dashboard_payload is None:
+        return None
+    try:
+        payload: Dict[str, Any] = build_dashboard_payload()  # type: ignore
+        compact: Dict[str, Any] = {}
+
+        # Overview: include high-level series lengths and last points only
+        overview = payload.get("overview") or {}
+        if overview:
+            def last_point(series: Dict[str, Any] | None) -> Any:
+                if not series: return None
+                points = series.get("points") or []
+                return points[-1] if points else None
+
+            compact["overview"] = {
+                "productivityBreakdown": {
+                    "sliceCount": len((overview.get("productivityBreakdown") or {}).get("slices") or []),
+                },
+                "hourlyProductivity": {"last": last_point(overview.get("hourlyProductivity"))},
+                "contextSwitchTrend": {"last": last_point(overview.get("contextSwitchTrend"))},
+                "weeklyProductivity": {"last": last_point(overview.get("weeklyProductivity"))},
+            }
+
+        # Focus goals summary
+        focus = payload.get("focus") or {}
+        if focus:
+            compact["focus"] = {
+                "goalMinutes": focus.get("goalMinutes"),
+                "sessionCount": len(focus.get("sessions") or []),
+            }
+
+        # Settings / monitor status
+        settings = payload.get("settings") or {}
+        if settings:
+            compact["settings"] = {
+                "monitorStatus": settings.get("monitorStatus"),
+            }
+
+        # Small timeline marker
+        timeline = payload.get("timeline") or {}
+        if timeline:
+            compact["timeline"] = {
+                "dailyPoints": len((timeline.get("dailyTimeline") or {}).get("points") or []),
+                "activityEventsCount": len(timeline.get("activityEvents") or []),
+            }
+
+        # Recent per-app usage (last 60 minutes) from metrics dataframe, if available
+        if _load_metrics_dataframe is not None:
+            try:
+                df = _load_metrics_dataframe()  # type: ignore
+            except Exception:
+                df = None
+            if df is not None and not df.empty:
+                cutoff = timezone.now() - timezone.timedelta(minutes=60)
+                try:
+                    recent = df[df["timestamp"] >= cutoff]
+                except Exception:
+                    recent = None
+                if recent is not None and not recent.empty:
+                    try:
+                        grp = recent.groupby("app_name").agg(active_seconds=("active_seconds", "sum"))
+                        top = grp.sort_values("active_seconds", ascending=False).head(5)
+                        compact["recentByApp"] = [
+                            {"app": app, "minutes": round(float(row["active_seconds"]) / 60.0, 2)}
+                            for app, row in top.iterrows()
+                        ]
+                    except Exception:
+                        pass
+
+        # Keep it tight
+        text = json.dumps(compact, separators=(",", ":"))
+        return text
+    except Exception:
+        return None
 
 def analyze_image(image_path: str, prompt: str) -> dict:
     mime, _ = mimetypes.guess_type(image_path)
@@ -75,20 +188,37 @@ def overlay_assist(image_path: str, prompt: str) -> str:
         "You are an on-screen assistant. Use only the supplied screenshot and user question to respond. "
         "Keep answers under 120 words and reference visible UI labels when applicable."
     )
+    system_prompt = _load_system_prompt(base_instruction)
 
-    final_prompt = base_instruction
-    if prompt:
-        final_prompt = f"{base_instruction}\n\nAdditional context from client:\n{prompt.strip()}"
+    user_text = (prompt or "").strip()
+    if user_text:
+        user_text = f"Additional context from client:\n{user_text}"
+    else:
+        user_text = "Provide helpful, concise guidance based on the screenshot."
+
+    # Optional stats context (only if asked by the user)
+    dashboard_context = _build_compact_dashboard_context()
+    gate_note = (
+        "STATS CONTEXT BELOW — USE ONLY IF THE USER ASKS ABOUT PRODUCTIVITY, TIME, APPS, OR HISTORY. "
+        "IF THE QUESTION IS ABOUT THE SCREEN, IGNORE IT."
+    )
+
+    # Embed system prompt as first part for compatibility with older clients
+    parts = [
+        {"text": f"[SYSTEM]\n{system_prompt}"},
+        {"text": user_text},
+        {"inline_data": {"mime_type": mime, "data": image_data}},
+    ]
+    if dashboard_context:
+        parts.append({"text": gate_note})
+        parts.append({"text": f"[STATS_BEGIN]\n{dashboard_context}\n[STATS_END]"})
 
     resp = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=[
             {
                 "role": "user",
-                "parts": [
-                    {"text": final_prompt},
-                    {"inline_data": {"mime_type": mime, "data": image_data}},
-                ],
+                "parts": parts,
             }
         ],
     )

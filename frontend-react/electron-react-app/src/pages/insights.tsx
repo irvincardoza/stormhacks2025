@@ -3,29 +3,17 @@ import { ChartBar } from "components/ui/chart-bar"
 import { ChartBarStacked } from "components/ui/chart-bar-stacked"
 import { useAppsData, useTimelineData } from "providers/dashboard-data-provider"
 import { useMemo } from "react"
+import { normalizeStackToPercent } from "lib/chart-utils"
 
 export function InsightsPage() {
   const apps = useAppsData()
   const { dailyTimeline } = useTimelineData()
 
   // Normalize each hour's values so stacked bars represent 100% of tracked time in that hour
-  const normalizedDailyPoints = useMemo(() => {
-    const points = dailyTimeline?.points || []
-    const config = dailyTimeline?.config || ({} as any)
-    const keys = Object.keys(config)
-    if (!points.length || !keys.length) return points
-
-    return points.map((p: any) => {
-      const total = keys.reduce((sum, k) => sum + (Number(p[k]) || 0), 0)
-      if (!total) return p
-      const normalized: Record<string, number> = {}
-      for (const k of keys) {
-        const raw = Number(p[k]) || 0
-        normalized[k] = (raw / total) * 100
-      }
-      return { ...p, ...normalized }
-    })
-  }, [dailyTimeline])
+  const normalizedDailyPoints = useMemo(
+    () => normalizeStackToPercent(dailyTimeline?.points || [], dailyTimeline?.config || ({} as any)),
+    [dailyTimeline]
+  )
 
   // Apply a distinct pastel palette (no blue) while preserving labels
   const pastelTimelineConfig = useMemo(() => {
@@ -79,4 +67,3 @@ export function InsightsPage() {
     </div>
   )
 }
-

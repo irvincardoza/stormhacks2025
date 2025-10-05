@@ -7,9 +7,9 @@ import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "
 
 export const description = "A bar chart with customizable colors"
 
-export function ChartBar({ data: chartData, config }: { data: any[], config: ChartConfig }) {
+export function ChartBar({ data: chartData, config, containerClassName }: { data: any[], config: ChartConfig, containerClassName?: string }) {
   return (
-    <ChartContainer config={config} className="mx-auto h-[400px] w-full">
+    <ChartContainer config={config} className={containerClassName || "mx-auto h-[400px] w-full"}>
       <BarChart
         accessibilityLayer
         data={chartData}

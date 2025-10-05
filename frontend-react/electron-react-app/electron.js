@@ -9,6 +9,8 @@ let mainWindow;
 let overlayWindow;
 let tray;
 let micProc = null;
+let micOverlayWindow;
+let micOverlayHideTimeout;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -100,6 +102,98 @@ function createOverlayWindow() {
   return overlayWindow;
 }
 
+function ensureMicOverlayWindow() {
+  if (micOverlayWindow) return micOverlayWindow;
+
+  const baseURL = isDev
+    ? 'http://localhost:3000'
+    : `file://${path.join(__dirname, '../build/index.html')}`;
+
+  micOverlayWindow = new BrowserWindow({
+    width: 440,
+    height: 260,
+    frame: false,
+    transparent: true,
+    resizable: false,
+    movable: false,
+    skipTaskbar: true,
+    focusable: false,
+    fullscreenable: false,
+    alwaysOnTop: true,
+    hasShadow: false,
+    show: false,
+    backgroundColor: '#00000000',
+    webPreferences: {
+      contextIsolation: true,
+      nodeIntegration: false,
+      sandbox: false,
+      preload: path.join(__dirname, 'overlay-preload.js'),
+    },
+  });
+
+  try {
+    micOverlayWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+    micOverlayWindow.setAlwaysOnTop(true, 'screen-saver');
+  } catch (_) {
+    micOverlayWindow.setAlwaysOnTop(true);
+  }
+
+  const micURL = `${baseURL}${baseURL.startsWith('file://') ? '?' : '?'}view=mic-overlay`;
+  micOverlayWindow.loadURL(micURL);
+
+  micOverlayWindow.on('closed', () => {
+    micOverlayWindow = null;
+  });
+
+  return micOverlayWindow;
+}
+
+function positionMicOverlayWindow() {
+  if (!micOverlayWindow) return;
+  const cursorPoint = screen.getCursorScreenPoint();
+  const display = screen.getDisplayNearestPoint(cursorPoint);
+  const { x, y, width, height } = display.workArea;
+  const { width: winW, height: winH } = micOverlayWindow.getBounds();
+  const posX = Math.round(x + (width - winW) / 2);
+  const posY = Math.round(y + (height - winH) / 2);
+  micOverlayWindow.setBounds({ x: posX, y: posY, width: winW, height: winH });
+}
+
+function showMicOverlayWindow() {
+  const win = ensureMicOverlayWindow();
+  if (!win) return;
+  clearTimeout(micOverlayHideTimeout);
+  positionMicOverlayWindow();
+  if (typeof win.showInactive === 'function') {
+    win.showInactive();
+  } else {
+    win.show();
+  }
+}
+
+function hideMicOverlayWindow() {
+  clearTimeout(micOverlayHideTimeout);
+  if (micOverlayWindow && micOverlayWindow.isVisible()) {
+    micOverlayWindow.hide();
+  }
+}
+
+function scheduleMicOverlayHide(delayMs = 0) {
+  clearTimeout(micOverlayHideTimeout);
+  if (delayMs <= 0) {
+    hideMicOverlayWindow();
+    return;
+  }
+  micOverlayHideTimeout = setTimeout(() => {
+    hideMicOverlayWindow();
+  }, delayMs);
+}
+
+function broadcastMicEvent(channel, payload) {
+  try { overlayWindow?.webContents.send(channel, payload) } catch (_) {}
+  try { micOverlayWindow?.webContents.send(channel, payload) } catch (_) {}
+}
+
 ipcMain.handle('overlay:capture', async () => {
   try {
     const imgBuffer = await screenshot({ format: 'png' })
@@ -125,24 +219,80 @@ ipcMain.handle('mic:start', async () => {
     const pyExec = process.env.PYTHON || 'python3'
     micProc = spawn(pyExec, [scriptPath], {
       cwd: path.resolve(repoRoot, '..'),
-      env: process.env,
+      env: { ...process.env, HOTKEY_RUNNER_MODE: 'overlay' },
       stdio: ['ignore', 'pipe', 'pipe']
     })
 
+    showMicOverlayWindow()
+
     const publish = (message) => {
-      try { overlayWindow?.webContents.send('mic:status', message) } catch (_) {}
+      if (message && message.recording) {
+        showMicOverlayWindow()
+        clearTimeout(micOverlayHideTimeout)
+      }
+      broadcastMicEvent('mic:status', message)
     }
 
-    micProc.stdout.on('data', (d) => publish({ recording: true, message: d.toString() }))
+    // Accumulate stdout and try to parse JSON results from overlay mode
+    let stdoutBuf = ''
+    micProc.stdout.on('data', (d) => {
+      const text = d.toString()
+      stdoutBuf += text
+      // Handle possibly multiple lines per chunk
+      const lines = stdoutBuf.split(/\r?\n/)
+      // Keep the last partial line in the buffer
+      stdoutBuf = lines.pop() || ''
+      for (const line of lines) {
+        const trimmed = (line || '').trim()
+        if (!trimmed) continue
+        // Try to parse structured result from Python overlay mode
+        let parsed = null
+        if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+          try { parsed = JSON.parse(trimmed) } catch (_) { /* fallthrough */ }
+        }
+        if (parsed && typeof parsed === 'object') {
+          showMicOverlayWindow()
+          broadcastMicEvent('mic:response', parsed)
+          scheduleMicOverlayHide(6000)
+        } else {
+          let message = trimmed
+          let recordingFlag = true
+          if (trimmed.startsWith('[overlay]')) {
+            const payload = trimmed.replace('[overlay]', '').trim()
+            if (payload === 'recording') {
+              message = 'Listening…'
+              recordingFlag = true
+            } else if (payload === 'no-audio') {
+              message = 'No speech detected.'
+              recordingFlag = false
+            } else if (payload === 'empty-response') {
+              message = 'No assistant response.'
+              recordingFlag = false
+            } else if (payload.startsWith('error')) {
+              message = payload.replace(/^error[:\s]*/i, '') || 'Microphone flow error.'
+              recordingFlag = false
+            } else {
+              message = payload
+            }
+          }
+          publish({ recording: recordingFlag, message })
+          if (!recordingFlag) {
+            scheduleMicOverlayHide(3500)
+          }
+        }
+      }
+    })
     micProc.stderr.on('data', (d) => publish({ recording: true, message: d.toString() }))
     micProc.on('exit', (code, signal) => {
       publish({ recording: false, message: `mic exited (${code ?? ''} ${signal ?? ''})` })
+      scheduleMicOverlayHide(1500)
       micProc = null
     })
 
     publish({ recording: true, message: 'mic started' })
     return { ok: true }
   } catch (e) {
+    scheduleMicOverlayHide(0)
     micProc = null
     return { ok: false, error: e && e.message ? e.message : String(e) }
   }
@@ -154,12 +304,26 @@ ipcMain.handle('mic:stop', async () => {
     // Politely terminate; fall back to kill if needed
     let done = false
     return await new Promise((resolve) => {
-      const publish = (msg) => { try { overlayWindow?.webContents.send('mic:status', msg) } catch (_) {} }
-      micProc.once('exit', () => { publish({ recording: false, message: 'mic stopped' }); done = true; micProc = null; resolve({ ok: true }) })
+      const publish = (msg) => { broadcastMicEvent('mic:status', msg) }
+      micProc.once('exit', () => {
+        publish({ recording: false, message: 'mic stopped' });
+        scheduleMicOverlayHide(1200)
+        done = true;
+        micProc = null;
+        resolve({ ok: true })
+      })
       try { process.platform === 'win32' ? micProc.kill() : micProc.kill('SIGTERM') } catch (_) {}
-      setTimeout(() => { if (!done && micProc) { try { micProc.kill('SIGKILL') } catch (_) {} micProc = null; resolve({ ok: true }) } }, 1500)
+      setTimeout(() => {
+        if (!done && micProc) {
+          try { micProc.kill('SIGKILL') } catch (_) {}
+          micProc = null;
+          scheduleMicOverlayHide(1200)
+          resolve({ ok: true })
+        }
+      }, 1500)
     })
   } catch (e) {
+    scheduleMicOverlayHide(0)
     micProc = null
     return { ok: false, error: e && e.message ? e.message : String(e) }
   }

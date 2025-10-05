@@ -4,15 +4,17 @@ import * as React from "react"
 import { Line, LineChart, CartesianGrid, XAxis, YAxis } from "recharts"
 
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "./chart"
+import { filterToTimeWindow } from "lib/chart-time"
 
 export const description = "A line chart with customizable colors"
 
-export function ChartLine({ data: chartData, config }: { data: any[], config: ChartConfig }) {
+export function ChartLine({ data: chartData, config, containerClassName }: { data: any[], config: ChartConfig, containerClassName?: string }) {
+  const clamped = React.useMemo(() => filterToTimeWindow(chartData), [chartData])
   return (
-    <ChartContainer config={config} className="mx-auto h-[400px] w-full">
+    <ChartContainer config={config} className={containerClassName || "mx-auto h-[400px] w-full"}>
       <LineChart
         accessibilityLayer
-        data={chartData}
+        data={clamped}
         margin={{
           left: 12,
           right: 12,
@@ -24,7 +26,7 @@ export function ChartLine({ data: chartData, config }: { data: any[], config: Ch
           tickLine={false}
           axisLine={false}
           tickMargin={8}
-          tickFormatter={(value) => value.slice(0, 3)}
+          tickFormatter={(value) => String(value)}
         />
         <YAxis
           tickLine={false}

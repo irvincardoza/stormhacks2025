@@ -4,15 +4,17 @@ import * as React from "react"
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts"
 
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "./chart"
+import { filterToTimeWindow } from "lib/chart-time"
 
 export const description = "An area chart with customizable colors"
 
 export function ChartArea({ data: chartData, config }: { data: any[], config: ChartConfig }) {
+  const clamped = React.useMemo(() => filterToTimeWindow(chartData), [chartData])
   return (
     <ChartContainer config={config} className="mx-auto h-[400px] w-full">
       <AreaChart
         accessibilityLayer
-        data={chartData}
+        data={clamped}
         margin={{
           left: 12,
           right: 12,

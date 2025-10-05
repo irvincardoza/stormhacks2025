@@ -85,6 +85,18 @@ if (contextBridge) {
       }
       return () => {}
     },
+    onMicResponse: (handler) => {
+      try {
+        if (ipcRenderer && typeof ipcRenderer.on === 'function') {
+          const listener = (_evt, payload) => handler && handler(payload)
+          ipcRenderer.on('mic:response', listener)
+          return () => { try { ipcRenderer.removeListener('mic:response', listener) } catch (_) {} }
+        }
+      } catch (err) {
+        console.error('mic:response subscription failed', err)
+      }
+      return () => {}
+    },
   })
 } else {
   // As a last resort, attach directly (less safe, but keeps feature working if contextBridge missing)

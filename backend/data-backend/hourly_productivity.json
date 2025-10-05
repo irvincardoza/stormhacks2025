@@ -1,17 +1,27 @@
 [
   {
-    "hour": "2025-10-05T00:00:00",
-    "productive": 90.91,
-    "unproductive": 9.09
+    "hour": "2025-10-05T08:00:00",
+    "productive": 34.4,
+    "unproductive": 65.6
   },
   {
-    "hour": "2025-10-05T01:00:00",
-    "productive": 96.74,
-    "unproductive": 3.26
+    "hour": "2025-10-05T09:00:00",
+    "productive": 58.4,
+    "unproductive": 41.6
   },
   {
-    "hour": "2025-10-05T02:00:00",
-    "productive": 100.0,
-    "unproductive": 0.0
+    "hour": "2025-10-05T10:00:00",
+    "productive": 46.32,
+    "unproductive": 53.68
+  },
+  {
+    "hour": "2025-10-05T11:00:00",
+    "productive": 53.16,
+    "unproductive": 46.84
+  },
+  {
+    "hour": "2025-10-05T12:00:00",
+    "productive": 14.37,
+    "unproductive": 85.63
   }
 ]

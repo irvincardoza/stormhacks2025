@@ -8,6 +8,8 @@ export type MicStatus = {
   message?: string
 }
 
+export type MicOverlayResult = any
+
 const getApi = (): any => (typeof window !== 'undefined' ? (window as any).overlayAPI : undefined)
 
 export async function startMic(): Promise<{ ok: boolean; error?: string }>
@@ -41,4 +43,11 @@ export function subscribeMicStatus(listener: (s: MicStatus) => void): () => void
   return () => {}
 }
 
+export function subscribeMicResponse(listener: (payload: MicOverlayResult) => void): () => void {
+  const api = getApi()
+  if (api?.onMicResponse) {
+    return api.onMicResponse((payload: MicOverlayResult) => listener(payload))
+  }
+  return () => {}
+}
 

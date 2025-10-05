@@ -5,6 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "c
 import { ChartBar } from "components/ui/chart-bar"
 import { ChartLine } from "components/ui/chart-line"
 import { useFocusData, useIdleData } from "providers/dashboard-data-provider"
+import { isDemo } from "../lib/demo"
 
 export function SessionsPage() {
   const focus = useFocusData()
@@ -19,16 +20,31 @@ export function SessionsPage() {
 
       <div className="space-y-8 px-6">
         {/* Focus trends */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+        {isDemo ? (
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Focus Score Trend</h3>
-            <ChartLine data={focus.focusScoreTrend.points} config={focus.focusScoreTrend.config} />
+            <h3 className="text-lg font-semibold">Hours by Category</h3>
+            {(() => {
+              // Convert minutes → hours for demo presentation, rounded to 1 decimal.
+              const points = (focus.categoryMinutes.points || []).map((p: any) => ({
+                name: p.name,
+                hours: Math.round(((Number(p.minutes) || 0) / 60) * 10) / 10,
+              }))
+              const config = { hours: { label: "Focus Time (hours)", color: "hsl(var(--chart-1))" } }
+              return <ChartBar data={points} config={config} containerClassName="mx-auto h-[520px] w-full" />
+            })()}
           </div>
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Minutes by Category</h3>
-            <ChartBar data={focus.categoryMinutes.points} config={focus.categoryMinutes.config} />
+        ) : (
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Focus Score Trend</h3>
+              <ChartLine data={focus.focusScoreTrend.points} config={focus.focusScoreTrend.config} />
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Minutes by Category</h3>
+              <ChartBar data={focus.categoryMinutes.points} config={focus.categoryMinutes.config} />
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <div className="space-y-4">
@@ -107,4 +123,3 @@ export function SessionsPage() {
     </div>
   )
 }
-

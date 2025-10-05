@@ -10,21 +10,22 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../components/ui/dropdown-menu"
 import { MoreHorizontal, RefreshCw } from "../components/icons/lucide-adapter"
 import { useMemo, useState } from "react"
-import { useOverviewData, useTimelineData, useDashboardActions } from "../providers/dashboard-data-provider"
+import { filterToTimeWindow } from "lib/chart-time"
+import { useOverviewData, useTimelineData, useDashboardActions, useAppsData } from "../providers/dashboard-data-provider"
 
 export function OverviewPage() {
-  const {
-    productivityBreakdown,
-    hourlyProductivity,
-    contextSwitchTrend,
-  } = useOverviewData()
+  const { hourlyProductivity, contextSwitchTrend } = useOverviewData()
 
   // Pull Activity Feed data from the same source as Timeline
   const { activityEvents } = useTimelineData()
   const { refresh, isRefreshing } = useDashboardActions()
+  const apps = useAppsData()
 
   type RangeKey = "all" | "1m" | "10m" | "1h"
   const [selectedRange, setSelectedRange] = useState<RangeKey>("all")
+
+  // Clamp hourly productivity to 08:00–13:00 for time-based X-axis.
+  const clampedHourly = useMemo(() => filterToTimeWindow(hourlyProductivity.points), [hourlyProductivity.points])
 
   // Prefer the source time string from JSON to avoid timezone shifts.
   function formatEventTime(tsOrObj: string | { ts?: string; timestamp?: string }) {
@@ -72,6 +73,27 @@ export function OverviewPage() {
     "1h": "Last 1h",
   }
 
+  // Build app-based pie slices from live usageByApp data.
+  const appPie = useMemo(() => {
+    const points: any[] = apps?.usageByApp?.points || []
+    const colors = [
+      "hsl(var(--chart-1))",
+      "hsl(var(--chart-2))",
+      "hsl(var(--chart-3))",
+      "hsl(var(--chart-4))",
+      "hsl(var(--chart-5))",
+    ]
+    const slices = points.map((p, i) => ({
+      name: p.name,
+      value: Number(p.time) || 0,
+      color: colors[i % colors.length],
+    }))
+    const config = Object.fromEntries(
+      slices.map((s) => [s.name, { label: s.name, color: s.color }])
+    ) as any
+    return { slices, config }
+  }, [apps])
+
   return (
     <div className="space-y-6">
       <PageHeader 
@@ -86,7 +108,7 @@ export function OverviewPage() {
           <ChartContainer config={hourlyProductivity.config} className="mx-auto h-[400px] w-full">
             <BarChart
               accessibilityLayer
-              data={hourlyProductivity.points}
+              data={clampedHourly}
               margin={{ left: 12, right: 12 }}
             >
               <CartesianGrid vertical={false} />
@@ -121,10 +143,10 @@ export function OverviewPage() {
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <div className="space-y-4">
             <ChartPieLegend 
-              data={productivityBreakdown.slices}
-              config={productivityBreakdown.config}
-              title="Productivity Breakdown"
-              description="Today's productivity distribution"
+              data={appPie.slices}
+              config={appPie.config}
+              title="Usage by App"
+              description="Share of tracked time by application (live)"
             />
           </div>
           

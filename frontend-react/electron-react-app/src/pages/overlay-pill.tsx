@@ -313,7 +313,7 @@ export function OverlayPill() {
         </svg>
       </button>
 
-      {/* Result panel */}
+      {/* Result panel (text prompt flow) */}
       {(loading || error || result || templateError) && (
         <div
           className="pointer-events-none rounded-xl border bg-black/80 border-white/20 backdrop-blur-xl shadow-2xl text-white p-3 text-sm"
@@ -346,6 +346,7 @@ export function OverlayPill() {
           )}
         </div>
       )}
+
     </div>
   )
 }
