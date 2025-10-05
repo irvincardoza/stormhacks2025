@@ -1,5 +1,7 @@
 // Cross-platform idle time implementation
 
+#include "../include/tracker.hpp"
+
 #ifdef _WIN32
 #include <windows.h>
 
