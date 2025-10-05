@@ -10,8 +10,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
-from django.conf import settings
-
+from ..services.paths import (
+    ACTIVITY_FILE,
+    DATA_DIR,
+    METRICS_FILE,
+    CONTEXT_SWITCHES_FILE,
+    HOURLY_FILE,
+    MONITOR_FILE,
+    SUMMARY_FILE,
+    HISTORY_FILE,
+)
 from ..utils.contex_switches import compute_context_switches
 from ..utils.hourly_breakdown import compute_hourly_productivity
 from ..utils.monitor import is_unproductive_streak
@@ -20,16 +28,7 @@ from ..utils.script_combiner import label_activity_with_productivity
 
 LOG = logging.getLogger(__name__)
 
-DATA_DIR = settings.BASE_DIR.parent.parent / "data-backend"
-ACTIVITY_FILE = DATA_DIR / "activity.jsonl"
-ANALYSIS_FILE = DATA_DIR / "q_analysis.jsonl"
-METRICS_FILE = DATA_DIR / "metrics.jsonl"
-CONTEXT_SWITCHES_FILE = DATA_DIR / "context_switches.json"
-HOURLY_FILE = DATA_DIR / "hourly_productivity.json"
-SUMMARY_FILE = DATA_DIR / "productivity_summary.json"
-MONITOR_FILE = DATA_DIR / "monitor_status.json"
-
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+ANALYSIS_FILE = HISTORY_FILE
 
 
 @dataclass(frozen=True)
