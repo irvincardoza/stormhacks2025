@@ -1,6 +1,7 @@
-"""Global hotkey trigger for the ElevenLabs speech-to-speech + overlay assist pipeline."""
+"""Push-to-talk hotkey trigger for the ElevenLabs STT → overlay pipeline."""
 
 from __future__ import annotations
+
 import logging
 import threading
 from contextlib import suppress
@@ -10,54 +11,94 @@ try:
 except ImportError as exc:
     raise SystemExit("Missing dependency 'pynput'. Run `pip install pynput`.") from exc
 
-# 🔹 Use full speech-to-speech pipeline instead of raw STT
-from .speech_to_speech import run_speech_cycle
+from .audio_utils import RecordingSession
+from .speech_to_speech import process_transcript
 
 LOGGER = logging.getLogger(__name__)
-_cycle_lock = threading.Lock()
+
+HOLD_KEY = keyboard.KeyCode(char='\\')
+CMD_KEYS = {
+    keyboard.Key.cmd,
+    getattr(keyboard.Key, "cmd_l", keyboard.Key.cmd),
+    getattr(keyboard.Key, "cmd_r", keyboard.Key.cmd),
+}
+
+STATE = {
+    "active": False,
+    "session": RecordingSession(debug=True),
+    "lock": threading.Lock(),
+}
+
+PRESSED: set = set()
 
 
-def _run_cycle_async(duration: int = 5):
-    """Record, transcribe, and send to overlay assist asynchronously."""
-    if not _cycle_lock.acquire(blocking=False):
-        LOGGER.info("Hotkey ignored — another cycle is already running.")
+def _cmd_active() -> bool:
+    return any(key in PRESSED for key in CMD_KEYS)
+
+
+def start_recording():
+    with STATE["lock"]:
+        if STATE["active"]:
+            return
+        LOGGER.info("🎙️ Recording started (push-to-talk engaged).")
+        STATE["session"].start()
+        STATE["active"] = True
+
+
+def stop_recording():
+    with STATE["lock"]:
+        if not STATE["active"]:
+            return
+        LOGGER.info("🛑 Recording stopped (push-to-talk released).")
+        STATE["active"] = False
+        audio_file = STATE["session"].stop()
+
+    if not audio_file:
+        LOGGER.warning("⚠️ No audio captured during this press.")
         return
 
-    def _runner():
-        try:
-            LOGGER.info("🎙️ Starting full speech-to-speech + overlay cycle.")
-            result = run_speech_cycle(duration=duration)
-            if not result:
-                LOGGER.warning("⚠️ No valid transcription or response.")
-                return
+    threading.Thread(target=_process_async, args=(audio_file,), daemon=True).start()
 
-            print("\n==============================")
-            print(f"🗣️ You said: {result['transcript']}")
-            if result.get("overlay_response"):
-                print("📸 Screenshot + prompt successfully sent to overlay endpoint.")
-                print(f"🤖 Overlay replied: {result['overlay_response']}")
-            else:
-                print("⚠️ No overlay response received.")
-            print("==============================\n")
 
-        except Exception as e:
-            LOGGER.error("❌ Error during speech cycle: %s", e)
-        finally:
-            _cycle_lock.release()
-            LOGGER.info("✅ Speech cycle completed.")
+def _process_async(audio_file: str):
+    try:
+        result = process_transcript(audio_file)
+        if not result:
+            LOGGER.warning("⚠️ No overlay response returned.")
+            return
+        LOGGER.info("Transcript: %s", result["transcript"])
+        LOGGER.info("Overlay response: %s", result["overlay_response"])
+    except Exception as exc:
+        LOGGER.error("Error processing transcript: %s", exc)
 
-    threading.Thread(target=_runner, daemon=True).start()
+
+def on_press(key):
+    PRESSED.add(key)
+    try:
+        if key == HOLD_KEY and _cmd_active():
+            start_recording()
+        elif key in CMD_KEYS and HOLD_KEY in PRESSED:
+            start_recording()
+    except Exception as exc:
+        LOGGER.error("Error during key press handling: %s", exc)
+
+
+def on_release(key):
+    try:
+        if key == HOLD_KEY or key in CMD_KEYS:
+            stop_recording()
+    except Exception as exc:
+        LOGGER.error("Error during key release handling: %s", exc)
+    finally:
+        PRESSED.discard(key)
 
 
 def main():
     logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
-    combo = "<ctrl>+<shift>+<space>"
-    LOGGER.info("🎧 Listening for %s — press Ctrl+C to exit.", combo)
-
-    hotkeys = {combo: lambda: _run_cycle_async()}
+    LOGGER.info("🎧 Hold Cmd + \\ to talk. Press Ctrl+C to exit.")
 
     with suppress(KeyboardInterrupt):
-        with keyboard.GlobalHotKeys(hotkeys) as listener:
+        with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
             listener.join()
 
 
