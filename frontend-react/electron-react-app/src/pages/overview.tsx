@@ -102,9 +102,17 @@ export function OverviewPage() {
                 tickMargin={8}
               />
               <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-              {/* Keep current theme colors via config */}
-              <Bar dataKey="productive" fill={hourlyProductivity.config.productive.color} radius={6} />
-              <Bar dataKey="unproductive" fill={hourlyProductivity.config.unproductive.color} radius={6} />
+              {/* Keep current theme colors via config with safe fallbacks */}
+              <Bar 
+                dataKey="productive" 
+                fill={hourlyProductivity?.config?.productive?.color ?? 'hsl(var(--chart-1))'} 
+                radius={6} 
+              />
+              <Bar 
+                dataKey="unproductive" 
+                fill={hourlyProductivity?.config?.unproductive?.color ?? 'hsl(var(--chart-2))'} 
+                radius={6} 
+              />
             </BarChart>
           </ChartContainer>
         </div>
