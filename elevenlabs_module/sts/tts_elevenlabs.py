@@ -1,15 +1,25 @@
+from elevenlabs import ElevenLabs
 import os
-from elevenlabs import generate, play, set_api_key
-from dotenv import load_dotenv
+from pydub import AudioSegment
+from pydub.playback import play
+import io
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "config", ".env"))
-ELEVEN_API_KEY = os.getenv("ELEVEN_API_KEY")
-VOICE_NAME = os.getenv("VOICE_NAME", "Rachel")
-MODEL_NAME = os.getenv("TTS_MODEL", "eleven_monolingual_v1")
+# Initialize ElevenLabs client with API key
+client = ElevenLabs(api_key=os.getenv("ELEVENLABS_API_KEY"))
 
-set_api_key(ELEVEN_API_KEY)
+def speak_text(text: str, voice: str = "Charlotte"):
+    """
+    Generate speech using ElevenLabs new client API and play it.
+    """
+    # Generate audio using the new SDK format
+    response = client.text_to_speech.convert(
+        voice_id=voice,
+        model_id="eleven_multilingual_v2",
+        text=text,
+        output_format="mp3_44100_128",
+    )
 
-def speak_text(text):
-    print(f"[TTS] Speaking: {text}")
-    audio = generate(text=text, voice=VOICE_NAME, model=MODEL_NAME)
+    # Convert byte stream to playable audio
+    audio_bytes = b"".join(chunk for chunk in response)
+    audio = AudioSegment.from_file(io.BytesIO(audio_bytes), format="mp3")
     play(audio)
