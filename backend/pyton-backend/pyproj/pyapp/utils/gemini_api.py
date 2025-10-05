@@ -62,3 +62,36 @@ Additional instruction from caller:
         "window_title": parsed.get("window_title", "unknown"),
         "productive": parsed.get("productive", None),
     }
+
+
+def overlay_assist(image_path: str, prompt: str) -> str:
+    mime, _ = mimetypes.guess_type(image_path)
+    mime = mime or "image/png"
+
+    with open(image_path, "rb") as f:
+        image_data = f.read()
+
+    base_instruction = (
+        "You are an on-screen assistant. Use only the supplied screenshot and user question to respond. "
+        "Keep answers under 120 words and reference visible UI labels when applicable."
+    )
+
+    final_prompt = base_instruction
+    if prompt:
+        final_prompt = f"{base_instruction}\n\nAdditional context from client:\n{prompt.strip()}"
+
+    resp = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=[
+            {
+                "role": "user",
+                "parts": [
+                    {"text": final_prompt},
+                    {"inline_data": {"mime_type": mime, "data": image_data}},
+                ],
+            }
+        ],
+    )
+
+    text = (resp.text or "").strip()
+    return text
