@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
 import { assistWithScreenshot, type OverlayAssistResponse } from "services/overlay-analyze"
+import { startMic, stopMic, subscribeMicStatus } from "services/mic-control"
 
 type PromptTemplate = {
   system: string
@@ -23,6 +24,9 @@ export function OverlayPill() {
   const dragOffsetRef = useRef<{ x: number; y: number } | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [resultBoxStyle, setResultBoxStyle] = useState<{ left: number; top: number; width: number }>({ left: 0, top: 0, width: 0 })
+  const [recording, setRecording] = useState(false)
+  const [micMessage, setMicMessage] = useState<string | undefined>(undefined)
+  const [micPressing, setMicPressing] = useState(false)
 
   useEffect(() => {
     // Autofocus and select on show without timers to avoid races
@@ -110,6 +114,15 @@ export function OverlayPill() {
     const height = el.offsetHeight
     setResultBoxStyle({ left: position.x, top: position.y + height + 8, width })
   }, [position, value, result, error, loading, templateError, lastQuery])
+
+  // Mic status subscription
+  useEffect(() => {
+    const unsubscribe = subscribeMicStatus((s) => {
+      setRecording(!!s.recording)
+      setMicMessage(s.message)
+    })
+    return () => { try { unsubscribe() } catch {} }
+  }, [])
 
   const clampWithinViewport = (x: number, y: number) => {
     const el = pillRef.current
@@ -240,6 +253,39 @@ export function OverlayPill() {
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={onKeyDown}
         />
+        {/* Push-to-talk mic button */}
+        <button
+          type="button"
+          aria-label={recording ? "Stop recording" : "Hold to talk"}
+          title={recording ? "Recording… release to stop" : "Hold to talk"}
+          className={`flex-none h-8 w-8 rounded-full border transition-colors ${(recording || micPressing) ? 'bg-red-500/80 border-red-400 shadow-inner' : 'bg-white/15 border-white/25 hover:bg-white/25'}`}
+          style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}
+          onPointerDown={async (e) => {
+            e.preventDefault()
+            setMicPressing(true)
+            try { (e.currentTarget as any)?.setPointerCapture?.(e.pointerId) } catch {}
+            if (!recording) await startMic()
+          }}
+          onPointerUp={async () => {
+            try { setMicPressing(false) } finally {}
+            if (recording) await stopMic()
+          }}
+          onPointerCancel={async () => {
+            try { setMicPressing(false) } finally {}
+            if (recording) await stopMic()
+          }}
+          onPointerLeave={async () => {
+            // If user drags pointer away while holding, keep it red due to capture,
+            // but if we somehow lose capture, ensure visual resets.
+            // We don't stop mic here to avoid accidental cancellations; pointerup/cancel will handle it.
+          }}
+        >
+          <span className="sr-only">{recording ? 'Stop recording' : 'Hold to talk'}</span>
+          {/* Simple mic glyph */}
+          <svg viewBox="0 0 24 24" className="h-4 w-4 mx-auto" aria-hidden="true">
+            <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 19v3h2v-3h-2z" fill={recording ? '#fff' : '#e5e7eb'} />
+          </svg>
+        </button>
         <div className="text-sm md:text-base text-white/80 select-none pr-1" style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}>
           {loading ? 'Sending…' : 'Enter'}
         </div>
@@ -255,6 +301,9 @@ export function OverlayPill() {
           {!loading && error && <div className="text-red-300">{error}</div>}
           {!loading && !error && templateError && !result && (
             <div className="text-amber-200">{templateError}</div>
+          )}
+          {!loading && !error && micMessage && (
+            <div className="text-white/50">{micMessage}</div>
           )}
           {!loading && result && (
             <div className="space-y-2">

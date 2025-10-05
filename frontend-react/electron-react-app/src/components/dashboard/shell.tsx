@@ -22,7 +22,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "components/ui/avatar"
-import { BarChart3, CalendarDays, Clock, Home, Settings, Target, Timer } from "components/icons/lucide-adapter"
+import { BarChart3, CalendarDays, Home, Settings, Target, Timer } from "components/icons/lucide-adapter"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,7 +44,6 @@ function formatMinutes(minutes: number) {
 
 const primaryNav = [
   { label: "Overview", icon: Home, href: "/dashboard" },
-  { label: "Timeline", icon: Clock, href: "/dashboard/timeline" },
   { label: "Insights", icon: BarChart3, href: "/dashboard/insights" },
   { label: "Sessions", icon: Target, href: "/dashboard/sessions" },
   { label: "Settings", icon: Settings, href: "/dashboard/settings" },

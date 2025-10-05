@@ -5,30 +5,34 @@
   },
   {
     "hour": "2025-10-05T00:00:00",
-    "switches": 87
+    "switches": 63
   },
   {
     "hour": "2025-10-05T01:00:00",
-    "switches": 52
+    "switches": 59
   },
   {
     "hour": "2025-10-05T02:00:00",
-    "switches": 196
+    "switches": 182
   },
   {
     "hour": "2025-10-05T03:00:00",
-    "switches": 96
+    "switches": 114
   },
   {
     "hour": "2025-10-05T04:00:00",
-    "switches": 203
+    "switches": 236
   },
   {
     "hour": "2025-10-05T05:00:00",
-    "switches": 54
+    "switches": 49
   },
   {
     "hour": "2025-10-05T07:00:00",
-    "switches": 9
+    "switches": 25
+  },
+  {
+    "hour": "2025-10-05T08:00:00",
+    "switches": 11
   }
 ]

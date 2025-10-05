@@ -1,5 +1,6 @@
 // electron.js
 const { app, BrowserWindow, Tray, Menu, globalShortcut, screen, nativeImage, ipcMain } = require('electron');
+const { spawn } = require('child_process');
 const path = require('path');
 const isDev = require('electron-is-dev');
 const screenshot = require('screenshot-desktop');
@@ -7,6 +8,7 @@ const screenshot = require('screenshot-desktop');
 let mainWindow;
 let overlayWindow;
 let tray;
+let micProc = null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -106,6 +108,60 @@ ipcMain.handle('overlay:capture', async () => {
     console.error('overlay:capture error', e)
     const msg = e && e.message ? e.message : String(e)
     throw new Error(msg)
+  }
+})
+
+// Mic IPC: start/stop a Python speech cycle process from elevenlabs_module
+ipcMain.handle('mic:start', async () => {
+  try {
+    if (micProc) {
+      return { ok: false, error: 'mic already running' }
+    }
+    // Resolve script path relative to repo root (app.asar unpack not required during dev)
+    const repoRoot = path.resolve(__dirname, '..')
+    const scriptPath = path.resolve(repoRoot, '..', 'elevenlabs_module', 'sts', 'hotkey_runner.py')
+
+    // Prefer system python; optionally respect PYTHON env
+    const pyExec = process.env.PYTHON || 'python3'
+    micProc = spawn(pyExec, [scriptPath], {
+      cwd: path.resolve(repoRoot, '..'),
+      env: process.env,
+      stdio: ['ignore', 'pipe', 'pipe']
+    })
+
+    const publish = (message) => {
+      try { overlayWindow?.webContents.send('mic:status', message) } catch (_) {}
+    }
+
+    micProc.stdout.on('data', (d) => publish({ recording: true, message: d.toString() }))
+    micProc.stderr.on('data', (d) => publish({ recording: true, message: d.toString() }))
+    micProc.on('exit', (code, signal) => {
+      publish({ recording: false, message: `mic exited (${code ?? ''} ${signal ?? ''})` })
+      micProc = null
+    })
+
+    publish({ recording: true, message: 'mic started' })
+    return { ok: true }
+  } catch (e) {
+    micProc = null
+    return { ok: false, error: e && e.message ? e.message : String(e) }
+  }
+})
+
+ipcMain.handle('mic:stop', async () => {
+  try {
+    if (!micProc) return { ok: true }
+    // Politely terminate; fall back to kill if needed
+    let done = false
+    return await new Promise((resolve) => {
+      const publish = (msg) => { try { overlayWindow?.webContents.send('mic:status', msg) } catch (_) {} }
+      micProc.once('exit', () => { publish({ recording: false, message: 'mic stopped' }); done = true; micProc = null; resolve({ ok: true }) })
+      try { process.platform === 'win32' ? micProc.kill() : micProc.kill('SIGTERM') } catch (_) {}
+      setTimeout(() => { if (!done && micProc) { try { micProc.kill('SIGKILL') } catch (_) {} micProc = null; resolve({ ok: true }) } }, 1500)
+    })
+  } catch (e) {
+    micProc = null
+    return { ok: false, error: e && e.message ? e.message : String(e) }
   }
 })
 

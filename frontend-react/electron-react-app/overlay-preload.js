@@ -52,8 +52,48 @@ async function captureScreenDataURL() {
 if (contextBridge) {
   contextBridge.exposeInMainWorld('overlayAPI', {
     captureScreen: captureScreenDataURL,
+    // Mic controls exposed to the renderer. These are optional and no-op if ipcRenderer is unavailable.
+    startMic: async () => {
+      try {
+        if (ipcRenderer && typeof ipcRenderer.invoke === 'function') {
+          return await ipcRenderer.invoke('mic:start')
+        }
+      } catch (err) {
+        console.error('mic:start failed', err)
+      }
+      return { ok: false, error: 'ipcRenderer not available' }
+    },
+    stopMic: async () => {
+      try {
+        if (ipcRenderer && typeof ipcRenderer.invoke === 'function') {
+          return await ipcRenderer.invoke('mic:stop')
+        }
+      } catch (err) {
+        console.error('mic:stop failed', err)
+      }
+      return { ok: false, error: 'ipcRenderer not available' }
+    },
+    onMicStatus: (handler) => {
+      try {
+        if (ipcRenderer && typeof ipcRenderer.on === 'function') {
+          const listener = (_evt, payload) => handler && handler(payload)
+          ipcRenderer.on('mic:status', listener)
+          return () => { try { ipcRenderer.removeListener('mic:status', listener) } catch (_) {} }
+        }
+      } catch (err) {
+        console.error('mic:status subscription failed', err)
+      }
+      return () => {}
+    },
   })
 } else {
   // As a last resort, attach directly (less safe, but keeps feature working if contextBridge missing)
-  try { window.overlayAPI = { captureScreen: captureScreenDataURL } } catch (_) {}
+  try {
+    window.overlayAPI = {
+      captureScreen: captureScreenDataURL,
+      startMic: async () => ({ ok: false, error: 'no contextBridge' }),
+      stopMic: async () => ({ ok: false, error: 'no contextBridge' }),
+      onMicStatus: () => () => {},
+    }
+  } catch (_) {}
 }
