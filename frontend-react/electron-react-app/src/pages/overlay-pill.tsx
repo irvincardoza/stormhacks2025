@@ -14,7 +14,7 @@ export function OverlayPill() {
   const [result, setResult] = useState<OverlayAssistResponse | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [promptTemplate, setPromptTemplate] = useState<PromptTemplate | null>(null)
-  const [, setPromptLoaded] = useState<boolean>(false)
+  const [promptLoaded, setPromptLoaded] = useState<boolean>(false)
   const [templateError, setTemplateError] = useState<string | null>(null)
   const [lastQuery, setLastQuery] = useState<string>("")
   const inputRef = useRef<HTMLInputElement | null>(null)
