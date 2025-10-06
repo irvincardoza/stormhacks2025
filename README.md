@@ -1,4 +1,4 @@
-# StormHacks 2025 
+# M.I.R.A -- MLH -- StormHacks 2025 
 
 Cross-platform desktop time tracking with an Electron + React dashboard, a local Django backend for analytics, and a Windows C++ tracker for high-fidelity activity logging.
 
